@@ -41,7 +41,7 @@ Instructions:
 </CaseSummary>
 
 Additional Instructions:
-- Keep the <Overview> summary under 400 words.
+- Keep the <Overview> summary under 600 words.
 - Focus on concisely extracting and explaining the essential points. 
 - Omit peripheral details not directly relevant to the court's core holding and reasoning.
 - Use clear, straightforward language and short paragraphs.

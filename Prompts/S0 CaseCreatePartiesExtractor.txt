@@ -1,35 +1,34 @@
-Your task is to create only the case, party, and jurisdiction nodes for the given legal case using the role-based Node Linking approach in Neo4j"s Cypher query language. Do not create any other nodes or relationships at this time.
 
-Instructions:
-1. Create a "Case" node with the following properties:
+Please carefully read the provided case text : <case> {{Case}} </case>
+
+Then,
+
+1. Create case information with the following properties:
    - name: The name of the case (e.g., "Bell v. Greg Agee Construction, Inc.")
-   - filingDate: The date the case was filed (use "date" as a placeholder if the actual date is not provided)
    
-2. Create "Party" nodes for each party involved in the case (e.g., Plaintiff, Defendant) with the following properties:
+2. Include party information for each party involved in the case (e.g., Plaintiff, Defendant) with the following properties:
    - role: The role of the party in the case (e.g., "Plaintiff", "Defendant")
    - name: The name of the party
 
-3. Create a "Jurisdiction" node with the following properties:
-   - name: The name of the jurisdiction (e.g., "Supreme Court of Arkansas")
+3. Include jurisdiction information with the following properties:
+   - name: The name of the jurisdiction hearing the case (e.g., "Supreme Court of Arkansas")
    - district: The name of the district, if applicable (e.g., "Sixth District")
    - level: The level of the jurisdiction (e.g., "State")
    - location: The geographic location of the jurisdiction (e.g., "Arkansas")
 
-4. Establish connections between the "Party" nodes and the "Case" node using the party's role as the relationship type.
+4. Establish connections between the parties and the case using the party's role.
 
-5. Connect the "Case" node to the "Jurisdiction" node using the [:FILED_IN] relationship type.
+5. Connect the case to the jurisdiction.
 
-6. Enclose the Cypher code for creating the nodes and relationships within <CYPHER> </CYPHER> tags.
+6. Format your response in XML structure within <CaseData> </CaseData> tags.
 
-Example:
-    CREATE (case1:Case {name: "Bell v. Greg Agee Construction, Inc.", filingDate: "date", })
-    
-    CREATE (cc_plaintiff1:Party {role: "Plaintiff", name: "John Bell"})
-    CREATE (cc_defendant1:Party {role: "Defendant", name: "Greg Agee Construction, Inc."})
-    
-    CREATE (cc_jurisdiction1:Jurisdiction {name: "Supreme Court of Arkansas",district: "distrinct name" level: "State", location: "Arkansas"})
-    
-    MERGE (case1)-[:PLAINTIFF]->(cc_plaintiff1)
-    MERGE (case1)-[:DEFENDANT]->(cc_defendant1)
-    
-    MERGE (case1)-[:FILED_IN]->(cc_jurisdiction1)
+Example output:
+<CaseData>
+    <Case name="Bell v. Greg Agee Construction, Inc." >
+        <Parties>
+            <Party role="Plaintiff" name="John Bell" />
+            <Party role="Defendant" name="Greg Agee Construction, Inc." />
+        </Parties>
+        <Jurisdiction name="Supreme Court of Arkansas" district="district name" level="State" location="Arkansas City court" />
+    </Case>
+</CaseData>

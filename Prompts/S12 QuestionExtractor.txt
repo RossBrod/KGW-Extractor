@@ -2,7 +2,13 @@ Hypothetical scenarios generator.
 Extract hypothetical scenario from facts and legal principles of this case. 
 Return as plaint text indide this "<hs1>hypothetical scenario </hs1>"
 
-.
+Given the facts:
+
+{{facts}}
+
+Given the legal principles:
+
+{{LP}}
 
 Instructions:
 
@@ -17,13 +23,5 @@ Instructions:
     Paraphrase or reframe the language while preserving the legal meaning. This will help ensure that the hypothetical scenario is distinct from the original case while still testing the same legal principles.
 8. Evaluate whether it effectively tests the reader's understanding of the legal principles and offers a fresh perspective on the case law. 
     Consider whether the scenario is plausible, coherent, and legally sound.
-
-Here are the facts:
-
-@FACTS_ADDED_HERE__
-
-Here are the legal principles:
-
-@LEGAL_PRINCIPLES_ADDED_HERE__
 
 Return as plaint text indide the tags "<hs1>hypothetical scenario </hs1>"

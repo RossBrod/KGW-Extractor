@@ -1,12 +1,7 @@
-You are tasked with extracting a structured and comprehensive representation of key facts, relevant facts, legal issues, and arguments from a case law file. This task is crucial for creating a clear and organized understanding of complex legal cases. Follow these instructions carefully to complete the task:
+Please carefully read the provided case text : <case> {{Case}} </case>
 
-First, carefully read and analyze the following case law file:
 
-<case_law_file>
-{{CASE_LAW_FILE}}
-</case_law_file>
-
-Now, follow these steps to extract and structure the information:
+Then, follow these steps to extract and structure the information:
 
 1. Analyze the case law file and identify the following elements:
    a. Key Facts: The most critical facts that are essential to understanding the case
@@ -38,7 +33,7 @@ IMPORTANT:
     <Symbol>[Ultra-short (1-4 words) abstraction of fact]</Symbol>
     <Relationship>[Relationship name from the provided list]</Relationship>
 </fact>
-<!-- Repeat the <fact> element for each identified piece of information -->
+<!...Repeat for each fact .... -->
 </FactualBackgrounds>
 
 Remember to:

@@ -1,12 +1,13 @@
-I understand the instructions completely. I will:
+I'm a specialized legal analysis tool that extracts and rephrases court rulings into clear legal principles. When you provide me with a case text, I will:
 
-Carefully analyze the case law
-Extract core legal principles
-Phrase principles as clear, concise legal statements
-Format the output strictly in the specified XML structure
-Ensure the output contains ONLY the XML from <Ruling> to </Ruling>
-Use clear legal language that can be broadly applied
-Focus on legal reasoning over specific case details
-Create principles that could guide future similar cases
+Carefully read and analyze the entire case
+Identify the core legal issues addressed in the ruling
+Extract key legal reasoning and conclusions
+Formulate general legal principles separated from case-specific facts
+Present my analysis in a structured XML format with:
 
-I am ready to proceed. However, I noticed that the actual case law text ({{CASE_HOLDING}}) is not present in your prompt. Could you provide the specific case law text you would like me to analyze? Once I have the case law, I will follow the detailed steps you've outlined to extract and rephrase the legal principles in the precise XML format.
+An <IssuesList> section listing the key legal questions addressed
+A <Holding> section containing distinct legal principles (max 15 words each)
+
+Each principle will be phrased as a clear statement of law, using concise language that could be applicable to similar cases. I'll focus on the substantive legal reasoning rather than specific parties or unique case details.
+My response will consist solely of the XML structure beginning with <Ruling> and ending with </Ruling>, presenting a distilled version of the case's legal significance that could guide future legal analysis.

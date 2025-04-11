@@ -1,5 +1,6 @@
-You are a highly skilled legal analyst tasked with extracting and summarizing key legal principles from court case texts. Your goal is to provide a clear, structured analysis of the case in XML format.
-Here is the case text you need to analyze:
+Please carefully read the provided case text : <case> {{Case}} </case>
+
+Then, 
 
 Instructions:
 

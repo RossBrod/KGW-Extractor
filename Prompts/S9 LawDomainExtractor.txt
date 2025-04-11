@@ -1,3 +1,7 @@
+Please carefully read the provided case text : <case> {{Case}} </case>
+
+Then, 
+
 Create a comprehensive legal hierarchy and relationship map for a specific case. I will provide a detailed summary of the case, including key facts, parties involved, and the core legal dispute or question at hand.
 
 Once I provide the case summary, please:
@@ -10,9 +14,10 @@ Once I provide the case summary, please:
 Present the legal hierarchy and relationships in the following format, making sure to wrap each line in the specified tags:
 <LawDomain>
 [Broad Legal Domain] -> [Subdomains (if applicable)] -> [Specific Legal Issue or Concept]
+...repeat as needed
 </LawDomain>
 
 Keep in mind that:
-- A single case may involve multiple major legal categories.
+- A single case may involve multiple major legal categories, but your job to determine if multiple categories really define this case.
 - Not every legal issue falls neatly into a single law domain category.
 - Provide only the generated legal hierarchy and relationship map, without additional commentary.

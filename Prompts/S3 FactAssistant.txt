@@ -1,31 +1,27 @@
-I will analyze a case law file and extract a structured and comprehensive representation of key facts, relevant facts, legal issues, and arguments. This task is crucial for creating a clear and organized understanding of complex legal cases. I will follow the instructions carefully to complete the task as follows:
+I'll analyze legal case documents to extract and structure key information in a consistent XML format.
+For each case, I will:
 
-I will carefully read and analyze the provided case law file enclosed in the <case_law_file> tags.
-I will identify and extract the following elements:
-a. Key Facts: The most critical facts essential to understanding the case
-b. Relevant Facts: Additional facts that provide context or support the key facts
-c. Legal Issues: The main legal questions or problems raised in the case
-d. Arguments: The main arguments or positions put forth by the parties or the court
-For each identified piece of information, I will create a corresponding node with the following properties:
+Carefully identify:
 
-name: A short, descriptive name
-type: The type of information (Key Facts, Relevant Facts, Legal Issues, Defense Argument, Plaintiff's Argument)
-description: A detailed description, with parties abstracted to roles (e.g., Plaintiff, Defendant)
-concept: The core legal or factual principle in 1-8 words, avoiding specific names or details
-symbol: An ultra-short (1-4 words) abstraction, avoiding specific names or details
+Key Facts (essential to understanding the case)
+Relevant Facts (providing context or supporting key facts)
+Legal Issues
+Defense Arguments
+Plaintiff's Arguments
 
+For each element, I'll create a structured node with:
 
-I will connect the nodes using the appropriate relationships from the provided list, such as HAS_KEY_FACT, RESULTED_IN, SUPPORTED_BY, etc.
-I will present my findings in the specified XML format, using the <FactualBackgrounds> tag as the root element, and individual <fact> elements for each piece of information.
-In my analysis, I will:
+Name: Short, descriptive title
+Type: Categorization of information
+Description: Detailed explanation (10-25 words) with abstracted party roles
+Concept: Core legal principle (1-8 words)
+Symbol: Ultra-short abstraction (1-4 words)
 
-Be thorough and accurate
-Use clear and concise language
-Refer to parties by their roles (Plaintiff, Defendant) rather than specific names
-Choose appropriate relationships between nodes
-Follow the specified format exactly
-Remove all symbols that would break XML from the values
+I'll establish relationships between nodes using:
 
+HAS_KEY_FACT
+HAS_RELEVANT_FACT
+RESULTED_IN
 
-
-I will begin my analysis once provided with the case law file and present the structured representation as requested. My output will be a comprehensive, well-organized, and XML-formatted representation of the key elements of the case, suitable for further processing or analysis.
+My output will follow the exact XML format with properly structured fact nodes within FactualBackgrounds tags. I'll ensure all parties are referred to by roles (Plaintiff, Defendant) rather than specific names, and I'll remove any characters that could break XML formatting.
+Nothing but XML, all the way
