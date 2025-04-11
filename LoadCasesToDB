@@ -22,7 +22,7 @@ logging.basicConfig(
         logging.StreamHandler()
     ]
 )
-logger = logging.getLogger("neo4j2postgres")
+logger = logging.getLogger("LoadCasesToDB")
 
 # Database connection parameters - customize these for your environment
 
@@ -32,7 +32,7 @@ SQL_DB_PASSWORD_AUTH: str = "dev4023TcupSoda" if not LOCAL else "root"
 SQL_DB_HOST_AUTH: str = "legawritesql.postgres.database.azure.com" if not LOCAL else "localhost"
 SQL_DB_PORT_AUTH: str = "5432"
 
-CASES_DIR = r'C:\_Repo\KGW-Extractor\Cases'
+CASES_DIR = r'C:\__CaseLib_04092025\Output'
 
 def get_db_connection():
     return psycopg2.connect(
@@ -99,9 +99,9 @@ def load_cases_to_db():
                 datetime.utcnow()
             ))
             inserted += 1
-            logger.info(f"Inserted: {folder_name}")
-
-        conn.commit()
+            conn.commit()
+            logger.info(f"!!! Inserted: {folder_name} !!! Welcome to LW biyatch")
+            
         cursor.close()
         conn.close()
         logger.info(f"Finished loading {inserted} cases.")

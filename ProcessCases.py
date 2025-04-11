@@ -3,6 +3,17 @@ import psycopg2
 from psycopg2.extras import DictCursor
 from openai import OpenAI
 from datetime import datetime
+import logging
+
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler("ProcessCases.log"),
+        logging.StreamHandler()
+    ]
+)
+logger = logging.getLogger("ProcessCases")
 
 # === CONFIGURATION ===
 DEEPSEEK_API_KEY = "sk-15ea675bbe1b4d89b729c34513f1c0bf"
@@ -34,6 +45,7 @@ def process_next_case():
     case = cursor.fetchone()
     if not case:
         print("No cases to process.")
+        logger.info("No cases to process.")
         return
 
     case_id = case["case_id"]
@@ -53,21 +65,24 @@ def process_next_case():
         functional_area = prompt["functional_area"]
         system_prompt = prompt["system_prompt"]
         extraction_prompt = prompt["extraction_prompt"]
+        confirmation_prompt = prompt["confirmation_prompt"]
         output_file = os.path.join(output_path, f"{functional_area}.xml")
 
         if os.path.exists(output_file):
             print(f"⏭️ Skipping {functional_area} (already exists)")
+            logger.info(f"⏭️ Skipping {functional_area} (already exists)")
             continue
 
         user_prompt = render_prompt(extraction_prompt, {"@CaseText": case_text})
         print(f"🧠 Sending prompt for {functional_area}...")
-
+        logger.info(f"🧠 Sending prompt for {functional_area}...")
         try:
             response = client.chat.completions.create(
                 model="deepseek-chat",
                 messages=[
                     {"role": "system", "content": system_prompt},
-                    {"role": "user", "content": user_prompt}
+                    {"role": "user", "content": user_prompt},
+                    {"role": "assistant", "content": confirmation_prompt}
                 ],
                 stream=False
             )
@@ -76,10 +91,12 @@ def process_next_case():
             with open(output_file, "w", encoding="utf-8") as f:
                 f.write(result)
 
-            print(f"✅ Saved {functional_area}.xml")
+            print(f"✅ Saved: {functional_area}.xml for {case_id}, welcome to the LW family! ")
+            logger.info(f"✅ Saved: {functional_area}.xml for {case_id}, welcome to the LW family! ")
 
         except Exception as e:
             print(f"❌ Error processing {functional_area}: {e}")
+            logger.info(f"❌ Error processing {functional_area}: {e}")
             # Don't stop, keep processing other functional areas
 
     # Check that all expected files were created
@@ -91,8 +108,10 @@ def process_next_case():
     if all_done:
         cursor.execute("UPDATE cases SET status = 'completed' WHERE id = %s", (case["id"],))
         print(f"🏁 Case {case_id} marked as completed.")
+        logger.info(f"🏁 Case {case_id} marked as completed.")
     else:
         print(f"⚠️ Case {case_id} still incomplete, will resume later.")
+        logger.info(f"⚠️ Case {case_id} still incomplete, will resume later.")
 
     conn.commit()
     cursor.close()
@@ -114,5 +133,5 @@ def process_all_cases():
 
         process_next_case()
         
-if __name__ == "__main__":
-    process_all_cases()
+# if __name__ == "__main__":
+#     process_all_cases()
