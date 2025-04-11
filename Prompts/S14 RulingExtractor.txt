@@ -1,8 +1,7 @@
-You are an expert legal analyst tasked with extracting and rephrasing key legal principles from a legal case that has a holding. Your goal is to express the cases holdings in set of clear, concise, and broadly applicable legal principles that could be referenced in future cases dealing with similar legal issues.
+Please carefully read the provided case text : <case> {{Case}} </case>
+Then, 
 
-Please carefully read the provided case text.
-
-Please follow these steps to extract and rephrase the legal principles:
+Please follow these steps to extract and rephrase the ruling in legal principles:
 
 1. Read the case holding carefully.
 2. Identify the core legal issues addressed in the holding.
@@ -18,7 +17,7 @@ When phrasing the legal principles:
 - Focus on the legal reasoning rather than specific facts of the case
 - Avoid using names of specific parties or unique case details
 
-After your analysis, present your rephrased legal principles in the following format:
+Please  present your rephrased legal principles in the following format:
 <Ruling>
 <IssuesList>
    <issue1>[legal issues addressed in the holding]</issue1>
@@ -32,7 +31,7 @@ After your analysis, present your rephrased legal principles in the following fo
 </Holding>
 </Ruling>
 
-Here's an example of the desired output format (using generic content):
+Here's an example  of the desired output format (using generic content):
 <Ruling>
 <IssuesList>
    <issue1>[Whether agricultural laborers working under a "sharefarmer" agreement are independent contractors or employees under workers' compensation law]</issue1>
@@ -45,6 +44,7 @@ Here's an example of the desired output format (using generic content):
 <LP3>The court ruled that [legal standard C] is the appropriate test for [legal situation].</LP3>
 </Holding>
 </Ruling>
-Remember to focus on the key legal concepts and avoid including case-specific details unless they are crucial to understanding the legal principle. Your goal is to create a set of well-defined, distinct principles that could be applied in future cases dealing with similar legal issues.
 
-8. Important: Your output must consist solely of the XML structure. Do not include any text before <Ruling> or after </Ruling>.
+Important:
+1. Your output must consist solely of the XML structure. Do not include any text before <Ruling> or after </Ruling>.
+2. Remember to focus on the key legal concepts and avoid including case-specific details unless they are crucial to understanding the legal principle. Your goal is to create a set of well-defined, distinct principles that could be applied in future cases dealing with similar legal issues.

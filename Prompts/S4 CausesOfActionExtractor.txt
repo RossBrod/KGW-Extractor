@@ -1,23 +1,21 @@
-You are tasked with extracting all stated causes of action from a given case law text. Your goal is to identify and categorize each cause of action mentioned in the text, providing specific details as outlined below. 
-Here is the case law text you will be analyzing:
+Please carefully read the provided case text : <case> {{Case}} </case>
 
-Follow these steps to complete the task:
+Then, 
+Instructions:
 
-1. Carefully read through the entire case law text.
+1. Identify all explicitly stated causes of action. A cause of action is a set of facts sufficient to justify a right to sue to obtain money, property, or the enforcement of a right against another party. Focus only on causes of action that are clearly stated in the text.
 
-2. Identify all explicitly stated causes of action. A cause of action is a set of facts sufficient to justify a right to sue to obtain money, property, or the enforcement of a right against another party. Focus only on causes of action that are clearly stated in the text.
-
-3. For each identified cause of action, extract the following information:
+2. For each identified cause of action, extract the following information:
    a. Name: Provide a short, common name for the cause of action.
    b. Type: Specify the type or category of the cause of action.
    c. Description: Give the full name or description of the cause of action if available in the text.
 
-4. If the case law clearly states the legal basis for a cause of action, include this information in a LegalBasis node with the following fields:
+3. If the case law clearly states the legal basis for a cause of action, include this information in a LegalBasis node with the following fields:
    a. Name: The name of the law, precedent, or legal doctrine cited.
    b. Type: The type of legal basis (e.g., statute, case law, constitutional provision).
    c. Description: A brief description of the law or doctrine as mentioned in the case.
 
-5. Present your findings in the following XML format:
+4. Present your findings in the following XML format:
 
 <causes_of_action>
   <cause_of_action1>

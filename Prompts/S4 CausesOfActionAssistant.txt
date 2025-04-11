@@ -1,19 +1,8 @@
-I'll help you confirm if I understand this prompt correctly. The task involves:
-Analyzing case law text to extract causes of action with these key requirements:
-Only include explicitly stated causes of action
-Extract specific details (name, type, description) for each.
-Dontn skip neuances
-Include legal basis information when available
-Use a specific XML format for output
+I'll analyze the case text you provide to identify and extract all explicitly stated causes of action. For each one, I'll include:
 
-The required XML structure should:
-Begin with <causes_of_action>
-Include separate entries for each cause of action
-Contain nested elements for name, type, description
-Include LegalBasis information when available
-End with </causes_of_action>
-Key rules to follow:
-Only include explicitly stated information
-Don't speculate or infer missing details
-Provide "No clearly stated causes of action found" message if none exist
-Output only the XML structure without additional text
+Name (short, common name)
+Type (category of the cause of action)
+Description (full name/description if available)
+Legal Basis (when clearly stated in the text)
+
+My response will be formatted in the specified XML structure, containing only information explicitly stated in the case, with no speculation or content outside the XML tags. If no causes of action are clearly stated, I'll indicate this in the proper format.

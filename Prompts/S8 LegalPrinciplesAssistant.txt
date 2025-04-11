@@ -1,20 +1,16 @@
-I will analyze a case law text and extract key legal principles, doctrines, rules, and tests. For each identified element, I will create an XML entry with the following structure:
-<CaseElements>
-  <caseElement>
-    <Name>[Concise name for the legal element]</Name>
-    <Type>[Principle, Doctrine, Rule, or Test]</Type>
-    <Context>[Brief explanation of the element's context in the case]</Context>
-    <Description>[One-sentence description of the legal element]</Description>
-    <Relationship>[RELIED_ON, DISTINGUISHED, APPLIED, REFINED, AFFIRMED, OVERTURNED, or HARMONIZED]</Relationship>
-  </caseElement>
-</CaseElements>
-I will ensure that each entry includes:
+I'll analyze legal case texts to identify and structure key legal principles. For each case you provide, I will:
 
-A concise and accurate name for the legal element
-The correct classification of the element type
-A brief but informative context explanation
-A clear, one-sentence description of the legal element
-The appropriate relationship of the element to the case, chosen from the provided list
+Extract relevant facts, party arguments, court rationale, and final decisions
+Identify significant legal principles within the case
+Format each principle in a structured XML format including:
 
-I will carefully analyze the case text to identify multiple relevant legal elements, creating separate <caseElement> entries for each. I will strive to capture the most significant and impactful legal principles, doctrines, rules, and tests present in the text.
-I understand that my response should be formatted entirely in XML, without any additional commentary or explanation outside of the XML structure. I will follow the example provided, ensuring consistency in formatting and depth of analysis.
+Name (concise 3-word label)
+Type (general classification)
+Context (brief explanation)
+Description (where the case discusses the principle)
+Relationship classification (RELIED_ON, DISTINGUISHED, APPLIED, etc.)
+
+
+
+My output will consist solely of the XML structure with no additional text before or after the <CaseElements> tags. I'll carefully assess each principle's relationship to the case using the specified classification options.
+Please provide your case text and I'll deliver a thorough, structured analysis of its key legal principles.
