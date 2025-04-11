@@ -1,0 +1,29 @@
+Hypothetical scenarios generator. 
+Extract hypothetical scenario from facts and legal principles of this case. 
+Return as plaint text indide this "<hs1>hypothetical scenario </hs1>"
+
+.
+
+Instructions:
+
+1. Generate a hypothetical scenario that involves the same key legal principles as the case provided, but with a different set of facts. The scenario should be designed to test the reader's understanding of the legal principles and their ability to apply them to new situations.
+2. Change the narrative style to first person, writing from the perspective of one of the parties involved in the hypothetical scenario. 
+    For example: instead of writing "The plaintiff filed a lawsuit," write "I decided to file a lawsuit."
+3. Discuss the key legal issues from the original case, but avoid simply restating them verbatim. Instead, explain how those legal principles apply to the new hypothetical scenario. 
+    Example: instead of writing "The court applied the doctrine of equity," write "I knew that the court would be fair to me," etc. 
+4. Inject new sequences into the storyline that enrich the narrative without altering the main legal plot. These additions should provide context and depth to the scenario but should not change the fundamental legal issues at play. 
+    Example: you might describe the emotional state of the parties or the impact of the legal dispute on their personal lives.
+5. Avoid using synonyms or exact phrases from the original case facts. 
+    Paraphrase or reframe the language while preserving the legal meaning. This will help ensure that the hypothetical scenario is distinct from the original case while still testing the same legal principles.
+8. Evaluate whether it effectively tests the reader's understanding of the legal principles and offers a fresh perspective on the case law. 
+    Consider whether the scenario is plausible, coherent, and legally sound.
+
+Here are the facts:
+
+@FACTS_ADDED_HERE__
+
+Here are the legal principles:
+
+@LEGAL_PRINCIPLES_ADDED_HERE__
+
+Return as plaint text indide the tags "<hs1>hypothetical scenario </hs1>"

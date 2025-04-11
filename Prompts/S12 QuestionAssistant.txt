@@ -1,0 +1,10 @@
+I will generate a hypothetical scenario based on the provided case law, focusing on the key legal principles and facts. To create this scenario, I will:
+1. Develop a new set of facts that involve the same fundamental legal issues as the original case, but with a different context and storyline. This will test the reader's ability to recognize and apply the legal principles in a novel situation.
+2. Write the scenario in the first person, adopting the perspective of one of the parties involved. This narrative style will make the hypothetical more engaging and relatable for the reader.
+3. Discuss the key legal issues from the original case, but explain them in terms of how they apply to the new hypothetical scenario. I will avoid simply restating the legal principles verbatim and instead focus on their practical implications in the new context.
+4. Add new elements to the story that provide depth and context without changing the core legal issues. These additions will enrich the narrative and make the scenario more realistic and compelling.
+5. Avoid using the exact phrases or synonyms from the original case facts to ensure that the hypothetical scenario is distinct and original. I will paraphrase and reframe the language while preserving the legal meaning.
+6. Evaluate the effectiveness of the hypothetical scenario in testing the reader's understanding of the legal principles and offering a fresh perspective on the case law. I will assess the scenario's plausibility, coherence, and legal soundness.
+
+Using the provided facts and legal principles, I will generate a hypothetical scenario that meets these criteria and presents a new situation for the reader to analyze and consider.
+Return as plaint text indide this "<hs1>hypothetical scenario </hs1>"

@@ -1,0 +1,51 @@
+Please carefully read the provided case text : <case> {{Case}} </case>
+
+Then, write a concise summary of the case in 600 words or less, addressing the following key points:
+
+Instructions:
+1. Provide a brief overview of what the case is about and describe the primary situations where the ruling in this case would be most applicable as precedent. Indicate whether the ruling is more favorable for plaintiffs or defendants. Most words out of 600 can be used here.
+2. Clearly identify and highlight the essential holdings and legal principles established in the case, noting any significant new interpretations or modifications of existing law.
+3. Briefly summarize the core arguments and reasoning presented by each side (use plaintiff or defendant instead of names) in the case. Mention the main legal principles or precedents each side relied upon to support their position.
+4. Pay close attention to and make sure to include any exceptions to general legal rules or principles that the court articulated in this case.
+5. Present your results in the following format:
+
+<CaseSummary>
+    <Casename></Casename>
+    <Overview>
+        Provide a brief overview of what the case is about and the primary situations where the ruling would be most applicable as precedent.
+    </Overview>
+
+    <LegalDomain>
+    Specify the broad legal domain (e.g. Contracts, Torts, Property) and any relevant subdomains in following 
+        [Broad Legal Domain] -> [Subdomains (if applicable)] -> [Specific Legal Issue or Concept]
+        EXAMPLE:
+            - Constitutional Law -> First Amendment -> Freedom of Speech
+            - Criminal Law -> Homicide -> Mens Rea Requirement
+            - Contract Law -> Contract Formation -> Offer and Acceptance
+    </LegalDomain>
+
+    <BothSidesArgumentsAndReasoning>
+        <PlaintiffArguments> [Briefly summarize the core arguments and reasoning presented by the plaintiff(s). Refer to parties as "plaintiff" or "defendant" rather than using names]</PlaintiffArguments>
+        <PlaintiffArgumentsType> [Classify the plaintiff(s) arguments in 4 words ]</PlaintiffArgumentsType>
+        <DefendantArguments> [Briefly summarize the core arguments and reasoning presented by the defendant(s). Refer to parties as "plaintiff" or "defendant" rather than using names]</DefendantArguments>
+        <DefendantArgumentsType> [Classify the defendant(s) arguments in 4 words ]</DefendantArgumentsType>
+    </BothSidesArgumentsAndReasoning>
+    <ApplicabilityOfTheCase>
+        When would one site the case, in 20 words or less.
+    </ApplicabilityOfTheCase>
+    <FindingsFavoredParty>
+        <WinningParty>
+            Just say "Plaintiff" or "Defendant" No other text 
+        </WinningParty>
+    </FindingsFavoredParty>
+</CaseSummary>
+
+Additional Instructions:
+- Keep the <Overview> summary under 400 words.
+- Focus on concisely extracting and explaining the essential points. 
+- Omit peripheral details not directly relevant to the court's core holding and reasoning.
+- Use clear, straightforward language and short paragraphs.
+- In the arguments and favored party sections, refer to parties as "plaintiff" or "defendant" rather than using names.
+
+6. Important: Your output must consist solely of the XML structure. Do not include any text before <CaseSummary> or after </CaseSummary>.
+

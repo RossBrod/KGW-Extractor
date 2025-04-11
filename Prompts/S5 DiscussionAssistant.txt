@@ -1,0 +1,37 @@
+I will help you verify and confirm that the Cypher code generated for the case law analysis meets the specified requirements. Please review the following checklist to ensure all criteria are met:
+
+1. Correct node types:
+   - Confirm that only CourtDecision, KeyIssue, CourtOpinion, CourtFinding, CourtReasoning, Implication, and PrevailingParty nodes are created.
+   - Verify that no other node types are included.
+
+2. Node properties:
+   - Check that each node has the required properties: name, type, description, concept, and symbol.
+   - Ensure that the concept and symbol properties use generic terms like "Plaintiff," "Defendant," or "Party" instead of specific names.
+
+3. Relationships:
+   - Verify that the following relationships are used correctly:
+     [:HAS_COURT_DECISION], [:HAS_KEY_ISSUE], [:HAS_OPINION], [:HAS_FINDING], [:HAS_REASONING], [:HAS_IMPLICATION], [:HAS_PREVAILING_PARTY]
+   - Confirm that all nodes are properly connected to the Discussion node, either directly or through intermediate nodes.
+
+4. Variable naming:
+   - Ensure that all variables (except "case1") use the "dsc_" prefix.
+   - Verify that the "case1" variable is used correctly to represent the case itself.
+
+5. String formatting:
+   - Check that all string values are enclosed in double quotes ("").
+   - Verify that single quotes ('') are used for internal quotations within string content.
+   - Confirm that no double quotes are used inside string content.
+
+6. Cypher code formatting:
+   - Ensure that the Cypher code is enclosed within <CYPHER> </CYPHER> tags.
+
+7. Content accuracy:
+   - Review the created nodes and relationships to ensure they accurately represent the court's decision, key issues, opinions, findings, reasoning, implications, and the prevailing party from the "Discussion" portion of the case law file.
+
+8. Completeness:
+   - Verify that all relevant information from the "Discussion" section is captured in the graph structure.
+
+9. Absence of Case node:
+   - Confirm that no Case node is created in the Cypher code.
+
+Please carefully review the generated Cypher code against these criteria and provide feedback on any discrepancies or areas that need improvement. If all requirements are met, confirm that the code is ready for use.

@@ -1,0 +1,21 @@
+I understand that you want me to extract legal doctrines and principles from case law, focusing on both explicit and implicit concepts. I will analyze the court's reasoning, legal precedents, and arguments made by parties or judges. For each identified doctrine or principle, I will:
+
+Distill its core idea and legal essence.
+Create a Doctrine node with a clear name and description.
+Connect the Doctrine node to the Case node using the most appropriate relationship from the provided list.
+Create LegalPrecedent nodes for key precedents and connect them to the Doctrine node.
+Analyze how the doctrine relates to previously extracted doctrines.
+Connect party nodes to the Case node using role-based relationships.
+
+I will follow these important rules:
+
+Never create the Case node.
+Use no quotes for field names.
+Use the "dokrn_" prefix for all variables except "case1".
+Follow the string formatting rules for node properties:
+• Enclose all string values in double quotes ("").
+• Use single quotes ('') for internal quotations within strings.
+• Never use double quotes inside string content.
+
+I will provide the output purely as Cypher code within <CYPHER> </CYPHER> tags, without additional explanations. I will use the provided CYPHER examples as a guide for formatting and structure.
+Is this understanding correct? Would you like me to proceed with extracting legal doctrines and principles based on these instructions?

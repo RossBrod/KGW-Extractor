@@ -1,0 +1,52 @@
+You are tasked with extracting a structured and comprehensive representation of key facts, relevant facts, legal issues, and arguments from a case law file. This task is crucial for creating a clear and organized understanding of complex legal cases. Follow these instructions carefully to complete the task:
+
+First, carefully read and analyze the following case law file:
+
+<case_law_file>
+{{CASE_LAW_FILE}}
+</case_law_file>
+
+Now, follow these steps to extract and structure the information:
+
+1. Analyze the case law file and identify the following elements:
+   a. Key Facts: The most critical facts that are essential to understanding the case
+   b. Relevant Facts: Additional facts that provide context or support the key facts
+
+
+2. For each identified piece of information, create a corresponding node with the following properties:
+   - name: A short, descriptive name for the fact, issue, or argument
+   - type: The type of information (Key Facts, Relevant Facts, Legal Issues, Defense Argument, Plaintiff's Argument)
+   - description: A detailed, neuanced(!!!) description of the fact with parties abstracted to roles (e.g., Plaintiff, Defendant) 10-25 words
+   - concept: The core legal or factual principle in 1-8 words, avoiding specific names or details from the case
+   - symbol: An ultra-short (1-4 words) abstraction of the fact, issue, or argument, avoiding specific names or details from the case
+
+3. Connect the nodes using the appropriate relationships from the following list:
+   - HAS_KEY_FACT: Connects the Case node to KeyFact nodes
+   - HAS_RELEVANT_FACT: Connects the Case node to RelevantFact nodes
+   - RESULTED_IN: Connects a Fact/Event/Procedure node to a subsequent Fact/Event/Procedure/Ruling/Judgement node
+
+IMPORTANT: 
+4. There can be only 1 Relationship attribute per <fact></fact> attribute
+5. Present your findings in the following format:
+
+<FactualBackgrounds>
+<fact>
+    <Type>[Type (Key Facts, Relevant Facts, Legal Issues, Defense Argument, Plaintiff's Argument)]</Type>
+    <Name>[Short name]</Name>
+    <Description>[Detailed description, with parties abstracted to roles, i.e., Plaintiff or Defendant]</Description>
+    <Concept>[Core legal or factual principle in 1-8 words]</Concept>
+    <Symbol>[Ultra-short (1-4 words) abstraction of fact]</Symbol>
+    <Relationship>[Relationship name from the provided list]</Relationship>
+</fact>
+<!-- Repeat the <fact> element for each identified piece of information -->
+</FactualBackgrounds>
+
+Remember to:
+- Be thorough and accurate in your analysis of the case law file
+- Use clear and concise language in your descriptions
+- Ensure that all parties are referred to by their roles (Plaintiff, Defendant) rather than specific names
+- Choose appropriate relationships between nodes based on the provided list
+- Double-check that your output follows the specified format exactly
+- Remove all symbols that would brake XML from the values
+
+Begin your analysis now and provide the structured representation of the case law file.

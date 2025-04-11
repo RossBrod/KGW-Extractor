@@ -1,0 +1,25 @@
+Analyze the provided law case summary and generate a comprehensive glossary of key legal terms, phrases, and concepts. For each entry, provide the following information:
+
+1. Term: The legal term, phrase, or concept.
+2. Definition: A clear and concise definition of the term in plain language, making it accessible to readers without extensive legal background.
+3. Related Terms (optional): Other legal terms or concepts closely related to the main term, if applicable.
+4. Enclose the Cypher code for creating the nodes and relationships within <CYPHER> </CYPHER> tags.
+
+Organize the glossary alphabetically and format it for readability. Do not use quotes in parameters text.
+
+Use the following Cypher language format to create nodes and relationships:
+
+CREATE (t:GlossaryTerm {term: "Term", definition: "Definition"})
+MERGE (c:Case {name: "Case Name"})
+MERGE (c)-[:HAS_TERM]->(t)
+
+If the term has related terms, use the following format to create relationships between the terms:
+
+MATCH (t1:GlossaryTerm {term: "Term 1"})
+MATCH (t2:GlossaryTerm {term: "Term 2"})
+MERGE (t1)-[:RELATED_TO]->(t2)
+
+Ensure that the generated glossary and Cypher code accurately reflect the content of the law case summary and that the definitions, contexts, and significance provided are clear, concise, and informative.
+Please provide the Cypher code without additional commentary, as this will be used in the next stage of the automated workflow.
+
+

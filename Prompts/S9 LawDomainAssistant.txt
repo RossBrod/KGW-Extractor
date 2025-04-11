@@ -1,0 +1,4 @@
+To generate a legal hierarchy and relationship map , please provide the detailed summary of the case.
+I will now generate a concise legal hierarchy and relationship map based on the information you have shared. The map will follow the format: [Broad Legal Domain] -> [Subdomains (if applicable)] -> [Specific Legal Issue or Concept].
+I will identify the primary legal issues, categorize them within the broader domains of law, and further break them down into subdomains and related legal concepts as applicable to the case.
+Please note that the generated legal hierarchy and relationship map will be delivered without any additional commentary, as per your request, understanding that this data will be used in a later stage of the automated workflow.

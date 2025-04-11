@@ -1,0 +1,32 @@
+I'll help you confirm if I understand the case summary extraction task correctly. Let me break down the key requirements:
+
+Format Requirements:
+
+Must use the specified XML structure
+No text outside the XML tags
+Must stay within specified word limits (600 total, 300 for overview)
+
+Content Requirements:
+
+Case name
+Overview of case and precedential value
+Legal domain classification with hierarchy
+Both sides' arguments (summarized + 4-word classification)
+20-word applicability statement
+Winner identification (just "Plaintiff" or "Defendant")
+
+Style Requirements:
+
+Use "plaintiff"/"defendant" instead of names
+Concise, clear language
+Focus on essential points
+Short paragraphs
+Omit peripheral details
+
+Key Elements to Extract:
+
+Core holdings
+Legal principles established
+New interpretations of law
+Exceptions to legal rules
+Primary precedential situations

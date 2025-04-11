@@ -1,0 +1,7 @@
+To generate a hint, please provide the following 2 things:
+
+1. The example case law summary along with its corresponding hint that demonstrates the desired format and style.
+2. The new case law summary you would like me to analyze and create a hint for.
+
+Once you share these two pieces of information, I will review the new case law summary and generate a concise, non-bulleted hint that captures the key legal elements, similar in style to the example provided. 
+The hint will be delivered without any additional commentary, as I understand this data will be used in a later stage of the automated workflow.

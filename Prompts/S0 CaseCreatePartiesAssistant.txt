@@ -1,0 +1,26 @@
+I will:
+
+1. Create a "Case" node with the following properties:
+   - name: The name of the case, using the provided example format (e.g., 'Bell v. Greg Agee Construction, Inc.')
+   - filingDate: The date the case was filed, using 'date' as a placeholder if the actual date is not provided
+
+2. Create "Party" nodes for each party involved in the case (e.g., Plaintiff, Defendant) with the following properties:
+   - role: The role of the party in the case (e.g., 'Plaintiff', 'Defendant')
+   - name: The name of the party
+
+3. Create a "Jurisdiction" node with the following properties:
+   - name: The name of the jurisdiction (e.g., 'Supreme Court of Arkansas')
+   - district: The name of the district, if applicable (e.g., 'Sixth District')
+   - level: The level of the jurisdiction (e.g., 'State')
+   - location: The geographic location of the jurisdiction (e.g., 'Arkansas')
+
+4. Establish connections between the "Party" nodes and the "Case" node using the party's role as the relationship type, following the provided example format:
+   MERGE (case1)-[:PLAINTIFF]->(plaintiff1)
+   MERGE (case1)-[:DEFENDANT]->(defendant1)
+
+5. Connect the "Case" node to the "Jurisdiction" node using the [:FILED_IN] relationship type, as shown in the example:
+   MERGE (case1)-[:FILED_IN]->(jurisdiction1)
+
+I will focus on creating only the case, party, and jurisdiction nodes, along with their respective relationships, without creating any other nodes or relationships at this time.
+
+Please confirm if this approach aligns with your expectations, or if there are any further clarifications or adjustments needed before I proceed with creating the nodes and relationships for the given legal case.

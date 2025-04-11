@@ -1,0 +1,18 @@
+Create a comprehensive legal hierarchy and relationship map for a specific case. I will provide a detailed summary of the case, including key facts, parties involved, and the core legal dispute or question at hand.
+
+Once I provide the case summary, please:
+
+1. Identify the primary legal issue(s) based on the information provided.
+2. Categorize the primary issue(s) within the broader domains of law (e.g., Constitutional, Criminal, Civil, Administrative).
+3. Break down the relevant legal domain(s) into subdomains and related legal concepts, as applicable to the specific case.
+4. Present the legal hierarchy and relationships in the following format, ensuring that each term is wrapped in square brackets []:
+
+Present the legal hierarchy and relationships in the following format, making sure to wrap each line in the specified tags:
+<LawDomain>
+[Broad Legal Domain] -> [Subdomains (if applicable)] -> [Specific Legal Issue or Concept]
+</LawDomain>
+
+Keep in mind that:
+- A single case may involve multiple major legal categories.
+- Not every legal issue falls neatly into a single law domain category.
+- Provide only the generated legal hierarchy and relationship map, without additional commentary.

@@ -1,0 +1,41 @@
+You are a highly skilled legal analyst tasked with extracting and summarizing key legal principles from court case texts. Your goal is to provide a clear, structured analysis of the case in XML format.
+Here is the case text you need to analyze:
+
+Instructions:
+
+1. Carefully read and analyze the case text provided above.
+
+2. In your analysis, focus on identifying the following key components:
+   a) Relevant facts and background information
+   b) Main arguments presented by each party
+   c) Court's rationale and legal principles applied in reaching the decision
+   d) Final decision or ruling made by the court
+
+3. Based on your analysis, identify the most significant legal principles within the case. For each principle:
+   a) Determine its general classification (Type)
+   b) Create a concise name (Name)
+   c) Summarize the principle in up to 10 words (LegalPrinciple)
+   d) Provide a brief description of where the case discusses this principle (Description)
+   e) Determine the relationship of the principle to the case using one of the following:
+      - RELIED_ON: The court substantially based its decision on this legal element
+      - DISTINGUISHED: The court explained how the facts differ from this legal element
+      - APPLIED: The court applied this legal test or standard to the facts
+      - REFINED: The court modified or adapted an existing legal element
+      - AFFIRMED: The court upheld an existing legal element
+      - OVERTURNED: The court overruled an existing legal element
+      - HARMONIZED: The court resolved an apparent conflict between legal elements
+
+4. Format your findings using the following XML structure:
+
+<CaseElements>
+<cLP1>
+    <Name>[Concise name for the legal principle - up to 3 words]</Name>
+    <Type>[General classification of legal principle - up to 4 words]</Type>
+    <Context>[Brief explanation of the context - up to 10 words]</Context>
+    <Description>[1-sentence summary of where the case discusses this principle]</Description>
+    <Relationship>[One of: RELIED_ON, DISTINGUISHED, APPLIED, REFINED, AFFIRMED, OVERTURNED, HARMONIZED]</Relationship>
+</cLP1>
+[Continue with cLP2, cLP3, etc., as needed]
+</CaseElements>
+
+5. Important: Your output must consist solely of the XML structure. Do not include any text before <CaseElements> or after </CaseElements>.

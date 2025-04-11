@@ -663,7 +663,7 @@ def process_LegalPrinciples(root_dir):
     finally:
         cursor.close()
         connection.close()
-def extract_legal_principles(content):
+def extract_legal_principles(content): 
     """Extract legal principles from the CaseElements section using regex."""
     principles = []
     
@@ -703,12 +703,13 @@ def extract_legal_principles(content):
             principle['relationship'] = relationship_match.group(1).strip()
         
         principles.append(principle)
-    
+   
     return principles
+
 def load_legal_principles(file_path, case_id, cursor):
     """Extract legal principles from a file and load them into PostgreSQL."""
     if case_exists(case_id, "legal_principles"):
-        logger.info(f"Case {case_id} already exists. Skipping creation.")
+        logger.info(f"<<<<<<<<<<<<<<<<<<<<<<Case {case_id} already exists. Skipping creation.>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>********************************************************************************************")
         return    
     try:
         with open(file_path, 'r', encoding='utf-8') as file:
@@ -1010,16 +1011,6 @@ def get_additional_info(case_id, root_dir):
     except Exception as e:
         print(f"[ERROR] Unexpected error reading {file_path}: {str(e)}")
         return "", "", ""
-
-def save_courtinfo(case_id, court, date_published, citation):
-    query = """
-        UPDATE cases 
-        SET court = %s,
-            date_published = %s,
-            citation = %s
-        WHERE case_id = %s
-    """
-   
 def save_courtinfo(case_id, court, date_published, citation):
     query = """
         UPDATE cases 
@@ -1030,7 +1021,6 @@ def save_courtinfo(case_id, court, date_published, citation):
     """
     connection = None
     cursor = None
-
     try:
         # Convert empty string to None for proper SQL NULL insertion
         citation_value = citation if citation else None
@@ -1048,13 +1038,11 @@ def save_courtinfo(case_id, court, date_published, citation):
             cursor.close()
         if connection:
             connection.close()
-
-    
 def process_additionalinfo_folder(root_dir):
     for folder_name in os.listdir(root_dir):
         print("AdditionalInfo starting: " + folder_name)
-        court, date_published = get_additional_info(folder_name, root_dir)
-        save_courtinfo(folder_name, court, date_published)
+        court, date_published, citation = get_additional_info(folder_name, root_dir)
+        save_courtinfo(folder_name, court, date_published,citation)
         print("finished: " + folder_name)
 ########## /additionalinfo_folder
 
@@ -1127,24 +1115,11 @@ def extract_issues(issues_section):
         issues.append(match.strip())
     
     return issues
-def extract_legal_principles(holding_section):
-    """Extract legal principles from the Holding section."""
-    principles = []
-    if not holding_section:
-        return principles
-    
-    # Use regex to find all LP elements (LP1, LP2, etc.)
-    lp_pattern = r"<LP\d+>(.*?)</LP\d+>"
-    matches = re.findall(lp_pattern, holding_section, re.DOTALL)
-    
-    for match in matches:
-        principles.append(match.strip())
-    
-    return principles
+
 def load_ruling_data(file_path, case_id, cursor):
     """Extract ruling data from a file and load it into PostgreSQL."""
     if case_exists(case_id, "case_rulings"):
-        logger.info(f"Case {case_id} already exists. Skipping creation.")
+        logger.info(f">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Case {case_id} already exists. Skipping creation.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%")
         return
     try:
         with open(file_path, 'r', encoding='utf-8') as file:
@@ -1456,13 +1431,13 @@ def main():
         # Replace with your actual directory path
         root_directory = "C:\\__CaseLib_04092025\\ReadyToProcess"
         
-        process_case_creation_file(root_directory)
-        process_case_summary_files(root_directory)
-        process_taxonomy_folder(root_directory)
+        #process_case_creation_file(root_directory)
+        #process_case_summary_files(root_directory)
+        #process_taxonomy_folder(root_directory)
         process_LegalPrinciples(root_directory)
-        process_Facts(root_directory)
-        process_additionalinfo_folder(root_directory) ############# This was skiped on my local, actually key info is Court name...
-        process_Ruling(root_directory)
+        #process_Facts(root_directory)
+        #process_additionalinfo_folder(root_directory) 
+        #process_Ruling(root_directory)
         #process_CausesOfAction(root_directory)
         
         logger.info("Processing completed successfully")
@@ -1471,3 +1446,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+    
