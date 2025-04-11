@@ -1,0 +1,26 @@
+Based on the case text, I have identified the following causes of action:
+
+<CYPHER>
+CREATE (coa_1:CauseOfAction {name: "First Amendment Retaliation", type: "Constitutional Violation", description: "Retaliation for exercising free speech rights under the First Amendment"})
+MERGE (case1)-[:ASSERTED_BY]->(coa_1)
+CREATE (coa_lb1:LegalBasis {name: "42 U.S.C. § 1983", type: "Federal Statute", description: "Civil action for deprivation of rights"})
+MERGE (coa_1)-[:BASED_ON]->(coa_lb1)
+
+CREATE (coa_2:CauseOfAction {name: "Discrimination", type: "FEHA Violation", description: "Discrimination in violation of California's Fair Employment and Housing Act"})
+MERGE (case1)-[:ASSERTED_BY]->(coa_2)
+
+CREATE (coa_3:CauseOfAction {name: "Retaliation", type: "FEHA Violation", description: "Retaliation in violation of California's Fair Employment and Housing Act"})
+MERGE (case1)-[:ASSERTED_BY]->(coa_3)
+
+CREATE (coa_4:CauseOfAction {name: "Violation of Public Safety Officers Procedural Bill of Rights", type: "Statutory Violation", description: "Violation of the California Public Safety Officers Procedural Bill of Rights"})
+MERGE (case1)-[:ASSERTED_BY]->(coa_4)
+</CYPHER>
+
+The key causes of action are:
+
+1. First Amendment Retaliation (under 42 U.S.C. § 1983)
+2. Discrimination in violation of California's Fair Employment and Housing Act (FEHA)
+3. Retaliation in violation of FEHA
+4. Violation of the California Public Safety Officers Procedural Bill of Rights
+
+The plaintiff initially asserted six claims, but later dropped the harassment and California Constitution violation claims. The remaining four claims are the focus of this case.

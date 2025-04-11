@@ -1,0 +1,21 @@
+{
+    "name": "Hauger v. Gates",
+    "number_of_cases": 43,
+    "citations": [
+        "https://casetext.com/case/walters-v-bank-of-america-etc-assn#p54",
+        "https://casetext.com/case/walters-v-bank-of-america-etc-assn",
+        "https://casetext.com/case/williams-v-pratt-1#p632",
+        "https://casetext.com/case/williams-v-pratt-1",
+        "https://casetext.com/case/sunrise-produce-co-v-malovich#p525",
+        "https://casetext.com/case/sunrise-produce-co-v-malovich",
+        "https://casetext.com/statute/california-codes/california-code-of-civil-procedure/part-2-of-civil-actions/title-6-of-the-pleadings-in-civil-actions/chapter-5-summary-judgments-and-motions-for-judgment-on-the-pleadings/section-438-motion-for-judgment-on-pleadings",
+        "https://casetext.com/case/schneider-v-henley#p763",
+        "https://casetext.com/case/schneider-v-henley",
+        "https://casetext.com/case/aplanalp-v-forte",
+        "https://casetext.com/case/banks-v-jpmorgan-chase-bank-na"
+    ],
+    "court": "Supreme Court of California",
+    "datePublished": "Apr 30, 1954",
+    "citing_cases": [],
+    "output_file": "Output/hauger-v-gates/hauger-v-gates.txt"
+}

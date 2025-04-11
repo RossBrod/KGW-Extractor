@@ -1,0 +1,68 @@
+Here is the structured representation of the key facts, relevant facts, legal issues, and arguments from the case law file:
+
+<FactualBackgrounds>
+<fact>
+    <Type>Key Facts</Type>
+    <Name>Vector's Business Model</Name>
+    <Description>Vector is a direct sales company that markets a line of high quality kitchen cutlery, accessories, and sporting knives manufactured by Cutco Cutlery Corporation. Vector sells and markets Cutco products through the use of Sales Representatives.</Description>
+    <Concept>Direct sales company marketing Cutco products</Concept>
+    <Symbol>Vector's business</Symbol>
+    <Relationship>HAS_KEY_FACT</Relationship>
+</fact>
+<fact>
+    <Type>Key Facts</Type>
+    <Name>Plaintiff's Employment</Name>
+    <Description>Plaintiff Alicia Harris was hired by Vector to be a Sales Representative to sell Cutco knives.</Description>
+    <Concept>Plaintiff hired as Sales Representative</Concept>
+    <Symbol>Plaintiff hired</Symbol>
+    <Relationship>HAS_KEY_FACT</Relationship>
+</fact>
+<fact>
+    <Type>Relevant Facts</Type>
+    <Name>Training Program</Name>
+    <Description>Before Sales Representatives begin selling the Cutco knives, they attend an initial training program that typically lasts three days. Trainees are not paid for their time spent in the training.</Description>
+    <Concept>Unpaid training program</Concept>
+    <Symbol>Training program</Symbol>
+    <Relationship>HAS_RELEVANT_FACT</Relationship>
+</fact>
+<fact>
+    <Type>Legal Issues</Type>
+    <Name>Failure to Pay Minimum Wages</Name>
+    <Description>Whether Vector's failure to pay trainees for the time spent in the initial training program constitutes a failure to pay minimum wages under the FLSA and California Labor Code.</Description>
+    <Concept>Minimum wage violation</Concept>
+    <Symbol>Unpaid training</Symbol>
+    <Relationship>HAS_LEGAL_ISSUE</Relationship>
+</fact>
+<fact>
+    <Type>Legal Issues</Type>
+    <Name>Coerced Purchase of Sample Knife Set</Name>
+    <Description>Whether Vector improperly coerced trainees into buying sample knife sets (to be used for sales presentations) in violation of California Labor Code § 2802, the California Labor Code Private Attorney General Act (PAGA), and California Business Professions Code § 17200.</Description>
+    <Concept>Coerced purchase of sample knives</Concept>
+    <Symbol>Coerced knife purchase</Symbol>
+    <Relationship>HAS_LEGAL_ISSUE</Relationship>
+</fact>
+<fact>
+    <Type>Legal Issues</Type>
+    <Name>Failure to Reimburse Expenses</Name>
+    <Description>Whether Vector violated California Labor Code § 2802 by failing to reimburse Sales Representatives for expenses incurred once they actually started selling knives.</Description>
+    <Concept>Failure to reimburse expenses</Concept>
+    <Symbol>Unreimbursed expenses</Symbol>
+    <Relationship>HAS_LEGAL_ISSUE</Relationship>
+</fact>
+<fact>
+    <Type>Plaintiff's Argument</Type>
+    <Name>Trainees are Employees</Name>
+    <Description>Plaintiff argues that trainees/Sales Representatives should be deemed employees for purposes of the FLSA and California law, and therefore Vector's failure to pay them for the training time constitutes a violation of minimum wage laws.</Description>
+    <Concept>Trainees are employees</Concept>
+    <Symbol>Trainees are employees</Symbol>
+    <Relationship>HAS_ARGUMENT</Relationship>
+</fact>
+<fact>
+    <Type>Defense Argument</Type>
+    <Name>Trainees are Not Employees</Name>
+    <Description>Vector argues that trainees/Sales Representatives are not employees as defined by federal and state law, and therefore the claims may not be asserted by them.</Description>
+    <Concept>Trainees are not employees</Concept>
+    <Symbol>Trainees are not employees</Symbol>
+    <Relationship>HAS_ARGUMENT</Relationship>
+</fact>
+</FactualBackgrounds>

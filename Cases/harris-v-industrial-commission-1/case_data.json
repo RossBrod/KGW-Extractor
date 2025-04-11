@@ -1,0 +1,13 @@
+{
+    "name": "Harris v. Industrial Commission",
+    "number_of_cases": 15,
+    "citations": [
+        "https://casetext.com/case/butler-v-industrial-com",
+        "https://casetext.com/case/kobe-v-industrial-acc-com",
+        "https://casetext.com/case/carnes-v-phoenix-newspapers-inc"
+    ],
+    "court": "Supreme Court of Arizona",
+    "datePublished": "Jun 25, 1951",
+    "citing_cases": [],
+    "output_file": "Output/harris-v-industrial-commission-1/harris-v-industrial-commission-1.txt"
+}

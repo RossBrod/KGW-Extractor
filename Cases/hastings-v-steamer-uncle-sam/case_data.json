@@ -1,0 +1,12 @@
+{
+    "name": "Hastings v. Steamer Uncle Sam",
+    "number_of_cases": 7,
+    "citations": [
+        "https://casetext.com/case/drakeburlingeam-v-palmer-cookco",
+        "https://casetext.com/case/speck-v-hoyt"
+    ],
+    "court": "Supreme Court of California",
+    "datePublished": "Oct 1, 1858",
+    "citing_cases": [],
+    "output_file": "Output/hastings-v-steamer-uncle-sam/hastings-v-steamer-uncle-sam.txt"
+}

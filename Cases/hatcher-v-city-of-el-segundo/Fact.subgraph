@@ -1,0 +1,103 @@
+Here is the structured representation of the key facts, relevant facts, legal issues, and arguments from the case law file:
+
+<FactualBackgrounds>
+<fact>
+    <Type>Key Facts</Type>
+    <Name>Hatcher's Employment History</Name>
+    <Description>Hatcher began working as a Fire Prevention Specialist (FPS) for the El Segundo Fire Department in 2000. He worked there for 27 years, with the last 19 years in the FPS role, before retiring in December 2019 at the age of 64 and a half.</Description>
+    <Concept>Long-term public sector employee</Concept>
+    <Symbol>Long-term FPS</Symbol>
+    <Relationship>HAS_KEY_FACT</Relationship>
+</fact>
+
+<fact>
+    <Type>Key Facts</Type>
+    <Name>Hatcher's Knee Injuries</Name>
+    <Description>Hatcher suffered two knee injuries while working - a torn meniscus in his left knee in 2011 and a torn meniscus in his right knee in 2015. He had total knee replacement surgery on his right knee in November 2016.</Description>
+    <Concept>Workplace knee injuries</Concept>
+    <Symbol>Knee injuries</Symbol>
+    <Relationship>HAS_KEY_FACT</Relationship>
+</fact>
+
+<fact>
+    <Type>Relevant Facts</Type>
+    <Name>Hatcher's Return to Work After Knee Surgery</Name>
+    <Description>When Hatcher returned to work in March 2017 after his knee surgery, his supervisor told him there was no light duty work available and he had to go home. Hatcher was eventually allowed to return to light duty work in April 2017 while City conducted a functional capacity evaluation, but he was cleared to return to full duty in June 2017 without any restrictions.</Description>
+    <Concept>Accommodation after injury</Concept>
+    <Symbol>Return to work</Symbol>
+    <Relationship>HAS_RELEVANT_FACT</Relationship>
+</fact>
+
+<fact>
+    <Type>Relevant Facts</Type>
+    <Name>Hatcher's Workload</Name>
+    <Description>Hatcher claimed his workload was increased to 600 annual inspections when he returned to work in 2017, which he believed was excessive and discriminatory. However, the undisputed evidence showed Hatcher was never actually required to complete 600 inspections per year, and he completed fewer inspections than assigned in 2017, 2018, and 2019 due to computer issues at the Department.</Description>
+    <Concept>Disputed workload</Concept>
+    <Symbol>Workload</Symbol>
+    <Relationship>HAS_RELEVANT_FACT</Relationship>
+</fact>
+
+<fact>
+    <Type>Relevant Facts</Type>
+    <Name>Comments About Retirement</Name>
+    <Description>Hatcher's supervisor Carver asked him about retirement approximately 45 times from 2017 to 2019, and Hatcher's Fire Chief Donovan made comments to Hatcher about retirement and the job being for younger people on several occasions in 2017 and 2018. Other City employees also frequently asked Hatcher about when he was going to retire.</Description>
+    <Concept>Age-related comments</Concept>
+    <Symbol>Retirement comments</Symbol>
+    <Relationship>HAS_RELEVANT_FACT</Relationship>
+</fact>
+
+<fact>
+    <Type>Legal Issues</Type>
+    <Name>Disability Discrimination</Name>
+    <Description>Hatcher alleged the City failed to accommodate his physical disability (knee injury) and constructively discharged him due to his disability.</Description>
+    <Concept>Disability discrimination</Concept>
+    <Symbol>Disability claim</Symbol>
+    <Relationship>HAS_LEGAL_ISSUE</Relationship>
+</fact>
+
+<fact>
+    <Type>Legal Issues</Type>
+    <Name>Age Discrimination</Name>
+    <Description>Hatcher alleged the City discriminated against him based on his age (64 years old at retirement) by creating intolerable working conditions that led to his constructive discharge.</Description>
+    <Concept>Age discrimination</Concept>
+    <Symbol>Age claim</Symbol>
+    <Relationship>HAS_LEGAL_ISSUE</Relationship>
+</fact>
+
+<fact>
+    <Type>Plaintiff's Argument</Type>
+    <Name>Constructive Discharge</Name>
+    <Description>Hatcher argued his retirement was a constructive discharge because the City increased his workload to an unreasonable level and made repeated comments about his age and retirement, creating intolerable working conditions that compelled him to resign.</Description>
+    <Concept>Constructive discharge</Concept>
+    <Symbol>Constructive discharge</Symbol>
+    <Relationship>HAS_ARGUMENT</Relationship>
+</fact>
+
+<fact>
+    <Type>Plaintiff's Argument</Type>
+    <Name>Failure to Accommodate</Name>
+    <Description>Hatcher argued the City failed to reasonably accommodate his known physical disability (knee injury) when he returned to work in 2017 and throughout his employment until his retirement.</Description>
+    <Concept>Failure to accommodate</Concept>
+    <Symbol>Failure to accommodate</Symbol>
+    <Relationship>HAS_ARGUMENT</Relationship>
+</fact>
+
+<fact>
+    <Type>Defense Argument</Type>
+    <Name>No Adverse Employment Action</Name>
+    <Description>The City argued Hatcher did not suffer any adverse employment action, as he was never actually required to complete 600 inspections per year and was not disciplined for completing fewer inspections.</Description>
+    <Concept>No adverse action</Concept>
+    <Symbol>No adverse action</Symbol>
+    <Relationship>HAS_ARGUMENT</Relationship>
+</fact>
+
+<fact>
+    <Type>Defense Argument</Type>
+    <Name>Failure to Accommodate Claim Time-Barred</Name>
+    <Description>The City argued Hatcher's failure to accommodate claim was time-barred because he did not file an administrative complaint within the one-year limitations period for any alleged failure to accommodate in 2017.</Description>
+    <Concept>Time-barred claim</Concept>
+    <Symbol>Time-barred</Symbol>
+    <Relationship>HAS_ARGUMENT</Relationship>
+</fact>
+
+</FactualBackgrounds>

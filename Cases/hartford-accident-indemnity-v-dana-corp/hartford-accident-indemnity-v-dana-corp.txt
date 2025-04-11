@@ -1,0 +1,248 @@
+[CaseName]:[Hartford Accident Indemnity v. Dana Corp.]
+[CaseId]:[https://casetext.com/case/hartford-accident-indemnity-v-dana-corp]
+
+
+ No. 49A02-9602-CV-110. 
+
+ December 12, 1997. 
+
+ Appeal from the Marion Superior Court Rm. 1, The Honorable Anthony J. Metz, III, Judge, Cause No. 49D01-9301-CP-26. 
+
+ Philip C. Stahl, Katherine E. Rakowsky, Margaret B. Jones, Grippo Elden, Chicago, Illinois, Bruce L. Kamplain, Norris, Choplin Schroeder, Indianapolis, John H. Douglas, Smith, Maley Douglas, Indianapolis, James P. Schaller, Richard J. Defeo, Mark A. Goodin, Jackson Campbell, P.C., Washington, D.C., for Appellants-Defendants. 
+
+ George M. Plews, Jeffrey D. Claflin, Frederick D. Emhardt, Plews Shadley Racher Braun, Indianapolis, for Appellee- Defendants. 
+
+ Eugene R. Anderson, John A. MacDonald, Paul W. Kisslinger, Anderson Kill Olick, P.C., New York City, Larry A. Vanore, Sommer Barnard, Indianapolis, Lee B. McTurnan, Steven M. Badger, McTurnan Turner, Indianapolis, Laura A. Foggan, Lon A. Berk, Scott S. Harris, Wiley, Rein Fielding, Washington, D.C., for Amici Curiae. 
+
+
+ 
+
+ Appellants-Defendants, American Insurance Company, Associated Indemnity Corporation and Fireman's Fund Insurance Company, (collectively "Fireman's Fund"), and Granite State Insurance Company, Lexington Insurance Company, and National Union Fire Insurance Company, (collectively "Granite State") appeal from the trial court's grant of partial summary judgment in favor of Appellee-Plaintiff, Dana Corporation ("Dana"). We affirm. 
+
+ Fireman's Fund raises five issues ( https://casetext.com/case/hartford-accident-indemnity-v-dana-corp#c73588b2-959e-4c31-9bcc-ef4849d12602-fn1 ) for our review which we restate as: 
+
+ Because Granite State's arguments do not substantially differ from Fireman's Fund's, we will not generally differentiate between these appellants in our discussion.
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ The designated evidence shows that Dana is a manufacturer of automotive components with facilities across the United States and worldwide. Dana has obtained both primary and excess comprehensive general liability ("CGL") insurance coverage for its operations from a variety of insurers. Prior to 1947, Dana's primary CGL insurer was Hartford Accident and Indemnity Company ("Hartford"). Fireman's Fund was Dana's primary CGL insurer from 1947 to 1957. From 1957 to 1963, Dana obtained primary CGL coverage from Associated Indemnity Corporation and from 1963 to 1969, American Insurance Company was Dana's primary CGL insurer. From 1969 to 1978, Dana's primary CGL coverage was obtained from Associated Indemnity Corporation, and since 1978, Hartford was again Dana's primary CGL insurer. ( https://casetext.com/case/hartford-accident-indemnity-v-dana-corp#f1897f36-caff-4296-97f3-b7e6adffa65b-fn2 ) In addition, Dana obtained excess or umbrella CGL coverage from a multitude of other insurers, including Granite State. 
+
+ Hartford entered into a settlement agreement with Dana, leaving Fireman's Fund as the only primary CGL insurer in the case.
+
+ Sixty-three of Dana's facilities, located in nineteen states, have become the subject of various governmental agency or third party actions regarding alleged environmental contamination. Dana has made claims for coverage under its CGL insurance policies and has been denied coverage for the most part. As a result, Dana filed suit against fifty-six insurers seeking a declaration that it is entitled to indemnification and defense under its primary, umbrella, and excess CGL insurance policies. Fireman's Fund filed a counterclaim against Dana and a cross-claim against Hartford for declaratory relief and contribution. The trial court issued a Case Management Plan and Order establishing that Phase I would involve contract interpretation. 
+
+ Dana filed a motion for partial summary judgment against Fireman's Fund seeking to establish the meaning of certain policy terms, to require Fireman's Fund to defend, and to obtain reimbursement of damages and legal expenses already incurred. Granite State filed a cross-motion for partial summary judgment. The trial court granted Dana's motion and entered findings of fact and conclusions of law, in part, as follows: 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ (R. 1128-50) (citations omitted). Both Fireman's Fund and Granite State appeal. 
+
+ When reviewing a grant of summary judgment, we use the same standard as the trial court: whether the pleadings and evidence demonstrate that there are no genuine issues of material fact and that the nonmoving party is entitled to judgment as a matter of law. Miller v. Memorial Hosp. of South Bend , 679 N.E.2d 1329, 1330 ( https://casetext.com/case/miller-v-memorial-hosp-of-south-bend#p1330 ) (Ind. 1997). We construe the pleadings, affidavits, and designated materials in a light most favorable to the nonmovant and give careful scrutiny to assure that the losing party is not improperly prevented from having its day in court. Id. (citation omitted). 
+
+ The fact that the parties make cross-motions for summary judgment does not alter our standard of review. Instead, we must consider each motion separately to determine whether the moving party is entitled to judgment as a matter of law. Hendricks County Bank Trust Co. v. Guthrie Building Materials , 663 N.E.2d 1180, 1183 ( https://casetext.com/case/hendricks-cty-bank-v-guthrie-bldg-mat#p1183 ) (Ind.Ct.App. 1996), trans. denied . 
+
+ Indiana's choice of law rule for actions on contract calls for applying the law of the forum with the most intimate contacts to the facts. Dohm Nelke v. Wilson Foods Corp. , 531 N.E.2d 512, 513 ( https://casetext.com/case/dohm-nelke-v-wilson-foods-corp#p513 ) (Ind.Ct.App. 1988). The court will consider all acts of the parties touching the transaction in relation to the several states involved and will apply as the law governing the transaction the law of that state with which the facts are in most intimate contact. W.H. Barber Co. v. Hughes , 223 Ind. 570 ( https://casetext.com/case/wh-barber-co-v-hughes ) , 63 N.E.2d 417, 423 ( https://casetext.com/case/wh-barber-co-v-hughes#p423 ) (1945). Indiana follows the approach formulated by the Restatement (Second) of Conflict of Laws. See Eby v. York-Division, Borg-Warner , 455 N.E.2d 623, 626 ( https://casetext.com/case/eby-v-york-division-borg-warner#p626 ) (Ind.Ct.App. 1983); Utopia Coach Corp. v. Weatherwax , 177 Ind. App. 321 ( https://casetext.com/case/utopia-coach-corp-et-al-v-weatherwax ) , 379 N.E.2d 518, 522 ( https://casetext.com/case/utopia-coach-corp-et-al-v-weatherwax#p522 ) (1978). In the absence of an effective choice of law by the parties, the contacts to be taken into account include: 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ Restatement (Second) of Conflict of Laws § 188 (1971). In addition, 
+
+ 
+
+ Restatement (Second) of Conflict of Laws § 193 (1971) (emphasis added). 
+
+ The trial court found that the place of contracting was Michigan, the place of negotiation was Michigan, the place of performance was Indiana, the location of the subject matter/risk was Indiana, and the domicile of the parties was indeterminate. The court concluded that the location of the insured risk was the most important contact and accordingly applied Indiana law. Fireman's Fund argues that the trial court erred in its conclusions regarding the contacts included in § 188 and also erred in applying § 193 to this case. Fireman's Fund contends that Ohio substantive law should be applied to this case. 
+
+ "[B]efore entangling itself in messy issues of conflict of laws a court ought to satisfy itself that there actually is a difference between the relevant laws of the different states." Barron v. Ford Motor Co. of Canada Ltd. , 965 F.2d 195, 197 ( https://casetext.com/case/barron-v-ford-motor-co-of-canada-ltd-2#p197 ) (7th Cir. 1992), cert. denied , 113 S.Ct. 605 (1992). If the purposes and policies of two potential rules are the same, the forum should apply the forum law. Lutz v. DeMars , 559 N.E.2d 1194, 1196 ( https://casetext.com/case/lutz-v-demars#p1196 ) n. 1 (Ind.Ct.App. 1990), trans. denied . 
+
+ The two substantive issues before us today, the meaning of CGL policy terms "suit" and "as damages," are questions of first impression in Indiana. However, Ohio courts have addressed both of these issues. ( https://casetext.com/case/hartford-accident-indemnity-v-dana-corp#41620415-e50d-4808-b189-b694afe56b78-fn3 ) In Professional Rental, Inc. v. Shelby Ins. Co. , 599 N.E.2d 423 ( https://casetext.com/case/professional-rental-v-shelby-ins ) (Ohio Ct. App. 1991), the term "suit" was found to be susceptible to more than one meaning and thus construed in favor of the insured. "The junction where environmental law meets insurance law is an inappropriate place to erect an inflexible rule requiring the initiation of a traditional lawsuit as a condition precedent to the insurer's obligation to defend." Id. at 428. In that case, however, the court held that an agency notification regarding potential liability was merely a claim, and unless followed by an administrative order imposing liability, was not the functional equivalent of a suit. Id. at 430. In Sanborn Plastics Corp. v. St. Paul Fire and Marine Ins. Co. , 616 N.E.2d 988 ( https://casetext.com/case/sanborn-plastics-v-st-paul-fire-marine ) (Ohio Ct. App. 1993), the Ohio court concluded that costs for environmental cleanup constituted "damages" even though such costs may be restitutional, or equitable, in nature. Also, in Morton Int'l, Inc. v. Harbor Ins. Co. , 607 N.E.2d 28 ( https://casetext.com/case/morton-internatl-v-harbor-ins-co ) (Ohio Ct. App. 1992), the court held that settlement payments for environmental damage constituted sums payable as "damages." 
+
+ None of the parties contends that the law of any other state should be applied to this case. Although several of Dana's environmental cleanup sites are located in Michigan, and that state has some contacts with this case, neither party advocates that the law of Michigan should apply.
+
+ While the absence of precedent in Indiana on these issues does not necessarily mean that a conflict of law exists, there are other issues in the litigation between these parties where Indiana and Ohio case law differ. ( https://casetext.com/case/hartford-accident-indemnity-v-dana-corp#5d9d2a13-12d5-4934-bcd4-2ecd974656d3-fn4 ) The various policies purchased by Dana include exclusions for pollution related claims. ( https://casetext.com/case/hartford-accident-indemnity-v-dana-corp#8a1f46f4-f8aa-4d9c-bd44-c81f7ec9f3a4-fn5 ) Similar exclusions have been the subject of numerous cases nationwide. Our supreme court, in American States Ins. Co. v. Kiger , 662 N.E.2d 945 ( https://casetext.com/case/american-states-ins-co-v-kiger ) (Ind. 1996), held that the term "sudden" used in the standard pollution exclusion clause was ambiguous in that it could mean "unexpected" as well as "abrupt." Under this interpretation, the clause would not exclude from coverage discharges which were unexpected or unintended. By contrast, the Ohio Supreme Court, in Hybud Equipment Corp. v. Sphere Drake Ins. Co., Ltd. , 597 N.E.2d 1096 ( https://casetext.com/case/hybud-equip-corp-v-sphere-drake-ins-co-ltd ) (Ohio 1992), cert. denied , 113 S.Ct. 1585 (1993), held that the term "sudden," used in the standard pollution exclusion clause, was unambiguous and must have a temporal aspect, as in "abrupt." As such, the exclusion does not apply to gradual or long term discharges of pollution. Thus, for purposes of the present case, the laws of Indiana and Ohio significantly differ, necessitating a choice of law decision. 
+
+ The trial court's Case Management Plan and Order mentions several of these issues. (R. 2266-81).
+
+ One policy reads: "This insurance does not apply . . . to bodily injury or property damage arising out of the discharge, dispersal, release or escape of smoke, vapors, soot, fumes, acids, alkalis, toxic chemicals, liquids or gases, waste materials or other irritants, contaminants or pollutants into or upon land, the atmosphere or any water course or body of water; but this exclusion does not apply if such discharge, dispersal, release or escape is sudden and accidental." (R. 471).
+
+ Fireman's Fund argues that because Dana's primary place of business is in Ohio, the place of contracting and the place of negotiation should point to Ohio. In addition, because the premiums were paid from Ohio and notification of claims came from Ohio, Fireman's Fund contends that the place of performance of the contracts was Ohio, citing Pennington v. American Family Ins. Group , 626 N.E.2d 461 ( https://casetext.com/case/pennington-v-american-family-ins-group ) (Ind.Ct.App. 1993). In Pennington , another panel of this court held that "[i]n conflict of law cases involving the interpretation of insurance contracts, the law of the state where the contract is executed controls. An insurance contract is executed in the state where application is made, the premium is paid and the policy is delivered." Id. at 465 (citing Travelers Ins. Co. v. Eviston , 110 Ind. App. 143, 152 ( https://casetext.com/case/travelers-insurance-co-v-eviston#p152 ) , 37 N.E.2d 310, 313 ( https://casetext.com/case/travelers-insurance-co-v-eviston#p313 ) (1941)). 
+
+ Our supreme court, however, modified the traditional choice-of-law rule relied upon in Eviston in W.H. Barber Co. v. Hughes , 223 Ind. 570 ( https://casetext.com/case/wh-barber-co-v-hughes ) , 63 N.E.2d 417, 423 ( https://casetext.com/case/wh-barber-co-v-hughes#p423 ) (1945). See Hubbard Mfg. Co., Inc. v. Greeson , 515 N.E.2d 1071, 1073 ( https://casetext.com/case/hubbard-mfg-co-inc-v-greeson-1#p1073 ) (Ind. 1987). "Judge Richman in Barber stated, `A contract is deemed to have been made in the state where the last act necessary to make it a binding agreement takes place,' not that the law of the place of contracting controls ." Suyemasa v. Myers , 420 N.E.2d 1334, 1343 ( https://casetext.com/case/suyemasa-v-myers#p1343 ) (Ind.Ct.App. 1981) (citation omitted) (internal quotation marks omitted) (emphasis added). "Indiana does not follow the lex loci contractus approach to determine . . . which forum's substantive law is applicable." Id. at 1344. In light of Barber , Hubbard , and Suyemasa , we decline to follow Pennington 's holding that the law of the place of contracting controls. Accord Schaffert v. Jackson Nat'l Life Ins. Co. , 687 N.E.2d 230, 232-33 ( https://casetext.com/case/schaffert-v-jackson-nat-life-ins-co#p232 ) n. 1 (Ind.Ct.App. 1997). 
+
+ Fireman's Fund makes much of the fact that its policies were "obtained in accordance with the countersignature laws and regulations of [Ohio] for the portion of the risk located in [Ohio]," (R. 221), in support of its argument that the place of contracting was Ohio. The countersignatures, however, were primarily those of the insurer's authorized agent, located in Michigan, with whom Dana negotiated for the policies. We conclude that the place of contracting is indeterminate, favoring neither Ohio nor Michigan. Moreover, "[s]tanding alone, the place of contracting is a relatively insignificant contact." Restatement (Second) of Conflict of Laws § 188 cmt. e. (1971). 
+
+ Fireman's Fund concedes that the place of negotiation was Michigan. (R. 1377). The place of negotiation, however, "is of less importance when there is no one single place of negotiation as . . . when the parties do not meet but rather conduct their negotiations from separate states by mail or telephone." Id. 
+
+ Fireman's Fund argues, without authority, that the place of performance of the contracts is Ohio because that is the location from which Dana paid premiums and sent notices relative to the policies. Dana counters that the trial court correctly found that the place of performance is the location where the insurance funds will be put to use. We agree with the analysis of the trial court. See Morton , 607 N.E.2d at 34 ( https://casetext.com/case/morton-internatl-v-harbor-ins-co#p34 ) (holding that the location of a waste-disposal facility, where the insured was liable for cleanup costs, was the place of performance of the liability policy). We also agree with Fireman's Fund that until all coverage issues have been decided for all sites involved, place of performance cannot be determined. Certainly, "the place of performance can bear little weight in the choice of the applicable law when . . . at the time of contracting it is either uncertain or unknown." Restatement (Second) of Conflict of Laws § 188 cmt. e. (1971). 
+
+ Dana is a Virginia corporation headquartered in Ohio. Fireman's Fund is a California corporation headquartered in the same state. We agree with the trial court that the place of domicile of the parties for choice of law purposes is indeterminate. ( https://casetext.com/case/hartford-accident-indemnity-v-dana-corp#391a651c-5d3f-4d7b-9701-7121a8bae631-fn6 ) 
+
+ Granite State cites Eli Lilly and Co. v. Home Ins. Co. , 764 F.2d 876 ( https://casetext.com/case/eli-lilly-and-co-v-home-ins-co-2 ) (D.C. Cir. 1985) for the proposition that an insured's place of business and place of incorporation constitute a strong interest in choosing that state's law. In Eli Lilly , however, the insurers did not dispute the choice of law. Id. at 882. In addition, because Dana's place of business and place of incorporation are in different states, Eli Lilly is inapposite.
+
+ 
+
+ Restatement (Second) of Conflict of Laws § 193 cmt. b (1971). The Restatement approach to a multiple risk policy is to treat the case "as if it involved [multiple] policies, each insuring an individual risk." Restatement (Second) of Conflict of Laws § 193 cmt. f. 
+
+ Courts have followed one of two approaches when confronted with CGL coverage of multi-state claims. "Under the uniform-contract-interpretation approach, the law of a single forum governs the interpretation of coverage under a casualty-insurance policy for multi-state claims arising from environmental damage in multiple jurisdictions." Gilbert Spruance Co. v. Pennsylvania Mfrs. Ass'n Ins. Co. , 629 A.2d 885, 889 ( https://casetext.com/case/gilbert-spruance-v-pennsylvania-mfrs#p889 ) (N.J. 1993). "The site-specific[-interpretation approach] provides that a casualty-insurance policy should be interpreted under the substantive law of the state that the parties understood to be the principal location of the insured risk," with the result that more than one body of law will apply to a single contract. Id. at 891. The parties have argued before the trial court and before us that, in the interest of judicial efficiency, the law of a single state should be applied. 
+
+ Fireman's Fund contends that the contact primarily relied upon by the trial court, the location of the insured risk, should be accorded less weight because the risks were scattered in several states. See Restatement (Second) of Conflict of Laws § 193 cmt. b. Yet, if the Restatement approach is to apply the law of a single state where the risk is principally located in one state, it would follow that applying the uniform-contract-interpretation approach requires us to determine the state where the risk is principally located, even though some of the risk is scattered in other states. Because the other § 188 factors do not point primarily to one forum, we conclude that the location of the subject matter/risk should be accorded greater significance. 
+
+ Although Dana's sites are scattered to a degree, they are nonetheless principally located in Indiana. As such, the principal location of the insured risk is Indiana. We hold that the trial court properly concluded that the law of Indiana applies to this case. ( https://casetext.com/case/hartford-accident-indemnity-v-dana-corp#6b73e9d9-e422-41c3-bc12-f1c8ed13c13d-fn7 ) 
+
+ Following oral argument in this case, Dana filed a motion to supplement the record, submitting documents regarding estimated damages for various sites. Because these documents do not disclose "what occurred in the trial court," Ind.Appellate Rule 7.2 (C), we deny Dana's motion.
+
+ Fireman's Fund complains that Dana failed to designate sufficient facts in support of its motion for partial summary judgment. It contends that there is a complete absence in the record of any evidence as to the nature of the proceedings against Dana and the costs which Dana has incurred. See Ind.Trial Rule 56(C). Fireman's Fund's argument fails to acknowledge that the trial court's case management order provided for the discovery of site-specific information in a later phase. ( https://casetext.com/case/hartford-accident-indemnity-v-dana-corp#0ef3edf7-b373-4167-8e09-75b17f060ecb-fn8 ) Phase I of the order, of which the partial summary judgment before us is only the beginning, was meant to determine the meaning of various policy terms, not to determine the full extent of coverage. As such, complete information regarding the proceedings against Dana is unnecessary. See Eli Lilly and Co. v. Home Ins. Co. , 482 N.E.2d 467, 470 ( https://casetext.com/case/eli-lilly-and-co-v-home-ins-co-4#p470 ) (Ind. 1985) (answering certified question from federal court regarding CGL policy "trigger" and concluding that extrinsic evidence was not necessary to interpret policy), cert. denied , 107 S.Ct. (1987); Plumlee v. Monroe Guaranty Ins. Co. , 655 N.E.2d 350, 359 ( https://casetext.com/case/plumlee-v-monroe-guar-ins-co#p359 ) (Ind.Ct.App. 1995) (stating that summary judgment can be granted where a "contract ambiguity, if one exists, can be resolved without the aid of a factual determination"), trans. denied . By comparison, declaratory judgment is appropriate to construe a contract even in the absence of a breach. Ind. Code § 34-4-10-3. We conclude that Dana's designated evidence is sufficient to meet its burden of demonstrating that there is no genuine issue of material fact before this court. ( https://casetext.com/case/hartford-accident-indemnity-v-dana-corp#0a356daa-b3a2-4f43-8cc2-1f0fbe601375-fn9 ) 
+
+ Dana prepared a set of "site notebooks," which describe proceedings against Dana at the various sites, describe the nature of the alleged environmental contamination at each site, and list Dana's actual and projected costs. These notebooks, prepared in accordance with the case management order, were filed as a supplemental designation of evidence in support of Dana's motion for partial summary judgment. Although the trial court granted Fireman's Fund's motion to strike the site notebooks as untimely filed, Dana later designated the site notebooks as evidence in opposition to Granite State's cross-motion.
+
+ Following oral argument in this case, Dana filed its "suggestion" that this issue is moot, attaching the trial court's August 20, 1997 order. This 165 page order includes findings and conclusions regarding Fireman's Fund's duty to defend and duty to indemnify as to each specific site. In light of our conclusion on this issue, we need not address Dana's "suggestion."
+
+ Fireman's Fund next argues that the trial court improperly concluded that various administrative proceedings against Dana are within the meaning of the policy term "suit." Fireman's Fund's policies obligate it to defend any suit against Dana. As noted above, the meaning of the term "suit" is a question of first impression in Indiana. ( https://casetext.com/case/hartford-accident-indemnity-v-dana-corp#1906c9ec-4744-489f-be2f-91c79cea4f6d-fn10 ) 
+
+ Both Dana and Fireman's Fund cite conflicting Indiana circuit court decisions on this issue. "[A] conclusion of law by a circuit court in a case from which no appeal has been taken is not binding precedent upon this court." Indiana Dep't of Natural Resources v. United Minerals, Inc. , No. 87A01-9702-CV-49, ___ N.E.2d ___, ___ (Ind.Ct.App. July 28, 1997), trans. pending . "Counsel are admonished that, just as it is inappropriate to cite memorandum decisions of this court as precedent (Ind.Appellate Rule 15(A)(3)), it is similarly inappropriate to cite trial court decisions." Id. at ___, n. 1.
+
+ First we must determine whether the term "suit," as used here, is unambiguous. If the policy language is clear and unambiguous, it should be given its plain and ordinary meaning. Eli Lilly , 482 N.E.2d at 470 ( https://casetext.com/case/eli-lilly-and-co-v-home-ins-co-4#p470 ) . Under Indiana law, an insurance policy is ambiguous if reasonable persons may honestly differ as to the meaning of the policy language. Id. Where there is ambiguity, insurance policies are to be construed strictly against the insurer. Kiger , 662 N.E.2d at 947 ( https://casetext.com/case/american-states-ins-co-v-kiger#p947 ) . An ambiguity does not exist simply because a controversy exists between the parties, each favoring an interpretation contrary to the other. Linder v. Ticor Title Ins. Co. of California , 647 N.E.2d 37, 39 ( https://casetext.com/case/linder-v-ticor-title-ins-of-california#p39 ) (Ind.Ct.App. 1995). 
+
+ Both parties cite cases from other jurisdictions for various propositions: 1) that the term "suit" is unambiguous and includes administrative proceedings; ( https://casetext.com/case/hartford-accident-indemnity-v-dana-corp#cb20ecda-9859-4568-870c-7dcaa01dc0af-fn11 ) 2) that the term "suit" is unambiguous and includes only courthouse lawsuits; ( https://casetext.com/case/hartford-accident-indemnity-v-dana-corp#72893ffe-70d9-44a6-ad66-2a7016859f94-fn12 ) and 3) that the term "suit" is ambiguous and is therefore to be construed against the insurer. ( https://casetext.com/case/hartford-accident-indemnity-v-dana-corp#af519b60-b0fb-4e13-b7a5-80735ae687fd-fn13 ) Our review of these and other cases reveals that the majority of courts adopt a broad meaning for the term. 
+
+ E.g. , Aetna Casualty and Surety Co. v. Pintlar Corp. , 948 F.2d 1507 ( https://casetext.com/case/aetna-cas-and-sur-co-v-pintlar-corp ) (9th Cir. 1991) (applying Idaho law); Ryan v. Royal Ins. Co. , 916 F.2d 731 ( https://casetext.com/case/ryan-v-royal-ins-co-of-america ) (1st Cir. 1990) (applying New York law); Avondale Indus., Inc. v. Travelers Indem. Co. , 887 F.2d 1200 ( https://casetext.com/case/avondale-industries-inc-v-travelers-indem-2 ) (2nd Cir. 1989) (applying New York law), cert. denied , 496 U.S. 906 ( https://casetext.com/case/travelers-indem-co-v-avondale-indus-inc ) (1990); SCSC Corp. v. Allied Mut. Ins. Co. , 536 N.W.2d 305 ( https://casetext.com/case/scsc-corp-v-allied-mut-ins-co ) (Minn. 1995); Coakley v. Maine Bonding and Casualty Co. , 618 A.2d 777 ( https://casetext.com/case/coakley-v-maine-bonding-cas-co ) (N.H. 1993); Hazen Paper Co. v. United States Fidelity and Guaranty Co. , 555 N.E.2d 576 ( https://casetext.com/case/hazen-paper-co-v-united-states-fidelity-guar-co ) (Mass. 1990); Minnesota Mining and Mfg. Co. v. Travelers Indemnity Co. , 457 N.W.2d 175 ( https://casetext.com/case/minnesota-min-mfg-v-travelers-indem ) (Minn. 1990); C.D. Spangler Constr. Co. v. Industrial Crankshaft and Eng'g Co. , 388 S.E.2d 557 ( https://casetext.com/case/cd-spangler-constr-v-indus-crankshaft-eng ) (N.C. 1990).
+
+ E.g. , Aetna Casualty and Surety Co. v. General Dynamics Corp. , 968 F.2d 707 ( https://casetext.com/case/aetna-cas-and-sur-co-v-gen-dynamics-corp ) (8th Cir. 1992) (applying Missouri law); Lapham-Hickey Steel Corp. v. Protection Mut. Ins. Co. , 655 N.E.2d 842 ( https://casetext.com/case/lapham-hickey-v-prot-mut-ins ) (Ill. 1995); City of Edgerton v. General Casualty Co. of Wisconsin , 517 N.W.2d 463 ( https://casetext.com/case/city-of-edgerton-v-general-cas-co-2 ) (Wis. 1994), cert. denied , 514 U.S. 1017 ( https://casetext.com/case/edgerton-v-gen-cas-co-of-wisconsin ) (1995); Patrons Oxford Mut. Ins. Co. v. Marois , 573 A.2d 16 ( https://casetext.com/case/patrons-oxford-mut-ins-co-v-marois ) (Me. 1990).
+
+ E.g. , Anderson Development Co. v. Travelers Indem. Co. , 49 F.3d 1128 ( https://casetext.com/case/anderson-development-co-v-travelers-indem ) (6th Cir. 1995) (applying Michigan law); Michigan Millers Mut. Ins. Co. v. Bronson Plating Co. , 519 N.W.2d 864 ( https://casetext.com/case/michigan-millers-ins-v-bronson ) (Mich. 1994); A.Y. McDonald Indus., Inc. v. Insurance Co. of N. America , 475 N.W.2d 607 ( https://casetext.com/case/ay-mcdonald-industries-v-ina-1 ) (Iowa 1991).
+
+ As to the question of ambiguity, some courts hold that a difference of opinion among courts of various jurisdictions establishes conclusively that a particular clause is ambiguous, while others hold that it merely constitutes evidence of ambiguity. See Charles C. Marvel, Annotation, Division of Opinion Among Judges on Same Court or Among Other Courts or Jurisdictions Considering Same Question, as Evidence that Particular Clause of Insurance Policy is Ambiguous , 4 A.L.R. 4th 1253 (1981). We conclude that the division of authority on this issue is instructive and is evidence that more than one reasonable interpretation of the term "suit" is possible. See Indiana Ins. Co. v. O.K. Transport, Inc. , 587 N.E.2d 129, 132 ( https://casetext.com/case/indiana-ins-co-v-ok-transport-inc#p132 ) (Ind.Ct.App. 1992), trans. denied . A commonly cited definition of "suit" is "the attempt to gain an end by legal process." Webster's Third New International Dictionary 2286 (1976). Such a definition is not limited to traditional courthouse lawsuits. Alternatively, Black's defines "suit" as 
+
+ 
+
+ Black's Law Dictionary (5th ed. 1979). In light of these reasonable, but differing definitions, we conclude that the term "suit" as used in Fireman's Fund's CGL policies is ambiguous. 
+
+ Fireman's Fund argues that such a conclusion would render meaningless the distinction in its policies between "suit" and "claim." We agree that a suit is more than a claim, but this result does not mean that every claim is a suit. After finding the term "suit" ambiguous, the next step is to determine which proceedings are suits. To facilitate this, some background information on agency proceedings is necessary. 
+
+ In the federal arena, the United States Environmental Protection Agency ("EPA") is statutorily authorized to enforce remediation of environmental pollution. The Comprehensive Environmental Response, Compensation and Liability Act ("CERCLA") provides several ways for the EPA to accomplish its objectives. 42 U.S.C. § 9601 ( https://casetext.com/statute/united-states-code/title-42-the-public-health-and-welfare/chapter-103-comprehensive-environmental-response-compensation-and-liability/subchapter-i-hazardous-substances-releases-liability-compensation/section-9601-definitions ) et seq. CERCLA empowers the EPA to unilaterally order responsible parties to undertake cleanup efforts, 42 U.S.C. § 9606(a) ( https://casetext.com/statute/united-states-code/title-42-the-public-health-and-welfare/chapter-103-comprehensive-environmental-response-compensation-and-liability/subchapter-i-hazardous-substances-releases-liability-compensation/section-9606-abatement-actions ) (hereinafter "§ 106(a)"), or to respond to contamination and then shift liability for "response costs" to those parties responsible, 42 U.S.C. § 9607 ( https://casetext.com/statute/united-states-code/title-42-the-public-health-and-welfare/chapter-103-comprehensive-environmental-response-compensation-and-liability/subchapter-i-hazardous-substances-releases-liability-compensation/section-9607-liability ) (hereinafter "§ 107"). 
+
+ Typically, the agency's first allegation of liability for environmental contamination is made by identifying a person or entity as a potentially responsible person ("PRP"). The PRP notification usually requests voluntary remediation and settlement negotiations between all PRPs. 42 U.S.C. § 9622(e) ( https://casetext.com/statute/united-states-code/title-42-the-public-health-and-welfare/chapter-103-comprehensive-environmental-response-compensation-and-liability/subchapter-i-hazardous-substances-releases-liability-compensation/section-9622-settlements ) (hereinafter "§ 122(e)"). 
+
+ 
+
+ Professional Rental, Inc. , 599 N.E.2d at 429 ( https://casetext.com/case/professional-rental-v-shelby-ins#p429 ) (citation omitted). The PRP letter usually requests participants to submit to the EPA a proposal for remedial action. "If the PRP does not respond to this invitation, CERCLA Section 106(a) authorizes the EPA to issue an administrative order to compel a responsible party to clean up a site." Id. at 428. Failure to comply with a § 106 order subjects the PRP to a fine of $25,000.00 per day. 42 U.S.C. § 9606(b)(1) ( https://casetext.com/statute/united-states-code/title-42-the-public-health-and-welfare/chapter-103-comprehensive-environmental-response-compensation-and-liability/subchapter-i-hazardous-substances-releases-liability-compensation/section-9606-abatement-actions ) . Alternatively, under § 106(a), the EPA may seek an injunction in federal district court to compel cleanup by the PRP, also subject to a $25,000.00 per day fine. 
+
+ As part of its enforcement efforts, the EPA may, pursuant to 42 U.S.C. § 9604 ( https://casetext.com/statute/united-states-code/title-42-the-public-health-and-welfare/chapter-103-comprehensive-environmental-response-compensation-and-liability/subchapter-i-hazardous-substances-releases-liability-compensation/section-9604-response-authorities ) (hereinafter "§ 104"), demand information or documents relative to a release or threat of release of pollutants. Failure to comply with such an order will subject a party to a $25,000.00 per day fine. Moreover, failure to comply with a § 104 or § 106 order will subject a liable party to treble damages. 42 U.S.C. § 9607(c)(3) ( https://casetext.com/statute/united-states-code/title-42-the-public-health-and-welfare/chapter-103-comprehensive-environmental-response-compensation-and-liability/subchapter-i-hazardous-substances-releases-liability-compensation/section-9607-liability ) . Even a failure to negotiate in good faith is cause for the EPA to commence action under §§ 104(a) or 106. 
+
+ "[T]o find agency conduct to have created a suit . . . there must be some cognizable degree of coerciveness or adversariness [sic] in the administrative body's actions." Ryan , 916 F.2d at 738 ( https://casetext.com/case/ryan-v-royal-ins-co-of-america#p738 ) . "[C]ase after case insists that, shy of an actual suit, a substantial entry-level burden must be carried before the duty to defend under a CGL policy arises. Most of the cases describe the entry-level burden in terms of coerciveness." Id. "Since the law holds PRPs to so strict a liability standard, the degree of compulsion the government wields in pursuing an insured seems an apt proxy for measuring factual expectancy according to the actual probability and immediacy of toxic waste liability." Id. at 741. We agree with those courts which have found coercive and adversarial administrative proceedings to be "suits." To decide otherwise would encourage insureds to not cooperate with governmental agencies, thus running the risk of huge fines, punitive damages, and delay in remediating environmental pollution. Accordingly, we hold that § 104 requests coupled with a specific allegation of liability, § 106 orders, § 107 demands, and § 122(e) offers, as well as analogous proceedings by state and local agencies, are "suits," triggering Fireman's Fund's duty to defend. Less coercive actions, however, do not rise to the level of "suit." These would include mere notification or investigation when no enforcement action is contemplated. Cf. Lapham-Hickey Steel Corp. , 655 N.E.2d at 844 ( https://casetext.com/case/lapham-hickey-v-prot-mut-ins#p844 ) . 
+
+ Fireman's Fund next contends that the trial court improperly concluded that environmental cleanup and response costs ( https://casetext.com/case/hartford-accident-indemnity-v-dana-corp#7df6517e-6b4f-48d2-a258-c35400fce32f-fn14 ) are included in the policy term "damages." Fireman's Fund's policies obligate it to pay on behalf of Dana any damages because of property damage. As already noted, the meaning of the term "damages," in the context of a CGL policy, is a question of first impression in Indiana. ( https://casetext.com/case/hartford-accident-indemnity-v-dana-corp#d98e9b8e-323c-4f19-ad9d-dc7dee06aefd-fn15 ) 
+
+ CERCLA establishes liability for and provides for the recovery of: (A) all costs of removal or remedial action incurred by the United States Government or a State . . .; (B) any other necessary costs of response incurred by any other person . . .; (C) damages for injury to, destruction of, or loss of natural resources, including the reasonable costs of assessing such injury, destruction, or loss resulting from such a release; and (D) the costs of any health assessment or health effects study . . . . 42 U.S.C. § 9607(a)(4) ( https://casetext.com/statute/united-states-code/title-42-the-public-health-and-welfare/chapter-103-comprehensive-environmental-response-compensation-and-liability/subchapter-i-hazardous-substances-releases-liability-compensation/section-9607-liability ) .
+
+ See supra note 10 regarding citation of circuit court decisions.
+
+ As with the term "suit," we must determine whether the term "damages" is unambiguous. Both parties cite cases holding that the term: 1) is unambiguous and includes environmental cleanup and response costs; ( https://casetext.com/case/hartford-accident-indemnity-v-dana-corp#2f83227c-4b19-4c90-8947-d08c097e62e6-fn16 ) 2) is unambiguous and excludes equitable remedies; ( https://casetext.com/case/hartford-accident-indemnity-v-dana-corp#27beefa3-804f-416b-8eb1-3f6befa31ae0-fn17 ) and 3) is ambiguous and therefore to be construed against the insurer. ( https://casetext.com/case/hartford-accident-indemnity-v-dana-corp#298f0b17-8054-439e-8d6d-afa00fe51c1c-fn18 ) See generally Carol A. Crocca, Annotation, Liability Insurance Coverage for Violations of Antipollution Laws , 87 A.L.R. 4th 444 (1991). The division of authority on this issue is evidence that more than one reasonable interpretation of the term "damages" is possible. Several courts cite the definition of "damages" as "the estimated reparation in money for detriment or injury sustained." Webster's Third New International Dictionary 571 (1976). 
+
+ E.g. , Bituminous Cas. Corp. v. Vacuum Tanks, Inc. , 75 F.3d 1048 ( https://casetext.com/case/bituminous-cas-corp-v-vacuum-tanks-inc ) (5th Cir. 1996) (applying Texas law); Pintlar Corp. , 948 F.2d at 1513 ( https://casetext.com/case/aetna-cas-and-sur-co-v-pintlar-corp#p1513 ) (applying Idaho law); Gerrish Corp. v. Universal Underwriters Ins. Co. , 947 F.2d 1023, 1030 ( https://casetext.com/case/gerrish-corp-v-universal-underwriters-ins-2#p1030 ) (2nd Cir. 1990) (applying Vermont law), cert. denied 504 U.S. 973 ( https://casetext.com/case/lee-v-baptist-medical-center-of-oklahoma ) (1992); Avondale Indus., Inc. , 887 F.2d at 1207 ( https://casetext.com/case/avondale-industries-inc-v-travelers-indem-2#p1207 ) (applying New York law), cert. denied 496 U.S. 906 ( https://casetext.com/case/travelers-indem-co-v-avondale-indus-inc ) (1990); Farmland Indus., Inc. v. Republic Ins. Co. , 941 S.W.2d 505 ( https://casetext.com/case/farmland-industries-inc-v-republic-ins ) (Mo. 1997); SCSC Corp. , 536 N.W.2d at 315 ( https://casetext.com/case/scsc-corp-v-allied-mut-ins-co#p315 ) (Minnesota); Weyerhauser Corp. v. Aetna Casualty Sur. Co. , 874 P.2d 142 ( https://casetext.com/case/weyerhaeuser-co-v-aetna ) (Wash. 1994); Coakley , 618 A.2d at 785 ( https://casetext.com/case/coakley-v-maine-bonding-cas-co#p785 ) (New Hampshire); Outboard Marine Corp. v. Liberty Mut. Ins. Co. , 607 N.E.2d 1204, 1215 ( https://casetext.com/case/outboard-marine-corp-v-liberty-mut-ins-1#p1215 ) (Ill. 1992); Boeing Co. v. Aetna Casualty Sur. Co. , 784 P.2d 507 ( https://casetext.com/case/boeing-v-aetna-casualty-surety-co ) (Wash. 1990).
+
+ E.g. , Cincinnati Ins. Co. v. Milliken and Co. , 857 F.2d 979 ( https://casetext.com/case/cincinnati-ins-co-v-milliken-and-co ) (4th Cir. 1988) (applying South Carolina law); Continental Ins. Co. v. Northeastern Pharmaceutical Chem. Co., Inc. , 842 F.2d 977 ( https://casetext.com/case/continental-v-northeastern-pharmaceutical ) (8th Cir. 1988) (applying Missouri law), cert. denied 488 U.S. 821 ( https://casetext.com/case/missouri-v-continential-insurance-cos ) (1988); City of Edgerton , 517 N.W.2d at 479 ( https://casetext.com/case/city-of-edgerton-v-general-cas-co-2#p479 ) (Wisconsin), cert. denied 514 U.S. 1017 ( https://casetext.com/case/edgerton-v-gen-cas-co-of-wisconsin ) (1995); Marois , 573 A.2d at 19-20 ( https://casetext.com/case/patrons-oxford-mut-ins-co-v-marois#p19 ) (Maine).
+
+ E.g. , Lindsay Mfg. Co. v. Hartford Accident Indemnity Co. , 118 F.3d 1263 ( https://casetext.com/case/lindsay-mfg-co-v-hartford-acc-indemy ) (8th Cir. 1997) (applying Nebraska law); Intel Corp. v. Hartford Accident Indemnity Co. , 952 F.2d 1551 ( https://casetext.com/case/intel-corp-v-hartford-acc-indem-co ) (9th Cir. 1991) (applying California law); New Castle County v. Hartford Accident Indemnity Co. , 933 F.2d 1162 ( https://casetext.com/case/new-castle-county-v-hartford-acc-indem ) (3rd Cir. 1991) (applying Delaware law); A.Y. McDonald , 475 N.W.2d at 622 ( https://casetext.com/case/ay-mcdonald-industries-v-ina-1#p622 ) (Iowa); C.D. Spangler Constr. Co. , 388 S.E.2d at 569 ( https://casetext.com/case/cd-spangler-constr-v-indus-crankshaft-eng#p569 ) (North Carolina); Minnesota Mining and Mfg. Co. , 457 N.W.2d at 179 ( https://casetext.com/case/minnesota-min-mfg-v-travelers-indem#p179 ) (Minnesota); AIU Ins. Co. v. Superior Court , 799 P.2d 1253 ( https://casetext.com/case/aiu-ins-co-v-superior-court-2 ) (Cal. 1990); Hazen , 555 N.E.2d at 583 ( https://casetext.com/case/hazen-paper-co-v-united-states-fidelity-guar-co#p583 ) (Massachusetts).
+
+ In contrast, Fireman's Fund urges that the unambiguous meaning of "damages" is limited to legal damages, that is, compensation awarded at law to a third party. ( https://casetext.com/case/hartford-accident-indemnity-v-dana-corp#a250a1fe-6edf-4a1a-afb5-ed499e3d23e6-fn19 ) Black's defines "damages" as "[a] pecuniary compensation or indemnity, which may be recovered in the courts by any person who has suffered loss, detriment, or injury." Black's Law Dictionary (5th ed. 1979). In light of these reasonable but differing definitions, we conclude that the term "damages" as used in Fireman's Fund's CGL policies is ambiguous. If an insurer intends that "damages" have only a limited technical meaning to exclude equitable relief, it should so indicate in its policy. We conclude that the "ordinary meaning of `damages' is so broad that it encompasses . . . environmental response costs." Farmland , 941 S.W.2d at 511 ( https://casetext.com/case/farmland-industries-inc-v-republic-ins#p511 ) . 
+
+ We find the distinction between legal and equitable remedies unpersuasive in this context. "Equity courts possess discretionary power to award damages in order to do complete justice." W W Equip. Co v. Mink , 568 N.E.2d 564, 577 ( https://casetext.com/case/w-w-equipment-co-inc-v-mink#p577 ) n. 1 (Ind.Ct.App. 1991), trans. denied .
+
+ Fireman's Fund claims that such an interpretation would render the term "damages" meaningless and require it to pay any amount for which Dana became obligated, for whatever reason. We disagree. Fireman's Fund would not be required to reimburse an insured for fines and penalties, for example. See id. The insurers also contend that preventive measures such as containment costs, where no environmental contamination has yet occurred, are not damages. The cost of containment as a remedial action taken to prevent further release of hazardous substances would be considered damages. See 42 U.S.C. § 9601(24) ( https://casetext.com/statute/united-states-code/title-42-the-public-health-and-welfare/chapter-103-comprehensive-environmental-response-compensation-and-liability/subchapter-i-hazardous-substances-releases-liability-compensation/section-9601-definitions ) . Yet, whether or not containment costs constitute damages necessarily also involves other policy terms ("injury to or destruction of property") and exclusions ("property owned by the insured"). We leave to the trial court the task of determining which costs associated with the cleanup of polluted sites will be covered. 
+
+ Fireman's Fund also argues that CERCLA itself distinguishes between damages and response costs. ( https://casetext.com/case/hartford-accident-indemnity-v-dana-corp#1e79c66f-6c25-44e4-95da-0c101c2e2086-fn20 ) The insurers "incorrectly assume that CERCLA's definition of the term `damages' governs the interpretation of that term in an insurance policy." Farmland , 941 S.W.2d at 512 ( https://casetext.com/case/farmland-industries-inc-v-republic-ins#p512 ) . Moreover, CERCLA was enacted in 1980, after the policies at issue here had been written, and after Fireman's Fund had ceased to be Dana's primary CGL insurer. 
+
+ See supra note 16.
+
+ We hold that the ordinary meaning of the term "damages" in a CGL policy includes EPA or state-mandated cleanup and response costs, and that the trial court properly so concluded. 
+
+ Fireman's Fund argues that the trial court erred in ordering it to tender a defense to Dana for all "suits" as defined by the court's order, and claims that such order was premature in light of other issues remaining between the parties. Fireman's Fund sets forth several arguments in support, all of which Dana disputes. We find, however, that resolution of this issue is unnecessary. On April 10, 1996, the trial court issued a stay of the portion of its order requiring Fireman's Fund to tender a defense "until the disposition of Fireman's Fund's appeal." (R. 2283). Furthermore, on June 28, 1996, Dana filed a motion for summary judgment "for reimbursement of its past defense costs and for an order requiring Fireman's Fund to defend." (R. 2284). This issue is not now before us. 
+
+ We affirm the judgment of the trial court in all respects. 
+
+ RILEY, J., and KIRSCH, J., concur. 

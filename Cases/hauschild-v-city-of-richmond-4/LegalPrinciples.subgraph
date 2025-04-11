@@ -1,0 +1,37 @@
+<CaseElements>
+<caseElement>
+    <Name>Tameny Claim</Name>
+    <Type>Doctrine</Type>
+    <Context>Wrongful termination claim against private employers for violating public policy</Context>
+    <Description>Under Tameny v. Atlantic Richfield Co., an employee can bring a tort claim for wrongful termination if the employer's actions violate fundamental principles of public policy.</Description>
+    <Relationship>DISTINGUISHED</Relationship>
+</caseElement>
+<caseElement>
+    <Name>Government Claims Act Immunity</Name>
+    <Type>Doctrine</Type>
+    <Context>Immunity for public entities against common law tort liability</Context>
+    <Description>The Government Claims Act of 1963 abolished common law tort liability, including Tameny claims, for public entities like the City of Richmond.</Description>
+    <Relationship>RELIED_ON</Relationship>
+</caseElement>
+<caseElement>
+    <Name>First Amendment Retaliation Test</Name>
+    <Type>Test</Type>
+    <Context>Five-factor analysis for public employee First Amendment retaliation claims</Context>
+    <Description>To succeed on a First Amendment retaliation claim, the plaintiff must show: (1) the speech was on a matter of public concern; (2) the speech was as a private citizen, not public employee; (3) the speech was a substantial factor in the adverse action; (4) the state lacked adequate justification; and (5) the state would not have taken the action absent the speech.</Description>
+    <Relationship>APPLIED</Relationship>
+</caseElement>
+<caseElement>
+    <Name>Self-Serving Declaration Rule</Name>
+    <Type>Rule</Type>
+    <Context>Limitations on relying solely on self-serving declarations at summary judgment</Context>
+    <Description>A district court may disregard a self-serving declaration that states conclusions rather than facts via admissible evidence, or lacks specific details and corroborating evidence.</Description>
+    <Relationship>APPLIED</Relationship>
+</caseElement>
+<caseElement>
+    <Name>Legitimate, Non-Discriminatory Reasons</Name>
+    <Type>Principle</Type>
+    <Context>Employer's burden to show adverse action was based on proper reasons</Context>
+    <Description>If the employee establishes the first three factors of the First Amendment retaliation test, the employer can still prevail by showing it would have taken the adverse action even absent the protected speech.</Description>
+    <Relationship>RELIED_ON</Relationship>
+</caseElement>
+</CaseElements>

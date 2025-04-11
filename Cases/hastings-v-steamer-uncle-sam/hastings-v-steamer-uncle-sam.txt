@@ -1,0 +1,30 @@
+[CaseName]:[Hastings v. Steamer Uncle Sam]
+[CaseId]:[https://casetext.com/case/hastings-v-steamer-uncle-sam]
+
+
+ Appeal from the District Court of the Seventh Judicial District, County of Solano. 
+
+ COUNSEL: 
+
+ S. Heydenfeldt , for Appellant. 
+
+ Delos Lake , for Respondent. 
+
+
+ JUDGES: Field, J., delivered the opinion of the Court. Terry, C. J., concurring. 
+
+ OPINION 
+
+ FIELD, Judge 
+
+ This is an action to recover damages for breach of an alleged contract, made by the owners of the steamer Uncle Sam, to transport the plaintiff and his family from San Francisco to New York by the way of Nicaragua. The breach averred is, that the defendants, instead of making the transportation by way of Nicaragua, conveyed the plaintiff and his family to the Isthmus of Panama, where they suffered from the diseases of the climate, and were subjected to various expenses, and detained sixteen days. The plaintiff obtained judgment for the sum of $ 2,800, which the Court, on motion, set aside, and granted a new trial. From the order for a new trial the appeal is taken. 
+
+ The only question for consideration is, whether the granting of the order for a new trial was such an abuse of discretion as to justify the interference of this Court. ( Drake v. Palmer , 2 Cal. 177 ( https://casetext.com/case/drakeburlingeam-v-palmer-cookco ) ; Spect v. Hoyt , 3 Cal. 413 ( https://casetext.com/case/speck-v-hoyt ) .) If any errors intervened on the trial, the order ought not to be disturbed. Several are alleged by the respondent, but it is sufficient to notice only one. To arrive at the damages sustained by the plaintiff by reason of his detention on the Isthmus, the witness Hubbs was permitted, against the objection of the defendants, to give his estimate of the value of the plaintiff's services per day. These the witness placed as high as one hundred dollars; and, as ground for his opinion, stated that the plaintiff was a speculator, possessed of a large property, money invested in stocks, rents, and other sources of income, and frequently made from one to five hundred dollars a day. The witness was unable to state the value of the plaintiff's services in any other capacity or employment. 
+
+ This testimony was clearly improper. The opinions of witnesses are generally admissible only when they relate to matters of science, or art, or to skill in some particular profession or business. The estimate of the witness Hubbs was but his judgment from facts, and could not be substituted for that of the jury. 
+
+ In Lincoln v. The Saratoga and Schenectady Railroad Company , (23 Wend. 425,) the plaintiff was detained some months from his business by the injury he received through the carelessness of the agents of the defendants, and several witnesses, after stating the character of his business, were permitted to give their opinions as to the amount of damages which he must have sustained in consequence of this detention. The plaintiff obtained judgment, but it was reversed on appeal, and the Court, per Nelson, C. J., said: 
+
+ " Where men of science or skill have been allowed to express their opinion, upon a given or admitted state of facts, if of equal standing and intelligence, there may be expected something like a general concurrence. I do not mean that the result would always follow with mathematical certainty, but deductions from the facts, by the application of their superior skill and knowledge in the matter, is supposed, by the law, to lead to a degree of certainty that may be safely relied on; otherwise the result would be worthless. In the case before us, no such accuracy is attainable, or can be predicated from the facts on which the opinions are expressed. They may be a tolerable conjecture of the amount of damage, and merchants in the same line of business with the plaintiff, and residing in his vicinity, might carry it nearer to the truth than others; but their opinions can rise no higher than mere conjecture ." 
+
+ Order affirmed. 

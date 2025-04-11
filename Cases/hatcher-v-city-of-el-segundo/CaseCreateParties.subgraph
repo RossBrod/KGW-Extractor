@@ -1,0 +1,27 @@
+<CYPHER>
+CREATE (case:Case {
+    name: 'Hatcher v. City of El Segundo',
+    filingDate: 'January 28, 2021'
+})
+
+CREATE (plaintiff:Party {
+    role: 'Plaintiff',
+    name: 'William Hatcher'
+})
+
+CREATE (defendant:Party {
+    role: 'Defendant',
+    name: 'City of El Segundo'
+})
+
+CREATE (jurisdiction:Jurisdiction {
+    name: 'Superior Court of Los Angeles County',
+    district: 'Los Angeles County',
+    level: 'State',
+    location: 'California'
+})
+
+MERGE (case)-[:PLAINTIFF]->(plaintiff)
+MERGE (case)-[:DEFENDANT]->(defendant)
+MERGE (case)-[:FILED_IN]->(jurisdiction)
+</CYPHER>
