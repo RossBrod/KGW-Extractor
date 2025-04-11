@@ -1,0 +1,23 @@
+{
+    "name": "Adams v. Comm'r of Internal Revenue",
+    "number_of_cases": 6,
+    "citations": [
+        "https://casetext.com/statute/united-states-code/title-26-internal-revenue-code/subtitle-f-procedure-and-administration/chapter-68-additions-to-the-tax-additional-amounts-and-assessable-penalties/subchapter-a-additions-to-the-tax-and-additional-amounts/part-i-general-provisions/section-6651-failure-to-file-tax-return-or-to-pay-tax",
+        "https://casetext.com/statute/united-states-code/title-26-internal-revenue-code/subtitle-f-procedure-and-administration/chapter-68-additions-to-the-tax-additional-amounts-and-assessable-penalties/subchapter-a-additions-to-the-tax-and-additional-amounts/part-i-general-provisions/section-6654-failure-by-individual-to-pay-estimated-income-tax",
+        "https://casetext.com/statute/united-states-code/title-26-internal-revenue-code/subtitle-a-income-taxes/chapter-1-normal-taxes-and-surtaxes/subchapter-b-computation-of-taxable-income/part-iii-items-specifically-excluded-from-gross-income/section-122-certain-reduced-uniformed-services-retirement-pay",
+        "https://casetext.com/statute/united-states-code/title-26-internal-revenue-code/subtitle-a-income-taxes/chapter-1-normal-taxes-and-surtaxes/subchapter-a-determination-of-tax-liability/part-i-tax-on-individuals/section-2-definitions-and-special-rules",
+        "https://casetext.com/statute/united-states-code/title-26-internal-revenue-code/subtitle-a-income-taxes/chapter-1-normal-taxes-and-surtaxes/subchapter-b-computation-of-taxable-income/part-iii-items-specifically-excluded-from-gross-income/section-107-rental-value-of-parsonages",
+        "https://casetext.com/case/employment-division-department-of-human-resources-of-oregon-v-smith",
+        "https://casetext.com/case/city-of-boerne-v-flores",
+        "https://casetext.com/case/hernandez-v-commissioner-2#p699",
+        "https://casetext.com/case/hernandez-v-commissioner-2",
+        "https://casetext.com/case/united-states-v-lee-24#p258",
+        "https://casetext.com/case/united-states-v-lee-24",
+        "https://casetext.com/statute/united-states-code/title-26-internal-revenue-code/subtitle-c-employment-taxes/chapter-24-collection-of-income-tax-at-source-on-wages/section-3406-backup-withholding",
+        "https://casetext.com/case/roye-v-commissioner"
+    ],
+    "court": "United States Tax Court.",
+    "datePublished": "Mar 3, 1998",
+    "citing_cases": [],
+    "output_file": "Output/adams-v-commr-of-internal-revenue-3/adams-v-commr-of-internal-revenue-3.txt"
+}

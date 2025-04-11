@@ -1,0 +1,28 @@
+{
+    "name": "Adams v. Cameron",
+    "number_of_cases": 16,
+    "citations": [
+        "https://casetext.com/case/cranfill-v-hayden",
+        "https://casetext.com/case/davis-v-hearst",
+        "https://casetext.com/statute/california-codes/california-civil-code/division-1-persons/part-2-personal-rights/section-45-libel-defined",
+        "https://casetext.com/case/tonini-v-cevasco",
+        "https://casetext.com/case/schomberg-v-walker",
+        "https://casetext.com/case/davis-v-hearst",
+        "https://casetext.com/case/westwater-v-grace-church",
+        "https://casetext.com/statute/california-codes/california-civil-code/division-4-general-provisions/part-1-relief/title-2-compensatory-relief/chapter-2-measure-of-damages/article-2-damages-for-wrongs/section-3333-breach-of-obligation-not-arising-from-contract",
+        "https://casetext.com/case/friendterry-lumber-co-v-miller",
+        "https://casetext.com/case/martin-v-deetz",
+        "https://casetext.com/case/carpenter-v-ashley-3#p423",
+        "https://casetext.com/case/carpenter-v-ashley-3",
+        "https://casetext.com/case/dauphiny-v-buhne",
+        "https://casetext.com/case/jarman-v-rea",
+        "https://casetext.com/case/tanner-v-embree",
+        "https://casetext.com/statute/california-codes/california-civil-code/division-1-persons/part-2-personal-rights/section-47-privileged-publication-or-broadcast",
+        "https://casetext.com/case/sweet-v-post-publishing-co",
+        "https://casetext.com/statute/california-codes/california-civil-code/division-1-persons/part-2-personal-rights/section-47-privileged-publication-or-broadcast"
+    ],
+    "court": "Court of Appeal of California, Third District",
+    "datePublished": "Jun 11, 1915",
+    "citing_cases": [],
+    "output_file": "Output/adams-v-cameron/adams-v-cameron.txt"
+}
