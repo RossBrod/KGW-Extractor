@@ -1,0 +1,122 @@
+import os
+import re
+import psycopg2
+from psycopg2.extras import execute_values
+import ast
+import datetime
+import logging
+import xml.etree.ElementTree as ET
+import json
+from typing import Dict, List
+from dateutil import parser as date_parser  # Make sure to install with: pip install python-dateutil
+from datetime import datetime
+
+LOCAL = False
+
+# Configure logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.FileHandler("neo4j_to_postgres.log"),
+        logging.StreamHandler()
+    ]
+)
+logger = logging.getLogger("neo4j2postgres")
+
+# Database connection parameters - customize these for your environment
+
+SQL_DB_NAME_AUTH: str = "KG-Extractor"
+SQL_DB_USER_AUTH: str = "postgres1dev" if not LOCAL else "postgres"
+SQL_DB_PASSWORD_AUTH: str = "dev4023TcupSoda" if not LOCAL else "root"
+SQL_DB_HOST_AUTH: str = "legawritesql.postgres.database.azure.com" if not LOCAL else "localhost"
+SQL_DB_PORT_AUTH: str = "5432"
+
+CASES_DIR = r'C:\_Repo\KGW-Extractor\Cases'
+
+def get_db_connection():
+    return psycopg2.connect(
+        dbname=SQL_DB_NAME_AUTH,
+        user=SQL_DB_USER_AUTH,
+        password=SQL_DB_PASSWORD_AUTH,
+        host=SQL_DB_HOST_AUTH,
+        port=SQL_DB_PORT_AUTH
+    )
+def connect_to_db():
+    """Create and return a connection to the PostgreSQL database."""
+    try:
+        connection = get_db_connection()
+        connection.autocommit = False  # Use transactions for better data integrity
+        return connection
+    except Exception as e:
+        logger.error(f"Database connection failed: {e}")
+        raise
+
+def create_cases_table_if_not_exists(conn):
+    with conn.cursor() as cur:
+        cur.execute('''
+            CREATE TABLE IF NOT EXISTS cases (
+                id SERIAL PRIMARY KEY,
+                case_id TEXT UNIQUE,
+                text TEXT,
+                status TEXT DEFAULT 'queued',
+                created_at TIMESTAMP DEFAULT NOW()
+            )
+        ''')
+    conn.commit()
+    logger.info("Table 'cases' ensured in the database (no title field).")
+
+def load_cases_to_db():
+    logger.info("Starting case loading process...")
+    try:
+        conn = connect_to_db()
+        create_cases_table_if_not_exists(conn)
+        cursor = conn.cursor()
+
+        inserted = 0
+
+        for folder_name in os.listdir(CASES_DIR):
+            folder_path = os.path.join(CASES_DIR, folder_name)
+            if not os.path.isdir(folder_path):
+                continue
+
+            txt_file = os.path.join(folder_path, f"{folder_name}.txt")
+            if not os.path.isfile(txt_file):
+                logger.warning(f"Missing case file: {txt_file}")
+                continue
+
+            with open(txt_file, 'r', encoding='utf-8') as f:
+                content = f.read()
+
+            cursor.execute('''
+                INSERT INTO cases (case_id, text, status, created_at)
+                VALUES (%s, %s, %s, %s)
+                ON CONFLICT (case_id) DO NOTHING
+            ''', (
+                folder_name,
+                content,
+                'queued',
+                datetime.utcnow()
+            ))
+            inserted += 1
+            logger.info(f"Inserted: {folder_name}")
+
+        conn.commit()
+        cursor.close()
+        conn.close()
+        logger.info(f"Finished loading {inserted} cases.")
+
+    except Exception as e:
+        logger.error(f"Error during case import: {e}")
+        raise
+
+    finally:
+        if cursor:                
+            cursor.close()
+        if conn:
+            conn.close()
+
+    
+    
+if __name__ == "__main__":
+    load_cases_to_db()

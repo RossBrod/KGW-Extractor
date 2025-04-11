@@ -1,5 +1,5 @@
 
-Please carefully read the provided case text : <case> {{Case}} </case>
+Please carefully read the provided case text : <case> @CaseText </case>
 
 Then,
 

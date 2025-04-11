@@ -17,7 +17,7 @@ logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     handlers=[
-        logging.FileHandler("neo4j_to_postgres.log"),
+        logging.FileHandler("LoadPromptstoDB.log"),
         logging.StreamHandler()
     ]
 )

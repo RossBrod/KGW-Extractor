@@ -1,4 +1,4 @@
-Please carefully read the provided case text : <case> {{Case}} </case>
+Please carefully read the provided case text : <case> @CaseText </case>
 
 Then, write a concise summary of the case in 600 words or less, addressing the following key points:
 

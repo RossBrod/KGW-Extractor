@@ -1,4 +1,4 @@
-Please carefully read the provided case text : <case> {{Case}} </case>
+Please carefully read the provided case text : <case> @CaseText </case>
 
 
 Then, follow these steps to extract and structure the information:
