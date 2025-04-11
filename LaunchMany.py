@@ -27,21 +27,21 @@ def worker_loop(worker_id):
 
             if count == 0:
                 print(f"✅ Worker {worker_id}: No more cases. Exiting.")
-                logger.info(f"✅ Worker {worker_id}: No more cases. Exiting.")
+                # logger.info(f"✅ Worker {worker_id}: No more cases. Exiting.")
                 break
 
             process_next_case()
 
         except Exception as e:
-            print(f"⚠️ Worker {worker_id} error: {e}")
-            logger.info(f"⚠️ Worker {worker_id} error: {e}")
-            time.sleep(3)  # Avoid tight crash loops
+            # print(f"⚠️ Worker {worker_id} error: {e}")
+            # logger.info(f"⚠️ Worker {worker_id} error: {e}")
+            time.sleep(1)  # Avoid tight crash loops
 
 if __name__ == "__main__":
-    num_workers = 500  # Tune based on machine and API capacity
+    num_workers = 50  # Tune based on machine and API capacity
 
     print(f"🚀 Starting {num_workers} persistent worker processes...")
-    logger.info(f"🚀 Starting {num_workers} persistent worker processes...")
+    #logger.info(f"🚀 Starting {num_workers} persistent worker processes...")
     workers = [Process(target=worker_loop, args=(i,)) for i in range(num_workers)]
 
     for w in workers:
