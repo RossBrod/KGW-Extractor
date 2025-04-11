@@ -1,0 +1,35 @@
+<CYPHER>
+CREATE (case:Case {
+    name: 'Hauschild v. City of Richmond',
+    filingDate: '2015-05',
+    caseId: 'https://casetext.com/case/hauschild-v-city-of-richmond-4',
+    caseNumber: 'C 15-01556 WHA'
+})
+
+CREATE (plaintiff:Party {
+    role: 'Plaintiff',
+    name: 'Thomas Hauschild'
+})
+
+CREATE (defendant1:Party {
+    role: 'Defendant',
+    name: 'City of Richmond'
+})
+
+CREATE (defendant2:Party {
+    role: 'Defendant',
+    name: 'Christopher Magnus'
+})
+
+CREATE (jurisdiction:Jurisdiction {
+    name: 'United States District Court',
+    district: 'Northern District of California',
+    level: 'Federal',
+    location: 'San Francisco'
+})
+
+MERGE (case)-[:PLAINTIFF]->(plaintiff)
+MERGE (case)-[:DEFENDANT]->(defendant1)
+MERGE (case)-[:DEFENDANT]->(defendant2)
+MERGE (case)-[:FILED_IN]->(jurisdiction)
+</CYPHER>

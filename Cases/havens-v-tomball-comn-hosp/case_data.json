@@ -1,0 +1,24 @@
+{
+    "name": "Havens v. Tomball Comn Hosp",
+    "number_of_cases": 70,
+    "citations": [
+        "https://casetext.com/case/delgado-v-burns-1#p429",
+        "https://casetext.com/case/gibbs-v-general-motors-corp#p828",
+        "https://casetext.com/case/wood-truck-leas-v-am-auto#p224",
+        "https://casetext.com/case/labbe-v-carr#p954",
+        "https://casetext.com/case/holmes-v-canlen-mgmt-corp#p201",
+        "https://casetext.com/case/gottlieb-v-hofheinz#p9",
+        "https://casetext.com/case/tidelands-auto-club-v-walters#p944",
+        "https://casetext.com/case/tidelands-auto-club-v-walters#p942",
+        "https://casetext.com/case/underwriters-life-ins-v-cobb#p819",
+        "https://casetext.com/case/tidelands-auto-club-v-walters#p944",
+        "https://casetext.com/case/st-elizabeth-hosp-v-garrard#p654",
+        "https://casetext.com/case/wilder-v-cody-country-ch-of-commerce",
+        "https://casetext.com/case/porterfield-v-galen-hosp",
+        "https://casetext.com/case/gte-southwest-inc-v-bruce"
+    ],
+    "court": "Court of Appeals of Texas, Houston, First District",
+    "datePublished": "Aug 16, 1990",
+    "citing_cases": [],
+    "output_file": "Output/havens-v-tomball-comn-hosp/havens-v-tomball-comn-hosp.txt"
+}

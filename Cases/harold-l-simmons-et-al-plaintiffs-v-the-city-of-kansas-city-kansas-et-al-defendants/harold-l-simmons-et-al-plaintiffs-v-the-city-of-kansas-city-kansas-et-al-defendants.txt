@@ -1,0 +1,66 @@
+[CaseName]:[Simmons v. City of Kansas City, Kansas]
+[CaseId]:[https://casetext.com/case/harold-l-simmons-et-al-plaintiffs-v-the-city-of-kansas-city-kansas-et-al-defendants]
+
+
+ Current and former black police officers of city brought action under §§ 1981, 1983, and Title VII against city, alleging racially discriminatory promotion policy. On officers' motion for class certification, the District Court, Earl E. O'Connor, Chief Judge, held that: (1) officers employed by city during applicable limitation periods could seek damages for alleged violations occurring outside limitations period, but those not so employed could not recover at all, and (2) officers were entitled to class certification. 
+
+ Motion granted. 
+
+ John H. Fields and Blaise R. Plummer, Carson & Fields, Kansas City, Kan., for plaintiffs. 
+
+ Daniel B. Denk, McAnany, Van Cleave & Phillips, P.A., and Harold T. Walker, Kansas City, Kan., for defendants. 
+
+
+ MEMORANDUM AND ORDER 
+
+ EARL E. O'CONNOR, Chief Judge. 
+
+ Before the court in the above-captioned matter is plaintiffs' motion for class certification, pursuant to Rule 23 of the Federal Rules of Civil Procedure. By order dated July 5, 1989, the court directed plaintiffs to file supplemental suggestions in support of their motion, to which defendants were allowed to respond. Having received and carefully considered said supplemental briefing by both sides, the court is prepared to rule. 
+
+ Plaintiffs are current and former black police officers employed by defendant City of Kansas City, Kansas (" the City" ). Plaintiffs claim that the City's policy governing promotions within the police department discriminates against them in violation of Title 42, United States Code, sections 1981 and 1983, 2000e et seq. (" § 1981," " § 1983," and " Title VII," respectively). The City's policy is contained in Article 11 of the Memorandum of Understanding Between The City of Kansas City, Kansas and Fraternal Order of Police Lodge # 4 of Kansas City, Kansas. The class for which plaintiffs seek certification is " All black police officers of the City of Kansas City, Kansas, at any time on or after the first day of January, 1977." Defendants deny that plaintiffs can meet any of the prerequisites for class certification. 
+
+ The court discussed many of the relevant considerations in ruling upon a motion for class certification in Smith v. MCI Telecommunications Corp., 124 F.R.D. 665 ( https://casetext.com/case/smith-v-mci-telecommunications-corporation ) (D.Kan.1989): 
+
+ 
+
+ 
+
+ 
+
+ * * * * * * 
+
+ 
+
+ Id. at 674 (footnote, citations, and internal quotation marks omitted). The court will first consider defendants' general objections to the proposed class and then turn to the requirements of Rule 23. 
+
+ Defendants object to the proposed class extending back to January 1, 1977, for two reasons. First, defendants maintain that, because actions under §§ 1981 and 1983 are subject to a two-year statute of limitations, Garcia v. University of Kan., 702 F.2d 849 ( https://casetext.com/case/garcia-v-university-of-kansas ) (10th Cir.1983), the class cannot include officers whose claims arose prior to December 7, 1986. Second, defendants argue that no Title VII claim will lie for class members not employed by the City on or after May 25, 1987. ( https://casetext.com/case/harold-l-simmons-et-al-plaintiffs-v-the-city-of-kansas-city-kansas-et-al-defendants#N131173 ) See Mohasco Corp. v. Silver, 447 U.S. 807 ( https://casetext.com/case/mohasco-corp-v-silver ) , 100 S.Ct. 2486 ( https://casetext.com/case/mohasco-corp-v-silver ) , 65 L.Ed.2d 532 ( https://casetext.com/case/mohasco-corp-v-silver ) (1980). Plaintiffs allege that the discriminatory promotional practices commenced on January 1, 1977, and constitute continuing violations of their rights. 
+
+ May 25, 1987, is 300 days prior to the filing of plaintiff Ambler's administrative charge. Among the named plaintiffs, Ambler's charge was the earliest filed, which determines the relevant limitations period for the Title VII claims. Movement for Opportunity v. General Motors, 622 F.2d 1235 ( https://casetext.com/case/movement-for-opportunity-v-general-motors ) (7th Cir.1980).
+
+ Suits under § 1981 and § 1983 challenging allegedly discriminatory practices are not barred by statutes of limitations, provided there is a violation during the limitations period. Pike v. City of Mission, 731 F.2d 655 ( https://casetext.com/case/pike-v-city-of-mission-kan ) (10th Cir.1984). The " continuing violation" theory also applies in cases under Title VII. See Bruno v. Western Elec. Co., 829 F.2d 957 ( https://casetext.com/case/bruno-v-western-elec-co-2 ) (10th Cir.1987). Merely feeling the effect of a past violation during the limitations period, however, is not sufficient to preserve the cause of action. Id. 
+
+ In the case at bar, the City's promotional policy has been in effect from January 1977 to the present. By definition, however, only the rights of those police officers actually employed by the City during the above limitations periods could be violated by a discriminatory promotional policy. Thus, while officers employed by the City during the limitations periods may seek damages for alleged violations occurring outside the limitations periods, those officers not so employed may not recover at all. See Wetzel v. Liberty Mut. Ins. Co., 508 F.2d 239 ( https://casetext.com/case/wetzel-v-liberty-mutual-insurance-co ) (3d Cir.), cert. denied, 421 U.S. 1011, 95 S.Ct. 2415, 44 L.Ed.2d 679 (1975); accord, Long v. Florida, 805 F.2d 1542 ( https://casetext.com/case/long-v-state-of-fla ) (11th Cir.1986), rev'd on other grounds, 487 U.S. 223 ( https://casetext.com/case/florida-v-long ) , 108 S.Ct. 2354 ( https://casetext.com/case/florida-v-long ) , 101 L.Ed.2d 206 ( https://casetext.com/case/florida-v-long ) (1988); Christman v. American Cyanamid Co., 92 F.R.D. 441, 448 (E.D.Pa.1981). Because the statute of limitations period for claims under § 1981 and/or § 1983 is longer than that for Title VII claims, the court will allow those officers employed by the City on or after December 7, 1986, to proceed as a class. If plaintiffs are successful on the former claims, then any recovery under Title VII will further depend, inter alia, upon their dates of employment. 
+
+ With respect to the issue of numerosity, Rule 23 directs a court to consider both the number of potential class members and the feasibility of their joinder in one action. Defendants herein do not claim that class membership of at least forty-nine persons is insufficient. Rather, they attack plaintiffs' demonstration that joinder is not practicable. Plaintiffs contend that the court should permit said members to proceed as a class, to minimize the likelihood of retaliation against individual members. As evidence of the likelihood of such retaliation, plaintiffs point to certain racial graffiti discovered on a wall of the police station after filing of the instant suit. Exhibit H, Plaintiffs' Suggestions ... Class Certification. In Frazier v. Southeastern Pa. Transp. Auth., 123 F.R.D. 195, 197 ( https://casetext.com/case/frazier-v-southeastern-pa-transp-authority#p197 ) (E.D.Pa.1988), the court found that alleged fear of retaliation against individual potential members of a class is a proper consideration when determining whether the numerosity requirement is met. We agree and, considering plaintiffs' evidence of potential retaliation, find that plaintiffs have satisfied the first condition for class certification. 
+
+ Plaintiffs may satisfy the commonality requirement by showing the existence of common questions either of law or of fact. Smith, 124 F.R.D. at 675 ( https://casetext.com/case/smith-v-mci-telecommunications-corporation#p675 ) . The proposed class members allegedly have three things in common: 1) they are black, 2) they have been employed by the City's police department, and 3) they have been denied promotions while Article 11 has been in effect. These three characteristics combine to present a common issue, namely, " Does the police department's promotional policy systematically discriminate against blacks?" The court holds that this is sufficient to satisfy the commonality requirement. 
+
+ While the commonality requirement is directed at guaranteeing some homogeneity within the proposed class, the typicality requirement helps insure that the named plaintiffs are representative of the proposed class. See id. The court finds that the named plaintiffs in this case satisfy the typicality requirement, inasmuch as they are each black police officers employed by the City who allegedly have been denied promotions under Article 11. 
+
+ Finally, to demonstrate that they will adequately represent the proposed class, plaintiffs must show that they do not have interests that are antagonistic to those of the proposed class members and that their named attorney is qualified to conduct the litigation as a class action. Id. at 676. Defendants do not challenge the qualifications of plaintiffs' attorneys. However, defendants do assert that the named plaintiffs have interests that are antagonistic to those of the proposed class members because some named plaintiffs have received promotions under Article 11, while some potential class members have not. That fact, however, does not lead to the conclusion that the named plaintiffs have interests antagonistic to those of the potential class members. At most, defendants have highlighted the inevitable factual variations among named plaintiffs and potential class members. Such variations are insufficient to undermine the adequacy of the named plaintiffs' representation. See Meiresonne v. Marriott Corp., 124 F.R.D. 619, 625 ( https://casetext.com/case/meiresonne-v-marriott-corp#p625 ) (N.D.Ill.1989) (holding that competition among class members is insufficient to demonstrate antagonistic interests). In sum, the court finds that plaintiffs have met the requirements of Rule 23(a). The inquiry turns, therefore, to whether plaintiffs have also satisfied Rule 23(b). Plaintiffs claim that their suit comes within the parameters of Rule 23(b)(2), ( https://casetext.com/case/harold-l-simmons-et-al-plaintiffs-v-the-city-of-kansas-city-kansas-et-al-defendants#N131267 ) which states that 
+
+ Although, in their original motion for certification, plaintiffs also claim to meet the requirements of Rule 23(b)(3), that basis is not briefed in their supplemental suggestions. Because the court finds certification proper under 23(b)(2), we need not determine whether plaintiffs meet the requirements of 23(b)(3) as well.
+
+ 
+
+ * * * * * * 
+
+ 
+
+ Fed.R.Civ.P. 23(b)(2) ( https://casetext.com/statute/united-states-code/title-28-appendix/federal-rules-of-civil-procedure/rules-of-civil-procedure-for-the-united-states-district-courts-1/title-iii-pleadings-and-motions/rule-23-class-actions ) . Plaintiffs challenge a specific procedure affecting the entire proposed class, while defendants maintain that the City's present promotional policy does not discriminate against blacks. Plainly, these facts satisfy Rule 23(b)(2). See Rich v. Martin Marietta Corp., 522 F.2d 333, 341 ( https://casetext.com/case/rich-v-martin-marietta-corporation#p341 ) (10th Cir.1975); Allen v. Isaac, 99 F.R.D. 45, 56 ( https://casetext.com/case/allen-v-isaac-2#p56 ) (N.D.Ill.1983). Nor do plaintiffs' prayers for monetary, in addition to injunctive, relief make certification improper under Rule 23(b)(2). Id. 
+
+ The court finds that plaintiffs have met the requirements for class certification under Rule 23 of the Federal Rules of Civil Procedure. Accordingly, this case will proceed as a class action on behalf of all black police officers of the City of Kansas City, Kansas, at any time on or after December 7, 1986. 
+
+ Counsel for plaintiffs shall, within twenty (20) days of the date of this order, file with the clerk and serve on counsel for defendants a proposed notice to class members, together with a proposed means of distributing said notice, pursuant to Local Rule 209(d). Defendants are given ten (10) days from the receipt of said proposals to respond thereto. 
+
+ IT IS SO ORDERED. 

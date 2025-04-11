@@ -1,0 +1,26 @@
+{
+    "name": "Hartle v. Packard Elec",
+    "number_of_cases": 30,
+    "citations": [
+        "https://casetext.com/statute/united-states-code/title-29-labor/chapter-18-employee-retirement-income-security-program/subchapter-i-protection-of-employee-benefit-rights/subtitle-a-general-provisions/section-1001-congressional-findings-and-declaration-of-policy",
+        "https://casetext.com/case/louisville-nashville-rr-v-mottley-2",
+        "https://casetext.com/case/metropolitan-life-ins-co-v-taylor",
+        "https://casetext.com/statute/united-states-code/title-29-labor/chapter-18-employee-retirement-income-security-program/subchapter-i-protection-of-employee-benefit-rights/subtitle-b-regulatory-provisions/part-5-administration-and-enforcement/section-1144-other-laws",
+        "https://casetext.com/case/alessi-v-raybestos-manhattan-inc#p523",
+        "https://casetext.com/case/alessi-v-raybestos-manhattan-inc#p1906",
+        "https://casetext.com/case/alessi-v-raybestos-manhattan-inc",
+        "https://casetext.com/case/metropolitan-life-ins-co-v-massachusetts",
+        "https://casetext.com/case/metropolitan-life-ins-co-v-taylor",
+        "https://casetext.com/case/pilot-life-insurance-company-v-dedeaux",
+        "https://casetext.com/case/cent-states-se-sw-areas-health-welfare-fund-v-health-special-risk",
+        "https://casetext.com/case/tower-loan-of-mississippi-v-hospital-benefits",
+        "https://casetext.com/case/barton-v-southern-farm-bureau-life-ins-co",
+        "https://casetext.com/case/christopher-v-mobil-oil-corp",
+        "https://casetext.com/case/morgan-v-meba-medical-benefits-plan",
+        "https://casetext.com/case/gibson-v-wyatt-cafeterias-inc"
+    ],
+    "court": "United States Court of Appeals, Fifth Circuit",
+    "datePublished": "Aug 10, 1989",
+    "citing_cases": [],
+    "output_file": "Output/hartle-v-packard-elec/hartle-v-packard-elec.txt"
+}

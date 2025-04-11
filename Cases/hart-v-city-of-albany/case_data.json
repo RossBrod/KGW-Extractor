@@ -1,0 +1,12 @@
+{
+    "name": "Hart v. City of Albany",
+    "number_of_cases": 20,
+    "citations": [
+        "https://casetext.com/case/meese-v-miller#p242",
+        "https://casetext.com/case/perez-v-morse-diesel-inc"
+    ],
+    "court": "Appellate Division of the Supreme Court of New York, Third Department",
+    "datePublished": "May 4, 2000",
+    "citing_cases": [],
+    "output_file": "Output/hart-v-city-of-albany/hart-v-city-of-albany.txt"
+}

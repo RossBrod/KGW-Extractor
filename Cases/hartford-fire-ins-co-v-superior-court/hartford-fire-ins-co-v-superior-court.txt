@@ -1,0 +1,166 @@
+[CaseName]:[Hartford Fire Ins. Co. v. Superior Court]
+[CaseId]:[https://casetext.com/case/hartford-fire-ins-co-v-superior-court]
+
+
+ Docket No. 65697. 
+
+ March 28, 1983. 
+
+ COUNSEL 
+
+ Overton, Lyman Prince, Laurence H. Schnabel and Kelley K. Beck for Petitioners. 
+
+ No appearance for Respondent. 
+
+ Steven W. Murray, Horvitz Greines, Barry R. Levy, Cotkin, Collins, Kolts Franscell, Raphael Cotkin, William D. Naeve, Georgette Herget, Stearns Nelson, Vincent W. Heublein, Kern, Wooley Maloney, Richard F. Runkle, Mendes Mount, David S. Brown, Billips Desimone, Magana, Cathcart, McCarthy Pierry, Peter T. Cathcart, Owen, Melbye Rohlff and William H. Owen for Real Parties in Interest. 
+
+
+ OPINION 
+
+ On June 22, 1982, Hartford Fire Insurance Company and Hartford Accident and Indemnity Company (hereafter Hartford or Hartford Fire or Hartford Accident) filed with this court a verified petition for writ of mandate, seeking to compel the superior court to set aside its ruling of June 11, 1982, which had determined that Joann Tobin, individually, and as personal representative of the estate of her husband Thomas Tobin, was entitled to a defense provided by Hartford. Hartford also sought to compel the superior court to grant its motion for summary judgment. 
+
+ On July 16, 1982, we denied the petition "without prejudice to petitioner's right to contend that the insured[s] are not entitled to coverage under the policy." This order had reference to the fact that the writ petition sought to challenge the denial of Hartford's motion for summary judgment, and that there was, as yet, no final judgment in the action. (Cf. Aetna Casualty Surety Co. v. Superior Court (1980) 114 Cal.App.3d 49, 54-55 ( https://casetext.com/case/aetna-casualty-surety-co-v-superior-court-3#p54 ) [ 170 Cal.Rptr. 527 ( https://casetext.com/case/aetna-casualty-surety-co-v-superior-court-3 ) ].) 
+
+ On September 30, 1982, our Supreme Court granted Hartford's petition for hearing and retransferred the case to this court with directions to issue an alternative writ, citing State Farm Fire Cas. Co. v. Camara (1976) 63 Cal.App.3d 48 ( https://casetext.com/case/state-farm-fire-cas-co-v-camara ) [ 133 Cal.Rptr. 600 ( https://casetext.com/case/state-farm-fire-cas-co-v-camara ) ].) 
+
+ Accordingly, on October 29, 1982, we issued our alternative writ of mandate ordering respondent court to vacate its order of June 11, 1982, denying Hartford's motion for summary judgment, and make a new and different order granting that motion, or to show cause why a peremptory writ should not issue. ( https://casetext.com/case/hartford-fire-ins-co-v-superior-court#ee11d24f-d219-4a18-b5ba-9ce4a145fa7d-fn1 ) 
+
+ From a transcript of the proceedings before the trial court on November 24, 1982, which was lodged with this court on December 20, 1982, it appears that on November 12, 1982, the trial court made a minute order indicating that Hartford did not have to provide a defense. However, a copy of that order was never forwarded to this court. On November 24, the trial court said that it had made the order of November 12 because it had thought that the Supreme Court and this court had required it to vacate the June 11 order, which is the subject of this proceeding. When the trial court noted the alternative language of this court's alternative writ, it vacated its order of November 12, and reinstated its order of June 11, leaving the parties where they stood when the original writ petition was filed. This court's alternative writ contains the following language: "In the event you choose alternative (a) above [vacating the June 11 order], you shall so inform this court by transmitting a copy of your minute order." As we have seen, no such order was transmitted to this court. Accordingly, alternative (a) was not fully conplied with, and the trial court was still under this court's order to show cause why a peremptory writ should not issue, as stated in alternative (b) of the alternative writ. Resolution of the question presented by the writ petition, thus, still awaits the opinion of this court.
+
+ Joann Tobin, real party in interest, has opposed issuance of the peremptory writ. 
+
+ Unigard Mutual Insurance Company, real party in interest, has also opposed issuance of the peremptory writ, ( https://casetext.com/case/hartford-fire-ins-co-v-superior-court#05380b0e-bcf5-4b98-9c9f-839a84533af4-fn2 ) as have Piper Aircraft, Jean Peterson, Thomas Carroll, and Transamerica Insurance Company. 
+
+ At the request of a party to this proceeding, we have judicially noticed our own records in Unigard Mutual Insurance Company v. Superior Court, our case number 2 Civil 65754. In that case Unigard filed a petition for writ of mandate on June 29, 1982, seeking the same relief sought by Hartford in the present case. On July 16, 1982, this court denied the writ petition "without prejudice to petitioner's right to contend that the insured[s] are not entitled to coverage under the policy." It does not appear that Unigard sought further relief. Rather, as a real party in interest in the present proceeding, Unigard has taken the position that Hartford does have a duty to defend Joann Tobin.
+
+ The complaint alleged as follows: On July 24, 1977, at Lake Tahoe, California, Thomas Tobin was piloting a Piper aircraft while trying to take off, with four passengers. Joann Tobin was not in the aircraft. The plane crashed shortly after takeoff, killing Thomas Tobin and one passenger, and seriously injuring three passengers. Complaints for personal injuries and wrongful death were filed against Joann Tobin, individually, and as personal representative of the estate. All of the community property of Joann and Thomas Tobin was placed in probate at Thomas' death, and claims in the personal injury actions were made against that property. The surviving passengers and surviving relatives of the deceased passenger asserted claims against Piper Aircraft, El Monte Flight Service, Norman and Dixie Hueckel, and American Safety Equipment Corporation, as well as against Joann Tobin; and those defendants filed cross-complaints against Joann Tobin, seeking indemnity and equitable contribution. On February 17, 1982, judgment for El Monte Flight Service was entered against Joann Tobin. All of the actions were then pending against Joann Tobin in the superior court, as part of the coordinated case number 799. 
+
+ Joann Tobin's complaint further alleged that she had tendered the claims made against her by third parties to the insurers, but that they had declined to settle or defend the cases. As to Hartford, her complaint alleged that Hartford Fire had issued a policy of general liability insurance, in the sum of $100,000, which included a promise to defend. A partial copy of the policy was attached to and incorporated in the complaint. Hartford Fire declined to defend the personal injury actions filed against Joann Tobin, denied coverage under the policy and refused to satisfy settlement demands or the judgment for El Monte Flight Service. Hartford Accident also issued a policy of insurance covering general liability, in the amount of $1 million, which included a promise to defend. A partial copy of that policy was also attached to and incorporated in the complaint. Hartford Accident refused to provide coverage or defense under that policy. 
+
+ The Hartford Fire policy was a so-called homeowner's policy issued to Thomas and Joann Tobin. 
+
+ Petitioner has not provided this court with a complete copy of the Hartford Fire policy, but the copy of certain policy pages, placed before the trial court with the complaint, shows the following terms: 
+
+ "This Company agrees to pay on behalf of the Insured all sums which insured shall become legally obligated to pay as damages because of bodily injury or property damage, to which this insurance applies, caused by an occurrence. This Company shall have the right and duty, at its own expense, to defend any suit against the Insured seeking damages on account of such bodily injury or property damage, even if any of the allegations of the suit are groundless, false or fraudulent, but may make such investigation and settlement of any claim or suit as it deems expedient. This Company shall not be obligated to pay any claim or judgment or to defend any suit after the applicable limit of this Company's liability has been exhausted by payment of judgments or settlements." 
+
+ The policy provided the following exclusion: 
+
+ "This policy does not apply: 
+
+ "Under Coverage E — Personal Liability . . . 
+
+ "a. to bodily injury or property damage arising out of the ownership, maintenance, operation, use, loading or unloading of: 
+
+ "(1) any aircraft. . . ." 
+
+ The Hartford Accident policy was a so-called "excess indemnity policy." Thomas F. Tobin was the named insured. The policy pages attached to the complaint reveal the following coverage and exclusion: 
+
+ "1. Coverage: The Company will indemnify the insured for ultimate net loss which the insured shall become legally obligated to pay, in excess of the applicable underlying (or retained) limit, because of personal injury or property damage occurring during the policy period; provided that: [Italics in original.] 
+
+ "Exclusions — This insurance does not apply: 
+
+ ". . . . . . . . . . . . . . . . . . . . . . . 
+
+ "(d) to the ownership, maintenance, operation, use, loading or unloading of any aircraft owned or operated by the insured or chartered without crew by or on behalf of the insured ; but this exclusion shall not apply to liability for personal injury to any employee of the insured arising out of and in the course of his employment by the insured ; [Italics in original.] 
+
+ "2. Defense of Suits Not Covered by Other Insurance: The Company shall defend any suit seeking damages which are not payable on behalf of the insured under the terms of the underlying policies of insurance . . . but which are payable under the terms of Section A1 [the section on coverage and exclusions]. . . ." (Italics in original.) 
+
+ Hartford answered the complaint. As an affirmative defense, Hartford alleged that neither the Hartford Fire nor the Hartford Accident policy created an obligation to defend or indemnify for the liabilities arising out of the air crash. 
+
+ Joann Tobin moved the court for an order specifying certain issues to be without substantial controversy. Those issues were as follows: 
+
+ "A. Against Unigard, Hartford, and Transamerica: 
+
+ "1. Joann Tobin, as an individual and as an insured, is entitled to a defense against the damage action in the coordinated tort case. 
+
+ "2. Joann Tobin, as administratrix, is entitled to a defense against the damage actions . . . because of alleged negligent acts of Thomas F. Tobin, independent of those involving the aircraft. 
+
+ "3. Joann Tobin, individually, as an insured, is the victim of a groundless, false and fraudulent lawsuit because any judgment rendered in the tort case is enforceable against her community property, as a proximate result of her `act' of marrying Thomas F. Tobin, not of using an aircraft." 
+
+ In support of her motion, Joann Tobin attached copies of her deposition taken in connection with the coordinated personal injury actions. In her deposition of June 15, 1981, she said that she recalled seeing her husband at home making flight preparations and plans before the accident flight. 
+
+ Hartford noticed a motion for summary judgment, together with its opposition to Joann Tobin's motion to declare certain issues to be without substantial controversy, to be heard on June 11, 1982, together with Joann Tobin's motion. Hartford's motion for summary judgment was based on the aircraft exclusions in the insurance policies and on the fact that the only liability of either Thomas Tobin's estate, or of Joann Tobin, arose out of the air crash and was excluded from coverage, regardless of whether relief was sought against Joann Tobin as an individual or as personal representative of the estate. 
+
+ Hartford filed the declaration of Ronald McClymont, an insurance agent, in support of its motion. He stated that he had sold Thomas Tobin the homeowner's policy and the excess insurance policy from Hartford and that he had discussed with Tobin the fact that Tobin did not have aviation insurance. 
+
+ The complaint filed by Jeanne L. Long against Piper and other defendants, including Joann Tobin, alleged that the underlying personal injury damages arose out of the chartering of a plane by the partnership of Keenan and Tobin, of which Thomas Tobin was a member, and that Thomas Tobin was the pilot of the plane when it crashed during take off from Lake Tahoe Airport. The Long complaint also alleged that Thomas Tobin was intoxicated at the time of the accident and that "defendants" had misrepresented Tobin's ability as a pilot. 
+
+ On December 5, 1980, the Jeanne Long complaint was dismissed as to certain defendants, but not as to Joann Tobin personally or the estate of Thomas Tobin. 
+
+ A copy of the National Transportation Safety Board's determination of probable cause of the crash also was attached to Joann Tobin's motion to find certain issues to be without substantial controversy. That report revealed that the crash occurred during the initial climb phase of take off, with unlimited visibility and fair weather. 
+
+ The report lists the following: 
+
+ "Probable cause(s) 
+
+ "Pilot in Command — Inadequate preflight preparation and/or planning 
+
+ "Pilot in command — Premature lift-off 
+
+ "Pilot in command — Misjudged distance, speed, and altitude 
+
+ "Pilot in command — Failed to obtain/maintain flying speed 
+
+ "Pilot in command — Physical impairment 
+
+ "Miscellaneous acts, conditions — alcoholic impairment of efficiency and judgment 
+
+ ". . . . . . . . . . . . . . . . . . . . . . . 
+
+ "Remarks — turned toward rising terrain, [pilot] blood alcohol lvl 0.15%. D/A Aprx 8500 ft. gusting 20m. . . ." 
+
+ The court's minute order of June 11, 1982, reflects that the court determined: (1) that the duty of the insurers to defend was a question of law; (2) that the exclusionary provisions of the policies were not ambiguous; (3) that parol evidence and extrinsic evidence were not admissible for their interpretation; (4) that the allegations that Thomas Tobin negligently prepared for the flight and that he negligently misrepresented his capabilities as a pilot were independent concurring proximate causes of the damages for which Joann Tobin and the estate were sought to be held liable and, thus, gave rise to a potential for liability under the policies despite the aviation exclusions; and (5) that the insurers, including Hartford, therefore, had a duty to defend Joann Tobin in the personal injury actions. The court also held that the insurers had a duty to protect Joann's interest in the community property since there was a potential for liability not excluded. 
+
+ For the reasons set forth herein, we have found that the peremptory writ should issue directing the superior court to vacate its order of June 11, 1982, and make a new and different order granting the motion of Hartford for summary judgment and determining that Hartford has no duty to provide a defense. 
+
+ We must make our own independent determination of the meaning of the language used in the Hartford policies, because the facts of this case are not in dispute and the trial court considered its determination to be a matter of law. (See Bareno v. Employers Life Ins. Co. (1972) 7 Cal.3d 875, 881 ( https://casetext.com/case/bareno-v-employers-life-ins-co#p881 ) [ 103 Cal.Rptr. 865 ( https://casetext.com/case/bareno-v-employers-life-ins-co ) , 500 P.2d 889 ( https://casetext.com/case/bareno-v-employers-life-ins-co ) ].) Accordingly, we have concluded that both Hartford policies gave rise to no potential coverage for the events alleged. 
+
+ Because there can be no potential coverage under the Hartford policies on the facts known and alleged from all sources, there is no duty to defend. ( Gray v. Zurich Insurance Co. (1966) 65 Cal.2d 263, 275 ( https://casetext.com/case/gray-v-zurich-insurance-co#p275 ) [ 54 Cal.Rptr. 104 ( https://casetext.com/case/gray-v-zurich-insurance-co ) , 419 P.2d 168 ( https://casetext.com/case/gray-v-zurich-insurance-co ) ].) 
+
+ There are few cases dealing with aircraft exclusions in insurance policies. However, we have found those cases dealing with automobile exclusions to be determinative of the issues before us. 
+
+ The leading case on the issue of whether coverage is available under a homeowner's policy, despite an exclusion for injuries "arising out of the use" of an automobile, when another factor besides automobile use contributed to the injuries, is State Farm Mut. Auto. Ins. Co. v. Partridge (1973) 10 Cal.3d 94 ( https://casetext.com/case/state-farm-mut-auto-ins-co-v-partridge ) [ 109 Cal.Rptr. 811 ( https://casetext.com/case/state-farm-mut-auto-ins-co-v-partridge ) , 514 P.2d 123 ( https://casetext.com/case/state-farm-mut-auto-ins-co-v-partridge ) ]. In that case, an insured had filed down the trigger on a pistol while at home. He then carried the pistol in his car onto rough terrain, where the gun went off, due to the "hair-trigger" alteration that he had made, and injured a passenger. The court found that coverage under the driver's automobile policy was clear, but went on to explain why it had found coverage under the homeowner's policy. The court stated its holding as follows: 
+
+ ". . . [A]lthough the homeowner's policy excluded injuries `arising out of the use' of an automobile, such exclusion does not preclude coverage when an accident results from the concurrence of a non-auto-related cause and an auto-related cause." (Italics added.) ( Id., at p. 97.) The court found that filing down the trigger and driving off the road were two independent, concurrent proximate causes of the injuries. The Supreme Court said the following: ". . . here both causes were independent of each other; the filing of the trigger did not `cause' the careless driving, nor vice versa. Both, however, caused the injury." ( Id., at pp. 103, 104, fn. 10.) 
+
+ In National Indemnity Co. v. Farmers Home Mutual Ins. Co. (1979) 95 Cal.App.3d 102 ( https://casetext.com/case/national-indemnity-co-v-farmers-home-mutual-ins ) [ 157 Cal.Rptr. 98 ( https://casetext.com/case/national-indemnity-co-v-farmers-home-mutual-ins ) ], the court held that when a small child was injured while alighting from a vehicle, the injuries were covered by the automobile liability policy, but not by the homeowner's policy, which contained an exclusion for injury "arising out of the ownership, maintenance, operation, use, loading or unloading of any motor vehicle owned or operated by . . . the insured. . . ." ( Id., at p. 106.) The court held that "negligence, to be covered by the homeowner's policy, must exist independently of the ownership, use or maintenance of the vehicle" ( id., at p. 108) and that because the negligence was in the failure to supervise a child during loading or unloading of a vehicle, there was, therefore, a complete lack of conduct which was independent of and unrelated to the use of a vehicle. 
+
+ The court reasoned as follows: 
+
+ "The conduct of the insured which contributed to the injury simply cannot be disassociated from the use of the vehicle. Nor did the injury, insofar as the insured is concerned, involve an instrumentality other than the vehicle itself. [Citation.] This being so, the exclusion clause in the . . . homeowners policy must be given effect." ( Id., at p. 109.) 
+
+ The present case is extremely close in many of its salient characteristics to State Farm Fire Cas. Co. v. Camara (1976) 63 Cal.App.3d 48 ( https://casetext.com/case/state-farm-fire-cas-co-v-camara ) [ 133 Cal.Rptr. 600 ( https://casetext.com/case/state-farm-fire-cas-co-v-camara ) ], in which the court held that a homeowner's policy did not provide coverage for injuries to a passenger riding in a dune buggy designed and built by the driver at his home. There was an exclusion in the policy for injuries arising out of the "ownership, maintenance, operation, use, loading or unloading" of a vehicle, and the court held that the work of designing, constructing, and building the dune buggy necessarily arose out of the vehicle's ownership and use. Furthermore, the court held that the passenger could only have been exposed to the risks inherent in the design by operation or use of the vehicle. Thus, the injuries came within the exclusion. ( Id., at pp. 53-55.) 
+
+ The Camara court noted that Partridge, supra, 10 Cal.3d 94 ( https://casetext.com/case/state-farm-mut-auto-ins-co-v-partridge ) , had held that the vehicle-related cause must be independent of the nonvehicle-related cause in order for liability to attach under a homeowner's policy. ( State Farm Fire Cas. Co. v. Camara, supra, 63 Cal.App.3d at pp. 54, 55 ( https://casetext.com/case/state-farm-fire-cas-co-v-camara#p54 ) , fn. 4.) 
+
+ (1) Under the reasoning of Camara, supra, preflight planning cannot be an independent cause of injury in the present case. 
+
+ One basis on which Joann Tobin contends that the policies do not exclude coverage is that Thomas worked on his preflight planning at his home the night before flying. However, as Hartford has pointed out in its motion for summary judgment, preflight planning is a part of the "operation" and "use" of an aircraft and therefore comes within the exclusion. Whether the planning is performed at home, on the airplane, or at some other location, it is simply a necessary part of operating the aircraft. 
+
+ Consumption of alcohol before the flight also does not cause any injury which is independent of the "operation" or "use" of an aircraft. Consuming alcohol is not, alone, negligent. It is only the act of piloting a plane while intoxicated that causes injuries or gives rise to an accident. Any damages caused while operating the aircraft under the influence of alcohol were wholly dependent on the aircraft operation. 
+
+ Likewise, any preflight representations made by Thomas Tobin about his experience as a pilot were not an independent cause of injuries. Without the aircraft operation and the crash, any such representations would have been mere harmless words. Representations about piloting ability cannot properly be characterized as "independent, concurring proximate" causes of the injuries, within the holding of State Farm Mut. Auto. Ins. Co. v. Partridge, supra, 10 Cal.3d at page 99 ( https://casetext.com/case/state-farm-mut-auto-ins-co-v-partridge#p99 ) . 
+
+ In sum, in the case at bench, the accident could not have happened but for the operation and use of the aircraft by Thomas Tobin. 
+
+ Lipson v. Superior Court (1982) 31 Cal.3d 362 ( https://casetext.com/case/lipson-v-superior-court ) [ 182 Cal.Rptr. 629 ( https://casetext.com/case/lipson-v-superior-court ) , 644 P.2d 822 ( https://casetext.com/case/lipson-v-superior-court ) ], cited by Joann Tobin for the proposition that negligent misrepresentations are an independent cause of injury, does not so hold. That case held that the "fireman's rule" precludes liability to a fireman only for injuries arising from those acts of misconduct which were the original cause of the fireman's presence on the scene. The court held that a fireman could recover for additional injuries caused by the landowner's failure to warn of another known, hidden danger on the premises or by misrepresentation as to the nature of the danger. ( Id., at pp. 369-371.) Such misrepresentations were held to be properly excluded from the fireman's rule because the fireman's rule is based on the doctrine of assumption of risk, and misrepresentation interferes with knowledge of the risk being assumed. The Lipson case represented the refusal to expand a common law doctrine beyond the situation which the doctrine had originally been intended to cover, and is inapplicable to the present case. 
+
+ Gonzalez v. St. Paul Mercury Ins. Co. (1976) 60 Cal.App.3d 675 ( https://casetext.com/case/gonzalez-v-st-paul-mercury-ins-co ) [ 131 Cal.Rptr. 626 ( https://casetext.com/case/gonzalez-v-st-paul-mercury-ins-co ) ], relied upon by Joann Tobin, was criticized by the court in State Farm Fire Cas. Co. v. Camara, supra, 63 Cal.App.3d 48 ( https://casetext.com/case/state-farm-fire-cas-co-v-camara ) , on the ground that repairing brakes, which was found not to come under an exclusion for automobile operation in that homeowner's policy, clearly should have come within the exclusion. The Camara court noted that extending liability by holding that repair of a vehicle was not excluded would turn a homeowner's policy into an automobile policy in many cases. Moreover, the activity of repairing brakes can be deemed an independent cause of injury, and thus the Gonzalez case can be distinguished from the case before us. 
+
+ In other cases cited in the opposition papers, the activities were also sufficiently removed from the "use" or "operation" of a vehicle not to come within the exclusion. In State Farm Fire Cas. Co. v. Kohl (1982) 131 Cal.App.3d 1031 ( https://casetext.com/case/state-farm-fire-cas-co-v-kohl ) [ 182 Cal.Rptr. 720 ( https://casetext.com/case/state-farm-fire-cas-co-v-kohl ) ], there was the independent act of dragging a person across a street. 
+
+ Because there is no duty to defend against any liability arising out of the air crash, there is no duty to provide a defense to Joann Tobin, either as the personal representative of Thomas Tobin's estate, or individually, as his spouse and heir. Any potential liability on her part in this case could only have arisen out of the aircraft operations which we have found to be excluded by the terms of both Hartford policies. Put differently, what was insured against by the policies, generally, was an "occurrence," and the "occurrence" in this case was of a kind excluded by the policy terms. The relationship or marital status of the Tobins gave rise to no independently insurable event which would place this case beyond the aircraft exclusions in the policies. (See Evans v. Pacific Indemnity Co. (1975) 49 Cal.App.3d 537, 542 ( https://casetext.com/case/evans-v-pacific-indemnity-co#p542 ) [ 122 Cal.Rptr. 680 ( https://casetext.com/case/evans-v-pacific-indemnity-co ) ].) The present case is distinguishable from those cited by Joann Tobin, such as Arenson v. Nat. Automobile Cas. Ins. Co. (1955) 45 Cal.2d 81 ( https://casetext.com/case/arenson-v-nat-automobile-cas-ins-co ) [ 286 P.2d 816 ( https://casetext.com/case/arenson-v-nat-automobile-cas-ins-co ) ], and Nuffer v. Insurance Co. of North America (1965) 236 Cal.App.2d 349 ( https://casetext.com/case/nuffer-v-insurance-co-of-north-america ) [ 45 Cal.Rptr. 918 ( https://casetext.com/case/nuffer-v-insurance-co-of-north-america ) ], in which the basic occurrence giving rise to the liability was not excluded, but was covered, by the language of the policy. In Nuffer, recovery was allowed under fire insurance policies for fire damages caused by the building-owner's agent, without the owner's authorization. The occurrence, a fire, was clearly covered by the insurance policy. The only question was whether the agent's unauthorized and illegal act of arson would block recovery by the owner, and recovery was allowed, because the occurrence was covered and the illegal act was unauthorized. In Arenson, the court held that policy language in a personal liability policy, which excluded ". . . injury . . . or destruction caused intentionally by or at the direction of the insured . . .," did not preclude coverage of the father's liability for a fire intentionally set by his son. The court held that the policy protected the named, insured father, against liability for intentional injury committed by another insured, because the purpose of the exclusionary clause was only to prevent an insured from recovering for his own intentional wrongdoing. These cases do not create an independent basis of coverage for an activity excluded by the terms of the insurance policy. In our case, the basic occurrence which caused the injuries was clearly excluded from coverage by the policies, and Joann Tobin cannot obtain coverage merely because she did not participate in the aircraft activities. 
+
+ The contention has been made that Hartford was obligated to defend because there was a conflict between Court of Appeal decisions and, when there is doubt, an insurer must defend. However, under our Supreme Court's decision in State Farm Mut. Auto. Ins. Co. v. Partridge, supra, 10 Cal.3d 94 ( https://casetext.com/case/state-farm-mut-auto-ins-co-v-partridge ) , it was clear that there was no duty to defend. 
+
+ Another factor which we have considered is that, in the present case, the reasonable expectations of the insurer and the insured do not contemplate coverage for aircraft-related accidents. Other insurance, with a premium suitable for the greater risk, is available to cover aviation accidents. These expectations weigh against extending coverage to include the air crash in the present case. (See Herzog v. National American Ins. Co. (1970) 2 Cal.3d 192, 197 ( https://casetext.com/case/herzog-v-national-american-ins-co#p197 ) [ 84 Cal.Rptr. 705 ( https://casetext.com/case/herzog-v-national-american-ins-co ) , 465 P.2d 841 ( https://casetext.com/case/herzog-v-national-american-ins-co ) ].) 
+
+ If we were to extend the coverage of the Hartford policies in this case, by some strained interpretation, to find potential coverage for the situation presented by this air crash and the surrounding facts alleged by the insured, we would be doing no favors to the consumers of homeowners and excess insurance policies. Ordinary insureds would have to bear the expense of the increased premiums necessitated by the expansion of their insurers' potential liabilities. (See National Indemnity Co. v. Farmers Home Mutual Ins. Co., supra, 95 Cal.App.3d at p. 107 ( https://casetext.com/case/national-indemnity-co-v-farmers-home-mutual-ins#p107 ) .) 
+
+ Our decision today leaves the law on the usual aircraft exclusion where it is on the usual automobile exclusion. That is, the exclusion will operate, unless there is an independent, concurrent, nonaircraft-related proximate cause for the injuries. Those who wish insurance for aircraft use and operation can purchase such insurance separately. 
+
+ Potter, Acting P.J., and Lui, J., concurred. 
+
+ The petitions of real parties in interest for a hearing by the Supreme Court were denied May 25, 1983. 
+
+ 

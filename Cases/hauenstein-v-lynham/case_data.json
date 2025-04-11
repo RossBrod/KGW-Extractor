@@ -1,0 +1,18 @@
+{
+    "name": "Hauenstein v. Lynham",
+    "number_of_cases": 162,
+    "citations": [
+        "https://casetext.com/case/shanks-et-al-v-dupont-et-al",
+        "https://casetext.com/case/ware-v-hylton",
+        "https://casetext.com/case/chirac-v-chirac",
+        "https://casetext.com/case/ware-v-hylton",
+        "https://casetext.com/case/shanks-et-al-v-dupont-et-al",
+        "https://casetext.com/case/people-ex-rel-attorney-gen-v-gerke",
+        "https://casetext.com/case/state-etc-v-hillcrest-investments-ltd",
+        "https://casetext.com/case/caparell-v-goodbody"
+    ],
+    "court": "U.S.",
+    "datePublished": "Jan 1, 1879",
+    "citing_cases": [],
+    "output_file": "Output/hauenstein-v-lynham/hauenstein-v-lynham.txt"
+}
