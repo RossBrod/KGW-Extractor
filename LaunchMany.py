@@ -2,20 +2,27 @@ from multiprocessing import Process
 from ProcessCases import process_next_case, get_db_connection
 import time
 import logging
+import os
 
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-    handlers=[
-        logging.FileHandler("LaunchMany.log"),
-        logging.StreamHandler()
-    ]
-)
-logger = logging.getLogger("LaunchMany")
+def setup_logger(worker_id):
+    logger = logging.getLogger(f"worker-{worker_id}")
+    logger.setLevel(logging.INFO)
 
+    formatter = logging.Formatter('%(asctime)s [%(name)s] %(levelname)s: %(message)s')
+
+    # Each worker logs to its own file (optional)
+    fh = logging.FileHandler(f'logs/worker_{worker_id}.log', encoding='utf-8')
+    fh.setFormatter(formatter)
+    logger.addHandler(fh)
+
+    return logger
 
 def worker_loop(worker_id):
+    
     print(f"👷 Worker {worker_id} started.")
+    
+    logger = setup_logger(worker_id)
+    logger.info(f"👷 Worker {worker_id} started.")
     while True:
         try:
             conn = get_db_connection()
@@ -27,21 +34,19 @@ def worker_loop(worker_id):
 
             if count == 0:
                 print(f"✅ Worker {worker_id}: No more cases. Exiting.")
-                # logger.info(f"✅ Worker {worker_id}: No more cases. Exiting.")
                 break
 
-            process_next_case()
+            process_next_case(logger=logger)
 
         except Exception as e:
-            # print(f"⚠️ Worker {worker_id} error: {e}")
-            # logger.info(f"⚠️ Worker {worker_id} error: {e}")
+            print(f"⚠️ Worker {worker_id} error: {e}")
             time.sleep(1)  # Avoid tight crash loops
 
 if __name__ == "__main__":
+    os.makedirs("logs", exist_ok=True)
     num_workers = 50  # Tune based on machine and API capacity
 
     print(f"🚀 Starting {num_workers} persistent worker processes...")
-    #logger.info(f"🚀 Starting {num_workers} persistent worker processes...")
     workers = [Process(target=worker_loop, args=(i,)) for i in range(num_workers)]
 
     for w in workers:
@@ -49,6 +54,5 @@ if __name__ == "__main__":
 
     for w in workers:
         w.join()
-
     print("\n🏁 All workers completed.")
-    logger.info("\n🏁 All workers completed.")
+
