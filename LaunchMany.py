@@ -44,7 +44,7 @@ def worker_loop(worker_id):
 
 if __name__ == "__main__":
     os.makedirs("logs", exist_ok=True)
-    num_workers = 50  # Tune based on machine and API capacity
+    num_workers = 10  # Tune based on machine and API capacity
 
     print(f"🚀 Starting {num_workers} persistent worker processes...")
     workers = [Process(target=worker_loop, args=(i,)) for i in range(num_workers)]

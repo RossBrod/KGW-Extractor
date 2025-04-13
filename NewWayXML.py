@@ -31,8 +31,6 @@ SQL_DB_USER_AUTH: str = "postgres1dev" if not LOCAL else "postgres"
 SQL_DB_PASSWORD_AUTH: str = "dev4023TcupSoda" if not LOCAL else "root"
 SQL_DB_HOST_AUTH: str = "legawritesql.postgres.database.azure.com" if not LOCAL else "localhost"
 SQL_DB_PORT_AUTH: str = "5432"
-
-
 def get_db_connection():
     return psycopg2.connect(
         dbname=SQL_DB_NAME_AUTH,
@@ -57,19 +55,139 @@ def ensure_case_exists(case_id):
         cursor.execute("INSERT INTO cases (case_id) VALUES (%s) ON CONFLICT DO NOTHING", (case_id,))
         connection.commit()
     except Exception as e:
-        print("⚠️ Added a token to national code debit ⚠️")        
+        print("✅ case exists ganagsta 🍷")        
     finally:
         cursor.close()
         connection.close()    
-    
+
 ########## CasePartyJurispridiction
-def process_case_creation_file(root_dir):
-    """Process all case creation files in the given directory."""
+def extract_tag_content(content, tag_name):
+    """Extract content between specified XML tags."""
+    match = re.search(f'<{tag_name}>(.*?)</{tag_name}>', content, re.DOTALL)
+    return match.group(1).strip() if match else ""
+def get_or_create_party(cursor, party_name):
+    """Get or create a party record and return its ID."""
+    cursor.execute(
+        "INSERT INTO parties (name) VALUES (%s) ON CONFLICT (name) DO UPDATE SET name = EXCLUDED.name RETURNING party_id",
+        (party_name,)
+    )
+    return cursor.fetchone()[0]
+def get_or_create_jurisdiction(cursor, name, level, location, district=None):
+    """Get or create a jurisdiction record and return its ID."""
+    # If district is provided, append it to the name
+    if district:
+        full_name = f"{name} - {district}"
+    else:
+        full_name = name
+        
+    cursor.execute(
+        """
+        INSERT INTO jurisdictions (name, level, location) 
+        VALUES (%s, %s, %s) 
+        ON CONFLICT (name, level, location) DO UPDATE 
+        SET name = EXCLUDED.name 
+        RETURNING jurisdiction_id
+        """,
+        (full_name, level, location)
+    )
+    return cursor.fetchone()[0]
+def process_case_create_parties(file_path, case_id):
+    """Process a CaseCreateParties XML file and update the database."""
     connection = connect_to_db()
     cursor = connection.cursor()
     
     try:
-        # Get list of all folders in root directory
+        # Ensure the case exists in the database
+        ensure_case_exists(case_id)
+        
+        # Parse the XML file
+        tree = ET.parse(file_path)
+        root = tree.getroot()
+        
+        # Extract case information
+        case_element = root.find(".//Case")
+        if case_element is None:
+            logger.warning(f"No Case element found in {file_path}")
+            return
+            
+        case_name = case_element.get("name", "")
+        
+        # Update case name if it exists
+        if case_name:
+            cursor.execute(
+                "UPDATE cases SET name = %s WHERE case_id = %s",
+                (case_name, case_id)
+            )
+            logger.info(f"Updated case name for {case_id}: {case_name}")
+        
+        # Process parties
+        parties_element = case_element.find("Parties")
+        if parties_element is not None:
+            for party_element in parties_element.findall("Party"):
+                party_name = party_element.get("name", "")
+                party_role = party_element.get("role", "")
+                
+                if party_name and party_role:
+                    # Get or create the party
+                    party_id = get_or_create_party(cursor, party_name)
+                    
+                    # Link the party to the case with the specified role
+                    cursor.execute(
+                        """
+                        INSERT INTO case_parties (case_id, party_id, role)
+                        VALUES (%s, %s, %s)
+                        ON CONFLICT (case_id, party_id, role) DO NOTHING
+                        """,
+                        (case_id, party_id, party_role)
+                    )
+                    logger.info(f"Added party {party_name} as {party_role} to case {case_id}")
+        
+        # Process jurisdiction
+        jurisdiction_element = case_element.find("Jurisdiction")
+        if jurisdiction_element is not None:
+            jurisdiction_name = jurisdiction_element.get("name", "")
+            jurisdiction_level = jurisdiction_element.get("level", "")
+            jurisdiction_location = jurisdiction_element.get("location", "")
+            jurisdiction_district = jurisdiction_element.get("district", None)
+            
+            if jurisdiction_name and jurisdiction_level and jurisdiction_location:
+                # Get or create the jurisdiction
+                jurisdiction_id = get_or_create_jurisdiction(
+                    cursor, 
+                    jurisdiction_name, 
+                    jurisdiction_level, 
+                    jurisdiction_location,
+                    jurisdiction_district
+                )
+                
+                # Link the jurisdiction to the case
+                cursor.execute(
+                    """
+                    INSERT INTO case_jurisdictions (case_id, jurisdiction_id)
+                    VALUES (%s, %s)
+                    ON CONFLICT (case_id, jurisdiction_id) DO NOTHING
+                    """,
+                    (case_id, jurisdiction_id)
+                )
+                logger.info(f"Added jurisdiction {jurisdiction_name} to case {case_id}")
+        
+        # Commit the transaction
+        connection.commit()
+        logger.info(f"Successfully processed case parties for case: {case_id}")
+        
+    except Exception as e:
+        connection.rollback()
+        logger.error(f"Error processing case parties for {case_id}: {str(e)}")
+        raise
+    finally:
+        cursor.close()
+        connection.close()
+def process_case_create_parties_files(root_dir):
+    """Process all CaseCreateParties files in the given directory."""
+    connection = connect_to_db()
+    cursor = connection.cursor()
+    
+    try:
         folder_count = 0
         success_count = 0
         
@@ -81,255 +199,35 @@ def process_case_creation_file(root_dir):
                 continue
                 
             folder_count += 1
-            case_file = os.path.join(folder_path, "CaseCreateParties.XML")
+            parties_file = os.path.join(folder_path, "CaseCreateParties.XML")
             
-            # Skip if case file doesn't exist
-            if not os.path.exists(case_file):
+            # Skip if parties file doesn't exist
+            if not os.path.exists(parties_file):
                 logger.warning(f"CaseCreateParties.XML not found in folder: {folder_name}")
                 continue
             
             try:
                 # Start a transaction
-                logger.info(f"Processing case creation for: {folder_name}")
+                logger.info(f"Processing case parties for: {folder_name}")
                 
-                # Extract and load the case data
-                load_case_creation(case_file, folder_name, cursor)
+                # Process the case parties file
+                process_case_create_parties(parties_file, folder_name)
                 
-                # Commit the transaction if everything succeeded
-                connection.commit()
                 success_count += 1
-                logger.info(f"Successfully processed case: {folder_name}")
+                logger.info(f"Successfully processed parties for case: {folder_name}")
                 
             except Exception as e:
-                # Rollback the transaction if an error occurred
-                connection.rollback()
-                logger.error(f"Error processing case {folder_name}: {str(e)}")
+                logger.error(f"Error processing case parties {folder_name}: {str(e)}")
         
-        logger.info(f"Processed {folder_count} folders, successfully loaded {success_count} cases")
+        logger.info(f"Processed {folder_count} folders, successfully loaded {success_count} case parties files")
     
     finally:
+        print(f"🍸Lets get this Party Started!🍷 at: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+        
         cursor.close()
         connection.close()
-def parse_properties(prop_str):
-    """Parse a property string from Cypher format to a Python dictionary."""
-    props = {}
-    
-    # Remove leading/trailing whitespace
-    prop_str = prop_str.strip()
-    
-    # Split by commas that are not inside array definitions
-    # This is a basic implementation - might need refinement for complex cases
-    in_array = False
-    start_idx = 0
-    
-    for i in range(len(prop_str)):
-        char = prop_str[i]
-        
-        if char == '[':
-            in_array = True
-        elif char == ']':
-            in_array = False
-        elif char == ',' and not in_array:
-            # Process the property segment
-            process_property(prop_str[start_idx:i].strip(), props)
-            start_idx = i + 1
-    
-    # Process the last property segment
-    if start_idx < len(prop_str):
-        process_property(prop_str[start_idx:].strip(), props)
-    
-    return props
-def process_property(prop, props_dict):
-    """Process a single property string and add it to the properties dictionary."""
-    if not prop:
-        return
-        
-    # Split by the first colon
-    parts = prop.split(':', 1)
-    
-    if len(parts) < 2:
-        logger.warning(f"Skipping invalid property format: {prop}")
-        return
-        
-    key = parts[0].strip()
-    value = parts[1].strip()
-    
-    # Handle arrays
-    if value.startswith('[') and value.endswith(']'):
-        try:
-            # Parse the array using ast.literal_eval for safety
-            value = ast.literal_eval(value)
-        except (SyntaxError, ValueError) as e:
-            logger.warning(f"Error parsing array value {value}: {e}")
-            # Fallback: basic string split approach 
-            value = [item.strip().strip("'\"") for item in value[1:-1].split(',')]
-    else:
-        # Handle other values, remove quotes
-        value = value.strip("'\"")
-        
-        # Try to convert 'date' to None for proper SQL handling
-        if value.lower() == 'date':
-            value = None
-    
-    props_dict[key] = value
-def parse_cypher_content(content):
-    """Extract values from Cypher content."""
-    case_data = {}
-    
-    # Extract case details
-    case_match = re.search(r'CREATE\s+\(case:Case\s+\{(.*?)\}\)', content, re.DOTALL)
-    if case_match:
-        case_data = parse_properties(case_match.group(1))
-
-    # Extract plaintiff details
-    plaintiff_match = re.search(r'CREATE\s+\(plaintiff:Party\s+\{(.*?)\}\)', content, re.DOTALL)
-    if plaintiff_match:
-        plaintiff_props = parse_properties(plaintiff_match.group(1))
-        case_data['plaintiff'] = plaintiff_props
-
-    # Extract defendant details
-    defendant_match = re.search(r'CREATE\s+\(defendant:Party\s+\{(.*?)\}\)', content, re.DOTALL)
-    if defendant_match:
-        defendant_props = parse_properties(defendant_match.group(1))
-        case_data['defendant'] = defendant_props
-
-    # Extract jurisdiction details
-    jurisdiction_match = re.search(r'CREATE\s+\(jurisdiction:Jurisdiction\s+\{(.*?)\}\)', content, re.DOTALL)
-    if jurisdiction_match:
-        jurisdiction_props = parse_properties(jurisdiction_match.group(1))
-        case_data['jurisdiction'] = jurisdiction_props
-
-    return case_data
-def load_case_creation(file_path, case_id, cursor):
-    """Extract data from a case creation file and load it into PostgreSQL."""
-    if case_exists_in_cases(case_id):
-        logger.info(f"!!!!!!!!!!!!!!!!!!!!!!!! Case {case_id} already exists. Skipping creation!!!!!!!!!!!!!!!!!!!!!!")
-        return    
-    try:
-        with open(file_path, 'r', encoding='utf-8') as file:
-            content = file.read()
-        
-        # Extract content between CYPHER tags
-        cypher_match = re.search(r'<CYPHER>(.*?)</CYPHER>', content, re.DOTALL)
-        if not cypher_match:
-            logger.warning(f"No CYPHER content found in {file_path}")
-            return
-
-        case_data = parse_cypher_content(cypher_match.group(1))
-        
-        # Insert the case
-        insert_case(cursor, case_id, case_data)
-        
-        # Insert jurisdiction if present
-        if 'jurisdiction' in case_data:
-            jurisdiction_id = insert_jurisdiction(cursor, case_data['jurisdiction'])
-            link_case_to_jurisdiction(cursor, case_id, jurisdiction_id)
-        
-        # Insert plaintiff if present
-        if 'plaintiff' in case_data:
-            plaintiff_id = insert_party(cursor, case_data['plaintiff']['name'])
-            link_party_to_case(cursor, case_id, plaintiff_id, 'Plaintiff')
-            
-            # Handle additional plaintiffs
-            if 'additionalPlaintiffs' in case_data['plaintiff'] and case_data['plaintiff']['additionalPlaintiffs']:
-                additional_plaintiffs = case_data['plaintiff']['additionalPlaintiffs']
-                for plaintiff_name in additional_plaintiffs:
-                    insert_additional_plaintiff(cursor, case_id, plaintiff_name)
-        
-        # Insert defendant if present
-        if 'defendant' in case_data:
-            defendant_id = insert_party(cursor, case_data['defendant']['name'])
-            link_party_to_case(cursor, case_id, defendant_id, 'Defendant')
-            
-    except Exception as e:
-        logger.error(f"Error in load_case_creation for {file_path}: {str(e)}")
-        raise
-def insert_case(cursor, case_id, case_data):
-    """Insert a case into the cases table."""
-    query = """
-        INSERT INTO cases (case_id, name, filing_date, filing_court)
-        VALUES (%s, %s, %s, %s)
-        ON CONFLICT (case_id) DO UPDATE SET
-            name = EXCLUDED.name,
-            filing_date = EXCLUDED.filing_date,
-            filing_court = EXCLUDED.filing_court
-        RETURNING case_id
-    """
-    
-    filing_date = None
-    # Try to parse the filing date if it's not None or 'date'
-    if 'filingDate' in case_data and case_data['filingDate'] and case_data['filingDate'].lower() != 'date':
-        try:
-            filing_date = datetime.datetime.strptime(case_data['filingDate'], '%Y-%m-%d').date()
-        except ValueError:
-            logger.warning(f"Could not parse filing date: {case_data['filingDate']} for case {case_id}")
-    
-    cursor.execute(query, (
-        case_id,
-        case_data.get('name', ''),
-        filing_date,
-        case_data.get('filingCourt', '')
-    ))
-    
-    return case_id
-def insert_jurisdiction(cursor, jurisdiction_data):
-    """Insert a jurisdiction and return its ID."""
-    query = """
-        INSERT INTO jurisdictions (name, level, location)
-        VALUES (%s, %s, %s)
-        ON CONFLICT (name, level, location) DO UPDATE SET
-            name = EXCLUDED.name
-        RETURNING jurisdiction_id
-    """
-    
-    cursor.execute(query, (
-        jurisdiction_data.get('name', ''),
-        jurisdiction_data.get('level', ''),
-        jurisdiction_data.get('location', '')
-    ))
-    
-    return cursor.fetchone()[0]
-def link_case_to_jurisdiction(cursor, case_id, jurisdiction_id):
-    """Create a relationship between a case and a jurisdiction."""
-    query = """
-        INSERT INTO case_jurisdictions (case_id, jurisdiction_id)
-        VALUES (%s, %s)
-        ON CONFLICT (case_id, jurisdiction_id) DO NOTHING
-    """
-    
-    cursor.execute(query, (case_id, jurisdiction_id))
-def insert_party(cursor, party_name):
-    """Insert a party and return its ID."""
-    query = """
-        INSERT INTO parties (name)
-        VALUES (%s)
-        ON CONFLICT (name) DO UPDATE SET
-            name = EXCLUDED.name
-        RETURNING party_id
-    """
-    
-    cursor.execute(query, (party_name,))
-    
-    return cursor.fetchone()[0]
-def link_party_to_case(cursor, case_id, party_id, role):
-    """Create a relationship between a case and a party with a specific role."""
-    query = """
-        INSERT INTO case_parties (case_id, party_id, role)
-        VALUES (%s, %s, %s)
-        ON CONFLICT (case_id, party_id, role) DO NOTHING
-    """
-    
-    cursor.execute(query, (case_id, party_id, role))
-def insert_additional_plaintiff(cursor, case_id, plaintiff_name):
-    """Insert an additional plaintiff for a case."""
-    query = """
-        INSERT INTO additional_plaintiffs (case_id, name)
-        VALUES (%s, %s)
-        ON CONFLICT (case_id, name) DO NOTHING
-    """
-    
-    cursor.execute(query, (case_id, plaintiff_name))
-
+########## CasePartyJurispridiction
+######### case_summary
 def process_case_summary_files(root_dir):
     """Process all case summary files in the given directory."""
     connection = connect_to_db()
@@ -375,18 +273,9 @@ def process_case_summary_files(root_dir):
         logger.info(f"Processed {folder_count} folders, successfully loaded {success_count} case summaries")
     
     finally:
+        print(r"🐸 summary Loaded at :{}".format(datetime.now().strftime("%Y-%m-%d %H:%M:%S")))
         cursor.close()
         connection.close()
-def extract_tag_content(content, tag_name):
-########## /CasePartyJurispridiction
-    """Extract content from a specific tag using regex."""
-    pattern = f"<{tag_name}>(.*?)</{tag_name}>"
-    match = re.search(pattern, content, re.DOTALL)
-    if match:
-        return match.group(1).strip()
-    return None
-
-######### case_summary
 def parse_case_summary(content):
     """Parse case summary content using regex instead of XML libraries."""
     summary_data = {}
@@ -411,7 +300,6 @@ def parse_case_summary(content):
         summary_data['winning_party'] = extract_tag_content(findings_section, "WinningParty")
     
     return summary_data
-
 def load_case_summary(file_path, case_id, cursor):
     
     ensure_case_exists(case_id) ### First code debit of this re-write.
@@ -523,6 +411,7 @@ def process_taxonomy_folder(root_dir):
         logger.info(f"Processed {folder_count} folders, successfully loaded {success_count} taxonomies")
     
     finally:
+        print(f"🧬 taxonomy saved at: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
         cursor.close()
         connection.close()
 def extract_taxonomy_section(content, section_name):
@@ -679,6 +568,7 @@ def process_LegalPrinciples(root_dir):
         logger.info(f"Processed {folder_count} folders, successfully loaded {success_count} legal principles sets")
     
     finally:
+        print(f"📚⚖️🧠  LegalPrinciples perserved at: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
         cursor.close()
         connection.close()
 def extract_legal_principles(content): 
@@ -723,7 +613,6 @@ def extract_legal_principles(content):
         principles.append(principle)
    
     return principles
-
 def load_legal_principles(file_path, case_id, cursor):
     """Extract legal principles from a file and load them into PostgreSQL."""
     if case_exists(case_id, "legal_principles"):
@@ -842,6 +731,7 @@ def process_Facts(root_dir):
         logger.info(f"Processed {folder_count} folders, successfully loaded facts for {success_count} cases")
     
     finally:
+        print(f"🗣️💯 FACTS done stating at: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
         cursor.close()
         connection.close()
 def load_facts_data(file_path, case_id, cursor):
@@ -998,7 +888,6 @@ def insert_fact(cursor, case_id, fact_data):
             # If it's a different error, re-raise it
             raise
 ########## /FACTS
-
 ########## /additionalinfo_folder
 def get_additional_info(case_id, root_dir):
     folder_path = os.path.join(root_dir, case_id)
@@ -1061,9 +950,8 @@ def process_additionalinfo_folder(root_dir):
         print("AdditionalInfo starting: " + folder_name)
         court, date_published, citation = get_additional_info(folder_name, root_dir)
         save_courtinfo(folder_name, court, date_published,citation)
-        print("finished: " + folder_name)
+        print(f"📎✨ {folder_name} AdditionalInfo finished at: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
 ########## /additionalinfo_folder
-
 ######### RULING
 def process_Ruling(root_dir):
     """Process all Ruling.XML files in the given directory structure."""
@@ -1110,6 +998,7 @@ def process_Ruling(root_dir):
         logger.info(f"Processed {folder_count} folders, successfully loaded {success_count} rulings")
     
     finally:
+        print(f"📢🔨 Ruling finished at: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
         cursor.close()
         connection.close()
 def extract_ruling_section(content, section_name):
@@ -1133,7 +1022,6 @@ def extract_issues(issues_section):
         issues.append(match.strip())
     
     return issues
-
 def load_ruling_data(file_path, case_id, cursor):
     """Extract ruling data from a file and load it into PostgreSQL."""
     if case_exists(case_id, "case_rulings"):
@@ -1203,7 +1091,6 @@ def insert_case_ruling(cursor, case_id, principle_text, principle_number):
     
     return cursor.fetchone()[0]
 ######### /RULING
-
 ######## CauseOfAction
 def process_CausesOfAction(root_dir):
     """Process all CausesOfAction.XML files in the given directory."""
@@ -1250,6 +1137,7 @@ def process_CausesOfAction(root_dir):
         logger.info(f"Processed {folder_count} folders, successfully loaded {success_count} causes of action sets")
     
     finally:
+        print(f"🚨📄  Finished COA at: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
         cursor.close()
         connection.close()
 def extract_cause_of_action(content, index):
@@ -1385,7 +1273,7 @@ def link_cause_to_legal_basis(cursor, cause_id, legal_basis_id):
     """
     
     cursor.execute(query, (cause_id, legal_basis_id))
-def case_exists_in_cases(case_id):
+
     query = "SELECT 1 FROM cases WHERE case_id = %s"
     try:
         connection = connect_to_db()
@@ -1439,24 +1327,23 @@ def case_exists(case_id, table_name=None):
             cursor.close()
         if connection:
             connection.close()
-
-
+######## CauseOfAction
 def main():
     """Main function to run the script."""
     try:
         # Replace with your actual directory path
-        root_directory = "C:\\__Repo\\_LegaWrite\\KGW-Extractor\\output"
+        root_directory = "C:\\__Repo\\_LegaWrite\\KGW-Extractor\\test1"
         
-        #process_case_creation_file(root_directory)
-        process_case_summary_files(root_directory)
-        process_taxonomy_folder(root_directory)
-        #process_LegalPrinciples(root_directory)
-        #process_Facts(root_directory)
-        #process_additionalinfo_folder(root_directory) 
-        #process_Ruling(root_directory)
-        #process_CausesOfAction(root_directory)
+        process_case_create_parties_files(root_directory)
+        # process_case_summary_files(root_directory)
+        # process_taxonomy_folder(root_directory)
+        process_LegalPrinciples(root_directory)
+        process_Facts(root_directory)
+        process_additionalinfo_folder(root_directory) 
+        process_Ruling(root_directory)
+        process_CausesOfAction(root_directory)
         
-        logger.info("Processing completed successfully")
+        logger.info("🏁 Processing completed successfully🏁")
     except Exception as e:
         logger.error(f"An error occurred in main: {str(e)}")
 
