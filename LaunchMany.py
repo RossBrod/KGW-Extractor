@@ -3,6 +3,21 @@ from ProcessCases import process_next_case, get_db_connection
 import time
 import logging
 import os
+from datetime import datetime, time as dt_time
+
+def is_within_discount_window():
+    utc_now = datetime.utcnow()
+    current_time = utc_now.time()
+    
+    # Define the discount time window (16:30-00:30 UTC)
+    start_time = dt_time(16, 30)
+    end_time = dt_time(0, 30)
+    
+    # Handle the case where end time crosses midnight
+    if start_time < end_time:
+        return start_time <= current_time <= end_time
+    else:
+        return current_time >= start_time or current_time <= end_time
 
 def setup_logger(worker_id):
     logger = logging.getLogger(f"worker-{worker_id}")
@@ -18,13 +33,19 @@ def setup_logger(worker_id):
     return logger
 
 def worker_loop(worker_id):
-    
     print(f"👷 Worker {worker_id} started.")
     
     logger = setup_logger(worker_id)
     logger.info(f"👷 Worker {worker_id} started.")
+    
     while True:
         try:
+            # Check if we're within the discount window
+            if not is_within_discount_window():
+                print(f"⏰ Worker {worker_id}: Outside discount window (16:30-00:30 UTC). Exiting.")
+                logger.info("Outside discount window (16:30-00:30 UTC). Exiting.")
+                break
+
             conn = get_db_connection()
             cursor = conn.cursor()
             cursor.execute("SELECT COUNT(*) FROM cases WHERE status = 'queued'")
@@ -43,8 +64,13 @@ def worker_loop(worker_id):
             time.sleep(1)  # Avoid tight crash loops
 
 if __name__ == "__main__":
+    # First check if we're in the discount window before starting workers
+    if not is_within_discount_window():
+        print("⏰ Outside discount window (16:30-00:30 UTC). Not starting workers.")
+        exit()
+    
     os.makedirs("logs", exist_ok=True)
-    num_workers = 10  # Tune based on machine and API capacity
+    num_workers = 100  # Tune based on machine and API capacity
 
     print(f"🚀 Starting {num_workers} persistent worker processes...")
     workers = [Process(target=worker_loop, args=(i,)) for i in range(num_workers)]
@@ -55,4 +81,3 @@ if __name__ == "__main__":
     for w in workers:
         w.join()
     print("\n🏁 All workers completed.")
-
