@@ -16,7 +16,7 @@ import logging
 # logger = logging.getLogger("ProcessCases")
 
 # === CONFIGURATION ===
-DEEPSEEK_API_KEY = "sk-15ea675bbe1b4d89b729c34513f1c0bf"
+DEEPSEEK_API_KEY = "sk-150b60e788af464ba6a1f1cc319716b7"
 DEEPSEEK_BASE_URL = "https://api.deepseek.com"
 OUTPUT_DIR = "output"
 
@@ -51,7 +51,7 @@ def process_next_case(logger):
 
     case_id = case["case_id"]
     case_text = case["text"]
-    prefix = f"<chache prefix:[{case_id}]>\n\n"
+    prefix = f"<cache prefix -- [{case_id}]>  \n\n"
     output_path = os.path.join(OUTPUT_DIR, case_id)
     os.makedirs(output_path, exist_ok=True)
 

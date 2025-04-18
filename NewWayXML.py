@@ -1332,7 +1332,7 @@ def main():
     """Main function to run the script."""
     try:
         # Replace with your actual directory path
-        root_directory = "C:\\__Repo\\_LegaWrite\\KGW-Extractor\\test1"
+        root_directory = "C:\\__Repo\\_LegaWrite\\KGW-Extractor\\output"
         
         process_case_create_parties_files(root_directory)
         # process_case_summary_files(root_directory)
