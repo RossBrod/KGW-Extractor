@@ -1335,8 +1335,8 @@ def main():
         root_directory = "C:\\__Repo\\_LegaWrite\\KGW-Extractor\\output"
         
         process_case_create_parties_files(root_directory)
-        # process_case_summary_files(root_directory)
-        # process_taxonomy_folder(root_directory)
+        process_case_summary_files(root_directory)
+        process_taxonomy_folder(root_directory)
         process_LegalPrinciples(root_directory)
         process_Facts(root_directory)
         process_additionalinfo_folder(root_directory) 
