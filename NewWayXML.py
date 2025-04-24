@@ -584,7 +584,7 @@ def extract_legal_principles(content):
     case_elements_content = case_elements_match.group(1)
     
     # Find all cLPX sections
-    clp_pattern = re.compile(r'<cLP\d+>(.*?)</cLP\d+>', re.DOTALL)
+    clp_pattern = re.compile(r'<LP\d+>(.*?)</LP\d+>', re.DOTALL)
     clp_matches = clp_pattern.findall(case_elements_content)
     
     for clp_content in clp_matches:
@@ -614,6 +614,23 @@ def extract_legal_principles(content):
         principles.append(principle)
    
     return principles
+def extract_LP_ruling(content):
+    """Extract legal principles from content using regex."""
+    principles = []
+    
+    # Find all LP tags with numbers (e.g., LP1, LP2, etc.)
+    lp_pattern = re.compile(r'<LP(\d+)>(.*?)</LP\1>', re.DOTALL)
+    lp_matches = lp_pattern.findall(content)
+    
+    for lp_number, lp_content in lp_matches:
+        principle = {
+            'number': int(lp_number),
+            'text': lp_content.strip()
+        }
+        principles.append(principle)
+   
+    return principles
+
 def load_legal_principles(file_path, case_id, cursor):
     """Extract legal principles from a file and load them into PostgreSQL."""
     if case_exists(case_id, "legal_principles"):
@@ -965,6 +982,7 @@ def process_Ruling(root_dir):
         success_count = 0
         
         for folder_name in os.listdir(root_dir):
+            folder_name="abbott-v-crown-motor-co-inc"
             folder_path = os.path.join(root_dir, folder_name)
             
             # Skip if not a directory
@@ -1050,7 +1068,7 @@ def load_ruling_data(file_path, case_id, cursor):
             insert_case_issue(cursor, case_id, issue_text, idx)
         
         # Process legal principles (holdings)
-        principles = extract_legal_principles(holding_section)
+        principles = extract_LP_ruling(holding_section)
         for idx, principle_text in enumerate(principles, 1):
             insert_case_ruling(cursor, case_id, principle_text, idx)
             
@@ -1333,14 +1351,14 @@ def main():
     """Main function to run the script."""
     try:
         # Replace with your actual directory path
-        root_directory = "C:\\__Repo\\_LegaWrite\\KGW-Extractor\\output"
-        process_case_create_parties_files(root_directory)
-        process_case_summary_files(root_directory)
-        process_taxonomy_folder(root_directory)
-        process_LegalPrinciples(root_directory)
-        process_Facts(root_directory)
-        root_directory = "C:\\__Repo\\AdditionalInfo"
-        process_additionalinfo_folder(root_directory) 
+        # root_directory = "C:\\__Repo\\_LegaWrite\\KGW-Extractor\\output"
+        # process_case_create_parties_files(root_directory)
+        # process_case_summary_files(root_directory)
+        # process_taxonomy_folder(root_directory)
+        # process_LegalPrinciples(root_directory)
+        # process_Facts(root_directory)
+        # root_directory = "C:\\__Repo\\AdditionalInfo"
+        # process_additionalinfo_folder(root_directory) 
         root_directory = "C:\\__Repo\\_LegaWrite\\KGW-Extractor\\output"
         process_Ruling(root_directory)
         process_CausesOfAction(root_directory)
