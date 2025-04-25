@@ -1002,7 +1002,7 @@ def process_Ruling(root_dir):
                 logger.info(f"Processing ruling for case: {folder_name}")
                 
                 # Extract and load the ruling data
-                load_ruling_data(ruling_file, folder_name, cursor)
+                load_ruling_data(ruling_file, folder_name, connection)
                 
                 # Commit the transaction if everything succeeded
                 connection.commit()
@@ -1041,7 +1041,7 @@ def extract_issues(issues_section):
         issues.append(match.strip())
     
     return issues
-def load_ruling_data(file_path, case_id, cursor):
+def load_ruling_data(file_path, case_id, connection):
     """Extract ruling data from a file and load it into PostgreSQL."""
     if case_exists(case_id, "case_rulings"):
         logger.info(f">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Case {case_id} already exists. Skipping creation.<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%")
@@ -1065,18 +1065,18 @@ def load_ruling_data(file_path, case_id, cursor):
         # Process issues
         issues = extract_issues(issues_section)
         for idx, issue_text in enumerate(issues, 1):
-            insert_case_issue(cursor, case_id, issue_text, idx)
+            insert_case_issue(connection, case_id, issue_text, idx)
         
         # Process legal principles (holdings)
         principles = extract_LP_ruling(holding_section)
         for idx, principle_text in enumerate(principles, 1):
-            insert_case_ruling(cursor, case_id, principle_text, idx)
+            insert_case_ruling(connection, case_id, principle_text, idx)
             
     except Exception as e:
         logger.error(f"Error in load_ruling_data for {file_path}: {str(e)}")
         raise
-def insert_case_issue(cursor, case_id, issue_text, issue_number):
-    """Insert a case issue into the case_issues table."""
+def insert_case_issue(connection, case_id, issue_text, issue_number):
+    """Insert or update a case issue into the case_issues table."""
     query = """
         INSERT INTO case_issues (case_id, issue_text, issue_number)
         VALUES (%s, %s, %s)
@@ -1084,31 +1084,19 @@ def insert_case_issue(cursor, case_id, issue_text, issue_number):
             issue_text = EXCLUDED.issue_text
         RETURNING issue_id
     """
-    
-    cursor.execute(query, (
-        case_id,
-        issue_text,
-        issue_number
-    ))
-    
-    return cursor.fetchone()[0]
-def insert_case_ruling(cursor, case_id, principle_text, principle_number):
-    """Insert a case ruling/legal principle into the case_rulings table."""
-    query = """
-        INSERT INTO case_rulings (case_id, legal_principle_text, principle_number)
-        VALUES (%s, %s, %s)
-        ON CONFLICT (case_id, principle_number) DO UPDATE SET
-            legal_principle_text = EXCLUDED.legal_principle_text
-        RETURNING ruling_id
-    """
-    
-    cursor.execute(query, (
-        case_id,
-        principle_text,
-        principle_number
-    ))
-    
-    return cursor.fetchone()[0]
+    with connection.cursor() as cur:
+        cur.execute(query, (case_id, issue_text, issue_number))
+        return cur.fetchone()[0]
+def insert_case_ruling(connection, case_id, principle_text, principle_number):
+    with connection.cursor() as cur:
+        cur.execute("""
+            INSERT INTO case_rulings (case_id, legal_principle_text, principle_number)
+            VALUES (%s, %s, %s)
+            ON CONFLICT (case_id, principle_number) DO UPDATE
+                SET legal_principle_text = EXCLUDED.legal_principle_text
+            RETURNING ruling_id
+        """, (case_id, principle_text["text"], principle_number))
+        return cur.fetchone()[0]
 ######### /RULING
 ######## CauseOfAction
 def process_CausesOfAction(root_dir):
