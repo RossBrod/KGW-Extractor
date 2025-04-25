@@ -60,6 +60,7 @@ def process_next_case(logger):
     output_path = os.path.join(OUTPUT_DIR, case_id)
     os.makedirs(output_path, exist_ok=True)
 
+    #################################################################################################################################################################################################################################
     print(f"🔍 Processing case: {case_id}")
     cursor.execute("UPDATE cases SET status = 'in_progress' WHERE id = %s", (case["id"],))
     conn.commit()
@@ -94,10 +95,12 @@ def process_next_case(logger):
                     
                     # Call Claude API instead of OpenAI/deepseek
                     response = anthropic_client.messages.create(
-                        model="claude-3-opus-20240229",  # Using Claude 3 Opus, adjust as needed
-                        max_tokens=4000,
+                        model="claude-3-7-sonnet-20250219",
+                        max_tokens=51201,
+                        temperature=0.0,
                         messages=[
-                            {"role": "user", "content": full_prompt}
+                            {"role": "user", "content": full_prompt},
+                            {"role": "assistant", "content": confirmation_prompt}
                         ],
                         system=system_prompt
                     )
@@ -141,7 +144,9 @@ def process_next_case(logger):
         )
 
         if all_done:
-            cursor.execute("UPDATE cases SET status = 'completed' WHERE id = %s", (case["id"],))
+            #################################################################################################################################################################################################################################
+            # Never update it
+            #cursor.execute("UPDATE cases SET status = 'completed' WHERE id = %s", (case["id"],))
             print(f"🏁 Case {case_id} marked as completed.")
             logger.info(f"🏁 Case {case_id} marked as completed.")
         else:
@@ -160,21 +165,3 @@ def process_next_case(logger):
     conn.close()
 
 
-# def process_all_cases():
-#     while True:
-#         print("\n🔄 Checking for queued cases...")
-#         conn = get_db_connection()
-#         cursor = conn.cursor()
-#         cursor.execute("SELECT COUNT(*) FROM cases WHERE status = 'queued'")
-#         count = cursor.fetchone()[0]
-#         cursor.close()
-#         conn.close()
-
-#         if count == 0:
-#             print("🎉 All cases processed.")
-#             break
-
-#         process_next_case()
-        
-# if __name__ == "__main__":
-#     process_all_cases()
