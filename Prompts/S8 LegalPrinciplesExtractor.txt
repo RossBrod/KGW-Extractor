@@ -30,12 +30,12 @@ Format your findings using the following XML structure:
 <CaseElements>
 <cLP1>
     <Name>[Concise name for the legal principle - up to 4 words]</Name>
-    <DoctrinePrinciple>[Write a single coherent statement in this format: "{Conceptual principle name- up to 4 words}. {Universal legal proposition that articulates the fundamental rule without reference to specific statutes or jurisdictions- up to 10 words}"]</DoctrinePrinciple>
+    <DoctrinePrinciple>[Write a single coherent statement in this format: "{Conceptual principle name- up to 4 words}.{Universal legal proposition that articulates the fundamental rule without reference to specific statutes or jurisdictions- up to 10 words}"]</DoctrinePrinciple>
     <Type>[General classification of legal principle - up to 4 words]</Type>
     <Description>[1-sentence summary of where the case discusses this doctrine/principle]</Description>
     <Relationship>[One of: RELIED_ON, DISTINGUISHED, APPLIED, REFINED, AFFIRMED, OVERTURNED, HARMONIZED]</Relationship>
 </cLP1>
-[Continue with cLP2, cLP3, etc., as needed]
+...repeat as needed
 </CaseElements>
 
 Remember to use only the information provided in the given legal case. Do not include any external knowledge or assumptions. If you cannot find sufficient information to complete any part of the format, write "Insufficient information" for that section.
