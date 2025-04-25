@@ -96,7 +96,8 @@ def process_next_case(logger):
                     # Call Claude API instead of OpenAI/deepseek
                     response = anthropic_client.messages.create(
                         model="claude-3-7-sonnet-20250219",
-                        max_tokens=51201,
+                        max_tokens=20201,
+                        stream=False,
                         temperature=0.0,
                         messages=[
                             {"role": "user", "content": full_prompt},
@@ -145,8 +146,8 @@ def process_next_case(logger):
 
         if all_done:
             #################################################################################################################################################################################################################################
-            # Never update it
-            #cursor.execute("UPDATE cases SET status = 'completed' WHERE id = %s", (case["id"],))
+            
+            cursor.execute("UPDATE cases SET status = 'completed' WHERE id = %s", (case["id"],))
             print(f"🏁 Case {case_id} marked as completed.")
             logger.info(f"🏁 Case {case_id} marked as completed.")
         else:
