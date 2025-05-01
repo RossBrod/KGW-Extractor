@@ -32,6 +32,8 @@ SQL_DB_USER_AUTH: str = "postgres1dev" if not LOCAL else "postgres"
 SQL_DB_PASSWORD_AUTH: str = "dev4023TcupSoda" if not LOCAL else "root"
 SQL_DB_HOST_AUTH: str = "legawritesql.postgres.database.azure.com" if not LOCAL else "localhost"
 SQL_DB_PORT_AUTH: str = "5432"
+
+
 def get_db_connection():
     return psycopg2.connect(
         dbname=SQL_DB_NAME_AUTH,
@@ -60,6 +62,45 @@ def ensure_case_exists(case_id):
     finally:
         cursor.close()
         connection.close()    
+def case_exists(case_id, table_name=None):
+    """
+    Check if a case exists in a specific table or across all relevant tables.
+    Args:
+        case_id: The case ID to check
+        table_name: Optional specific table to check. If None, checks all relevant tables.
+    """
+    if table_name:
+        tables_to_check = [table_name]
+    else:
+        tables_to_check = [
+            "cases",
+            "case_summaries",
+            "facts",
+            "legal_principles",
+            "case_rulings",
+            "case_issues",
+            "case_law_domains",
+            "case_causes"
+        ]
+
+    try:
+        connection = connect_to_db()
+        cursor = connection.cursor()
+
+        for table in tables_to_check:
+            cursor.execute(f"SELECT 1 FROM {table} WHERE case_id = %s LIMIT 1", (case_id,))
+            if cursor.fetchone():
+                return True
+
+        return False
+    except Exception as e:
+        logger.error(f"Error checking if case exists in table(s) for {case_id}: {e}")
+        return False
+    finally:
+        if cursor:
+            cursor.close()
+        if connection:
+            connection.close()
 
 ########## CasePartyJurispridiction
 def extract_tag_content(content, tag_name):
@@ -303,9 +344,8 @@ def parse_case_summary(content):
     return summary_data
 def load_case_summary(file_path, case_id, cursor):
     
-    ensure_case_exists(case_id) ### First code debit of this re-write.
-    logger.info("This should have never happen... CODE DEBIT HERE?!! ")
-    
+    ensure_case_exists(case_id) ### this give flexibility to test potential changes in some of the later XML files without running them sequentialy
+        
     """Extract data from a case summary file and load it into PostgreSQL."""
     if case_exists(case_id, "case_summaries"):
         logger.info(f"!!!!!!!!!!!!!!!!!!!!!!!! Case {case_id} already exists. Skipping creation!!!!!!!!!!!!!!!!!!!!!!")
@@ -525,111 +565,96 @@ def link_case_to_domain(cursor, case_id, domain_id):
 ########## /taxonomy
 ########## LegalPrinciples
 def process_LegalPrinciples(root_dir):
-    """Process all legal principles files in the given directory."""
-    connection = connect_to_db()
-    cursor = connection.cursor()
-    
-    try:
-        # Get list of all folders in root directory
-        folder_count = 0
-        success_count = 0
+        """Process all legal principles files in the given directory."""
+        connection = connect_to_db()
+        cursor = connection.cursor()
         
-        for folder_name in os.listdir(root_dir):
-            folder_path = os.path.join(root_dir, folder_name)
+        try:
+            # Get list of all folders in root directory
+            folder_count = 0
+            success_count = 0
             
-            # Skip if not a directory
-            if not os.path.isdir(folder_path):
-                continue
+            for folder_name in os.listdir(root_dir):
+                folder_path = os.path.join(root_dir, folder_name)
                 
-            folder_count += 1
-            principles_file = os.path.join(folder_path, "LegalPrinciples.XML")
+                # Skip if not a directory
+                if not os.path.isdir(folder_path):
+                    continue
+                    
+                folder_count += 1
+                principles_file = os.path.join(folder_path, "LegalPrinciples.XML")
+                
+                # Skip if principles file doesn't exist
+                if not os.path.exists(principles_file):
+                    logger.warning(f"LegalPrinciples.XML not found in folder: {folder_name}")
+                    continue
+                
+                try:
+                    # Start a transaction
+                    logger.info(f"Processing legal principles for case: {folder_name}")
+                    
+                    # Extract and load the legal principles data
+                    load_legal_principles(principles_file, folder_name, cursor)
+                    
+                    # Commit the transaction if everything succeeded
+                    connection.commit()
+                    success_count += 1
+                    logger.info(f"Successfully processed legal principles for case: {folder_name}")
+                    
+                except Exception as e:
+                    # Rollback the transaction if an error occurred
+                    connection.rollback()
+                    logger.error(f"Error processing legal principles for case {folder_name}: {str(e)}")
             
-            # Skip if principles file doesn't exist
-            if not os.path.exists(principles_file):
-                logger.warning(f"LegalPrinciples.XML not found in folder: {folder_name}")
-                continue
-            
-            try:
-                # Start a transaction
-                logger.info(f"Processing legal principles for case: {folder_name}")
-                
-                # Extract and load the legal principles data
-                load_legal_principles(principles_file, folder_name, cursor)
-                
-                # Commit the transaction if everything succeeded
-                connection.commit()
-                success_count += 1
-                logger.info(f"Successfully processed legal principles for case: {folder_name}")
-                
-            except Exception as e:
-                # Rollback the transaction if an error occurred
-                connection.rollback()
-                logger.error(f"Error processing legal principles for case {folder_name}: {str(e)}")
+            logger.info(f"Processed {folder_count} folders, successfully loaded {success_count} legal principles sets")
         
-        logger.info(f"Processed {folder_count} folders, successfully loaded {success_count} legal principles sets")
-    
-    finally:
-        print(f"📚⚖️🧠  LegalPrinciples perserved at: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-        cursor.close()
-        connection.close()
+        finally:
+            print(f"📚⚖️🧠  LegalPrinciples perserved at: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+            cursor.close()
+            connection.close()
+
 def extract_legal_principles(content): 
-    """Extract legal principles from the CaseElements section using regex."""
-    principles = []
+        """Extract legal principles from the CaseElements section using regex."""
+        principles = []
+        
+        # First extract the CaseElements section
+        case_elements_match = re.search(r'<CaseElements>(.*?)</CaseElements>', content, re.DOTALL)
+        if not case_elements_match:
+            return principles
+        
+        case_elements_content = case_elements_match.group(1)
+        
+        # Find all cLPX sections
+        clp_pattern = re.compile(r'<cLP\d+>(.*?)</cLP\d+>', re.DOTALL)
+        clp_matches = clp_pattern.findall(case_elements_content)
+        
+        for clp_content in clp_matches:
+            principle = {}
+            
+            # Extract each field
+            name_match = re.search(r'<Name>(.*?)</Name>', clp_content, re.DOTALL)
+            if name_match:
+                principle['name'] = name_match.group(1).strip()
+            
+            type_match = re.search(r'<Type>(.*?)</Type>', clp_content, re.DOTALL)
+            if type_match:
+                principle['type'] = type_match.group(1).strip()
+            
+            doctrine_match = re.search(r'<DoctrinePrinciple>(.*?)</DoctrinePrinciple>', clp_content, re.DOTALL)
+            if doctrine_match:
+                principle['DoctrinePrinciple'] = doctrine_match.group(1).strip()
+            
+            description_match = re.search(r'<Description>(.*?)</Description>', clp_content, re.DOTALL)
+            if description_match:
+                principle['description'] = description_match.group(1).strip()
+            
+            relationship_match = re.search(r'<Relationship>(.*?)</Relationship>', clp_content, re.DOTALL)
+            if relationship_match:
+                principle['relationship'] = relationship_match.group(1).strip()
+            
+            principles.append(principle)
     
-    # First extract the CaseElements section
-    case_elements_match = re.search(r'<CaseElements>(.*?)</CaseElements>', content, re.DOTALL)
-    if not case_elements_match:
         return principles
-    
-    case_elements_content = case_elements_match.group(1)
-    
-    # Find all cLPX sections
-    clp_pattern = re.compile(r'<LP\d+>(.*?)</LP\d+>', re.DOTALL)
-    clp_matches = clp_pattern.findall(case_elements_content)
-    
-    for clp_content in clp_matches:
-        principle = {}
-        
-        # Extract each field
-        name_match = re.search(r'<Name>(.*?)</Name>', clp_content, re.DOTALL)
-        if name_match:
-            principle['name'] = name_match.group(1).strip()
-        
-        type_match = re.search(r'<Type>(.*?)</Type>', clp_content, re.DOTALL)
-        if type_match:
-            principle['type'] = type_match.group(1).strip()
-        
-        context_match = re.search(r'<Context>(.*?)</Context>', clp_content, re.DOTALL)
-        if context_match:
-            principle['context'] = context_match.group(1).strip()
-        
-        description_match = re.search(r'<Description>(.*?)</Description>', clp_content, re.DOTALL)
-        if description_match:
-            principle['description'] = description_match.group(1).strip()
-        
-        relationship_match = re.search(r'<Relationship>(.*?)</Relationship>', clp_content, re.DOTALL)
-        if relationship_match:
-            principle['relationship'] = relationship_match.group(1).strip()
-        
-        principles.append(principle)
-   
-    return principles
-def extract_LP_ruling(content):
-    """Extract legal principles from content using regex."""
-    principles = []
-    
-    # Find all LP tags with numbers (e.g., LP1, LP2, etc.)
-    lp_pattern = re.compile(r'<LP(\d+)>(.*?)</LP\1>', re.DOTALL)
-    lp_matches = lp_pattern.findall(content)
-    
-    for lp_number, lp_content in lp_matches:
-        principle = {
-            'number': int(lp_number),
-            'text': lp_content.strip()
-        }
-        principles.append(principle)
-   
-    return principles
 
 def load_legal_principles(file_path, case_id, cursor):
     """Extract legal principles from a file and load them into PostgreSQL."""
@@ -654,16 +679,16 @@ def load_legal_principles(file_path, case_id, cursor):
     except Exception as e:
         logger.error(f"Error in load_legal_principles for {file_path}: {str(e)}")
         raise
-def insert_legal_principle(cursor, case_id, principle):
+def insert_legal_principle(cursor, case_id, principle):    
     """Insert a legal principle into the legal_principles table."""
     query = """
         INSERT INTO legal_principles (
-            case_id, name, type, context, description, relationship_type
+            case_id, name, type, "DoctrinePrinciple", description, relationship_type
         )
         VALUES (%s, %s, %s, %s, %s, %s)
         ON CONFLICT (case_id, name) DO UPDATE SET
             type = EXCLUDED.type,
-            context = EXCLUDED.context,
+            "DoctrinePrinciple" = EXCLUDED."DoctrinePrinciple",
             description = EXCLUDED.description,
             relationship_type = EXCLUDED.relationship_type
         RETURNING principle_id
@@ -674,7 +699,7 @@ def insert_legal_principle(cursor, case_id, principle):
             case_id,
             principle.get('name', ''),
             principle.get('type', ''),
-            principle.get('context', ''),
+            principle.get('DoctrinePrinciple', ''),
             principle.get('description', ''),
             principle.get('relationship', '')
         ))
@@ -686,22 +711,22 @@ def insert_legal_principle(cursor, case_id, principle):
         # Alternative query without conflict handling
         query = """
             INSERT INTO legal_principles (
-                case_id, name, type, context, description, relationship_type
+                case_id, name, type, "DoctrinePrinciple", description, relationship_type
             )
             VALUES (%s, %s, %s, %s, %s, %s)
             RETURNING principle_id
         """
-        
         cursor.execute(query, (
             case_id,
             principle.get('name', ''),
             principle.get('type', ''),
-            principle.get('context', ''),
+            principle.get('DoctrinePrinciple', ''),
             principle.get('description', ''),
             principle.get('relationship', '')
         ))
-    
     return cursor.fetchone()[0]
+
+
 ########## /LegalPrinciples
 ########## FACTS
 def process_Facts(root_dir):
@@ -1097,6 +1122,23 @@ def insert_case_ruling(connection, case_id, principle_text, principle_number):
             RETURNING ruling_id
         """, (case_id, principle_text["text"], principle_number))
         return cur.fetchone()[0]
+def extract_LP_ruling(content):
+    """Extract legal principles from content using regex."""
+    principles = []
+    
+    # Find all LP tags with numbers (e.g., LP1, LP2, etc.)
+    lp_pattern = re.compile(r'<LP(\d+)>(.*?)</LP\1>', re.DOTALL)
+    lp_matches = lp_pattern.findall(content)
+    
+    for lp_number, lp_content in lp_matches:
+        principle = {
+            'number': int(lp_number),
+            'text': lp_content.strip()
+        }
+        principles.append(principle)
+   
+    return principles
+
 ######### /RULING
 ######## CauseOfAction
 def process_CausesOfAction(root_dir):
@@ -1295,61 +1337,23 @@ def link_cause_to_legal_basis(cursor, cause_id, legal_basis_id):
             cursor.close()
         if connection:
             connection.close()
-def case_exists(case_id, table_name=None):
-    """
-    Check if a case exists in a specific table or across all relevant tables.
-    Args:
-        case_id: The case ID to check
-        table_name: Optional specific table to check. If None, checks all relevant tables.
-    """
-    if table_name:
-        tables_to_check = [table_name]
-    else:
-        tables_to_check = [
-            "cases",
-            "case_summaries",
-            "facts",
-            "legal_principles",
-            "case_rulings",
-            "case_issues",
-            "case_law_domains",
-            "case_causes"
-        ]
 
-    try:
-        connection = connect_to_db()
-        cursor = connection.cursor()
-
-        for table in tables_to_check:
-            cursor.execute(f"SELECT 1 FROM {table} WHERE case_id = %s LIMIT 1", (case_id,))
-            if cursor.fetchone():
-                return True
-
-        return False
-    except Exception as e:
-        logger.error(f"Error checking if case exists in table(s) for {case_id}: {e}")
-        return False
-    finally:
-        if cursor:
-            cursor.close()
-        if connection:
-            connection.close()
 ######## CauseOfAction
 def main():
     """Main function to run the script."""
     try:
         # Replace with your actual directory path
-        # root_directory = "C:\\__Repo\\_LegaWrite\\KGW-Extractor\\output"
+        root_directory = "C:\\__Repo\\_LegaWrite\\KGW-Extractor\\output"
         # process_case_create_parties_files(root_directory)
         # process_case_summary_files(root_directory)
         # process_taxonomy_folder(root_directory)
-        # process_LegalPrinciples(root_directory)
+        process_LegalPrinciples(root_directory)
         # process_Facts(root_directory)
         # root_directory = "C:\\__Repo\\AdditionalInfo"
         # process_additionalinfo_folder(root_directory) 
         root_directory = "C:\\__Repo\\_LegaWrite\\KGW-Extractor\\output"
-        process_Ruling(root_directory)
-        process_CausesOfAction(root_directory)
+        #process_Ruling(root_directory)
+        #process_CausesOfAction(root_directory)
         
         logger.info("🏁 Processing completed successfully🏁")
     except Exception as e:

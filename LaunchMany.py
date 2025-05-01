@@ -10,7 +10,7 @@ def is_within_discount_window():
     current_time = utc_now.time()
     
     # Define the discount time window (16:30-00:30 UTC)
-    start_time = dt_time(16, 30)
+    start_time = dt_time(0, 30)
     end_time = dt_time(0, 30)
     
     # Handle the case where end time crosses midnight
