@@ -94,10 +94,11 @@ def process_next_case(logger):
                     
                     # Call Claude API instead of OpenAI/deepseek
                     response = anthropic_client.messages.create(
-                        model="claude-3-opus-20240229",  # Using Claude 3 Opus, adjust as needed
-                        max_tokens=4000,
+                        model="claude-3-7-sonnet-20250219", 
+                        max_tokens=60000,
                         messages=[
-                            {"role": "user", "content": full_prompt}
+                            {"role": "user", "content": full_prompt},
+                            {"role": "assistant", "content": confirmation_prompt}
                         ],
                         system=system_prompt
                     )

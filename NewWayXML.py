@@ -683,12 +683,12 @@ def insert_legal_principle(cursor, case_id, principle):
     """Insert a legal principle into the legal_principles table."""
     query = """
         INSERT INTO legal_principles (
-            case_id, name, type, "DoctrinePrinciple", description, relationship_type
+            case_id, name, type, doctrine_principle, description, relationship_type
         )
         VALUES (%s, %s, %s, %s, %s, %s)
         ON CONFLICT (case_id, name) DO UPDATE SET
             type = EXCLUDED.type,
-            "DoctrinePrinciple" = EXCLUDED."DoctrinePrinciple",
+            doctrine_principle = EXCLUDED.doctrine_principle,
             description = EXCLUDED.description,
             relationship_type = EXCLUDED.relationship_type
         RETURNING principle_id
@@ -699,7 +699,7 @@ def insert_legal_principle(cursor, case_id, principle):
             case_id,
             principle.get('name', ''),
             principle.get('type', ''),
-            principle.get('DoctrinePrinciple', ''),
+            principle.get('doctrine_principle', ''),
             principle.get('description', ''),
             principle.get('relationship', '')
         ))
@@ -711,7 +711,7 @@ def insert_legal_principle(cursor, case_id, principle):
         # Alternative query without conflict handling
         query = """
             INSERT INTO legal_principles (
-                case_id, name, type, "DoctrinePrinciple", description, relationship_type
+                case_id, name, type, doctrine_principle, description, relationship_type
             )
             VALUES (%s, %s, %s, %s, %s, %s)
             RETURNING principle_id
@@ -720,7 +720,7 @@ def insert_legal_principle(cursor, case_id, principle):
             case_id,
             principle.get('name', ''),
             principle.get('type', ''),
-            principle.get('DoctrinePrinciple', ''),
+            principle.get('doctrine_principle', ''),
             principle.get('description', ''),
             principle.get('relationship', '')
         ))
