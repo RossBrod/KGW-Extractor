@@ -27,7 +27,7 @@ logger = logging.getLogger("NewWayXML")
 
 # Database connection parameters - customize these for your environment
 
-SQL_DB_NAME_AUTH: str = "CaseGraph2"
+SQL_DB_NAME_AUTH: str = "CaseGraph3"
 SQL_DB_USER_AUTH: str = "postgres1dev" if not LOCAL else "postgres"
 SQL_DB_PASSWORD_AUTH: str = "dev4023TcupSoda" if not LOCAL else "root"
 SQL_DB_HOST_AUTH: str = "legawritesql.postgres.database.azure.com" if not LOCAL else "localhost"
@@ -655,7 +655,6 @@ def extract_legal_principles(content):
             principles.append(principle)
     
         return principles
-
 def load_legal_principles(file_path, case_id, cursor):
     """Extract legal principles from a file and load them into PostgreSQL."""
     if case_exists(case_id, "legal_principles"):
@@ -725,8 +724,6 @@ def insert_legal_principle(cursor, case_id, principle):
             principle.get('relationship', '')
         ))
     return cursor.fetchone()[0]
-
-
 ########## /LegalPrinciples
 ########## FACTS
 def process_Facts(root_dir):
@@ -1007,7 +1004,6 @@ def process_Ruling(root_dir):
         success_count = 0
         
         for folder_name in os.listdir(root_dir):
-            folder_name="abbott-v-crown-motor-co-inc"
             folder_path = os.path.join(root_dir, folder_name)
             
             # Skip if not a directory
@@ -1279,7 +1275,6 @@ def insert_cause_of_action(cursor, cause_data):
             description = EXCLUDED.description
         RETURNING cause_id
     """
-    
     cursor.execute(query, (
         cause_data['name'],
         cause_data['type'],
@@ -1296,14 +1291,16 @@ def insert_legal_basis(cursor, legal_basis_data):
             description = EXCLUDED.description
         RETURNING basis_id
     """
-    
-    cursor.execute(query, (
-        legal_basis_data['name'],
-        legal_basis_data['type'],
-        legal_basis_data['description']
-    ))
-    
-    return cursor.fetchone()[0]
+    try:
+        cursor.execute(query, (
+            legal_basis_data['name'],
+            legal_basis_data['type'],
+            legal_basis_data['description']
+        ))
+    except Exception as e:
+        logger.error(f"Error in insert_legal_basis")
+    return cursor.fetchone()[0] 
+
 def link_cause_to_case(cursor, case_id, cause_id):
     """Create a relationship between a case and a cause of action."""
     query = """
@@ -1311,8 +1308,11 @@ def link_cause_to_case(cursor, case_id, cause_id):
         VALUES (%s, %s)
         ON CONFLICT (case_id, cause_id) DO NOTHING
     """
-    
-    cursor.execute(query, (case_id, cause_id))
+    try:
+        cursor.execute(query, (case_id, cause_id))
+    except Exception as e:
+        logger.error(f"Error in link_cause_to_case for case_id:{case_id},cause_id:{cause_id} {str(e)}")
+        
 def link_cause_to_legal_basis(cursor, cause_id, legal_basis_id):
     """Create a relationship between a cause of action and its legal basis."""
     query = """
@@ -1320,23 +1320,10 @@ def link_cause_to_legal_basis(cursor, cause_id, legal_basis_id):
         VALUES (%s, %s)
         ON CONFLICT (cause_id, basis_id) DO NOTHING
     """
-    
-    cursor.execute(query, (cause_id, legal_basis_id))
-
-    query = "SELECT 1 FROM cases WHERE case_id = %s"
-    try:
-        connection = connect_to_db()
-        cursor = connection.cursor()
-        cursor.execute(query, (case_id,))
-        return cursor.fetchone() is not None
+    try:    
+        cursor.execute(query, (cause_id, legal_basis_id))
     except Exception as e:
-        logger.error(f"Error checking if case exists in 'cases' for {case_id}: {e}")
-        return False
-    finally:
-        if cursor:
-            cursor.close()
-        if connection:
-            connection.close()
+        logger.error(f"Error link_cause_to_legal_basis cause_id:{cause_id},legal_basis_id:{legal_basis_id}")
 
 ######## CauseOfAction
 def main():
@@ -1344,16 +1331,16 @@ def main():
     try:
         # Replace with your actual directory path
         root_directory = "C:\\__Repo\\_LegaWrite\\KGW-Extractor\\output"
-        # process_case_create_parties_files(root_directory)
-        # process_case_summary_files(root_directory)
-        # process_taxonomy_folder(root_directory)
+        process_case_create_parties_files(root_directory)
+        process_case_summary_files(root_directory)
+        process_taxonomy_folder(root_directory)
         process_LegalPrinciples(root_directory)
-        # process_Facts(root_directory)
-        # root_directory = "C:\\__Repo\\AdditionalInfo"
+        process_Facts(root_directory)
+        #root_directory = "C:\\__Repo\\AdditionalInfo"
         # process_additionalinfo_folder(root_directory) 
-        root_directory = "C:\\__Repo\\_LegaWrite\\KGW-Extractor\\output"
-        #process_Ruling(root_directory)
-        #process_CausesOfAction(root_directory)
+        # root_directory = "C:\\__Repo\\_LegaWrite\\KGW-Extractor\\output"
+        process_Ruling(root_directory)
+        process_CausesOfAction(root_directory)
         
         logger.info("🏁 Processing completed successfully🏁")
     except Exception as e:

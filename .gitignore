@@ -10,3 +10,6 @@ output_full/1300-n-curson-investors/CaseCreateParties.xml
 .env
 /output_dev
 *.rar
+/output_dev2
+/output_done
+/output_LP_fix1/output
