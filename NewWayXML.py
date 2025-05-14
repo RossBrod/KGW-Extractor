@@ -612,7 +612,6 @@ def process_LegalPrinciples(root_dir):
             print(f"📚⚖️🧠  LegalPrinciples perserved at: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
             cursor.close()
             connection.close()
-
 def extract_legal_principles(content): 
         """Extract legal principles from the CaseElements section using regex."""
         principles = []
@@ -642,7 +641,7 @@ def extract_legal_principles(content):
             
             doctrine_match = re.search(r'<DoctrinePrinciple>(.*?)</DoctrinePrinciple>', clp_content, re.DOTALL)
             if doctrine_match:
-                principle['DoctrinePrinciple'] = doctrine_match.group(1).strip()
+                principle['doctrine_principle'] = doctrine_match.group(1).strip()
             
             description_match = re.search(r'<Description>(.*?)</Description>', clp_content, re.DOTALL)
             if description_match:
@@ -724,6 +723,7 @@ def insert_legal_principle(cursor, case_id, principle):
             principle.get('relationship', '')
         ))
     return cursor.fetchone()[0]
+
 ########## /LegalPrinciples
 ########## FACTS
 def process_Facts(root_dir):
