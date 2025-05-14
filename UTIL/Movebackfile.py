@@ -46,29 +46,27 @@ def update_case_status_from_folders(output_base, conn):
     cursor.close()
     
 # Define paths
-prod_base = r'C:\__Repo\_LegaWrite\KGW-Extractor___PROD\output_full'
+prod_base = r'C:\__Repo\_LegaWrite\KGW-Extractor\output_LP_fix1\output'
 output_base = r'C:\__Repo\_LegaWrite\KGW-Extractor\output'
 
-conn = get_db_connection()
-update_case_status_from_folders(output_base, conn)
-conn.close()
+# conn = get_db_connection()
+# update_case_status_from_folders(output_base, conn)
+# conn.close()
 
+# Iterate through subfolders in the PROD folder
+for folder_name in os.listdir(prod_base):
+    prod_folder = os.path.join(prod_base, folder_name)
+    output_folder = os.path.join(output_base, folder_name)
 
+    # Only proceed if both are directories and output folder exists
+    if os.path.isdir(prod_folder) and os.path.isdir(output_folder):
+        for file_name in os.listdir(prod_folder):
+            src_file = os.path.join(prod_folder, file_name)
+            dest_file = os.path.join(output_folder, file_name)
 
-# # Iterate through subfolders in the PROD folder
-# for folder_name in os.listdir(prod_base):
-#     prod_folder = os.path.join(prod_base, folder_name)
-#     output_folder = os.path.join(output_base, folder_name)
-
-#     # Only proceed if both are directories and output folder exists
-#     if os.path.isdir(prod_folder) and os.path.isdir(output_folder):
-#         for file_name in os.listdir(prod_folder):
-#             src_file = os.path.join(prod_folder, file_name)
-#             dest_file = os.path.join(output_folder, file_name)
-
-#             if os.path.isfile(src_file):
-#                 shutil.copy2(src_file, dest_file)
-#                 print(f"Copied: {src_file} -> {dest_file}")
+            if os.path.isfile(src_file):
+                shutil.copy2(src_file, dest_file)
+                print(f"Copied: {src_file} -> {dest_file}")
 
 
 
