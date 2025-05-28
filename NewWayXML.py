@@ -408,160 +408,171 @@ def insert_case_summary(cursor, case_id, summary_data):
 ######### /case_summary   
 ########## taxonomy
 def process_taxonomy_folder(root_dir):
-    """Process all taxonomy files (LawDomain.XML) in the given directory."""
-    connection = connect_to_db()
-    cursor = connection.cursor()
-    
-    try:
-        # Get list of all folders in root directory
-        folder_count = 0
-        success_count = 0
-        
-        for folder_name in os.listdir(root_dir):
-            folder_path = os.path.join(root_dir, folder_name)
-            
-            # Skip if not a directory
-            if not os.path.isdir(folder_path):
-                continue
-                
-            folder_count += 1
-            taxonomy_file = os.path.join(folder_path, "LawDomain.XML")
-            
-            # Skip if taxonomy file doesn't exist
-            if not os.path.exists(taxonomy_file):
-                logger.warning(f"LawDomain.XML not found in folder: {folder_name}")
-                continue
-            
-            try:
-                # Start a transaction
-                logger.info(f"Processing taxonomy for case: {folder_name}")
-                
-                # Extract and load the taxonomy data
-                load_taxonomy_data(taxonomy_file, folder_name, cursor)
-                
-                # Commit the transaction if everything succeeded
-                connection.commit()
-                success_count += 1
-                logger.info(f"Successfully processed taxonomy for case: {folder_name}")
-                
-            except Exception as e:
-                # Rollback the transaction if an error occurred
-                connection.rollback()
-                logger.error(f"Error processing taxonomy for case {folder_name}: {str(e)}")
-        
-        logger.info(f"Processed {folder_count} folders, successfully loaded {success_count} taxonomies")
-    
-    finally:
-        print(f"🧬 taxonomy saved at: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-        cursor.close()
-        connection.close()
+   """Process all taxonomy files (LawDomain.XML) in the given directory."""
+   connection = connect_to_db()
+   cursor = connection.cursor()
+   
+   try:
+       # Get list of all folders in root directory
+       folder_count = 0
+       success_count = 0
+       
+       for folder_name in os.listdir(root_dir):
+           folder_path = os.path.join(root_dir, folder_name)
+           
+           # Skip if not a directory
+           if not os.path.isdir(folder_path):
+               continue
+               
+           folder_count += 1
+           taxonomy_file = os.path.join(folder_path, "LawDomain.XML")
+           
+           # Skip if taxonomy file doesn't exist
+           if not os.path.exists(taxonomy_file):
+               logger.warning(f"LawDomain.XML not found in folder: {folder_name}")
+               continue
+           
+           try:
+               # Start a transaction
+               logger.info(f"Processing taxonomy for case: {folder_name}")
+               
+               # Extract and load the taxonomy data
+               load_taxonomy_data(taxonomy_file, folder_name, cursor)
+               
+               # Commit the transaction if everything succeeded
+               connection.commit()
+               success_count += 1
+               logger.info(f"Successfully processed taxonomy for case: {folder_name}")
+               
+           except Exception as e:
+               # Rollback the transaction if an error occurred
+               connection.rollback()
+               logger.error(f"Error processing taxonomy for case {folder_name}: {str(e)}")
+       
+       logger.info(f"Processed {folder_count} folders, successfully loaded {success_count} taxonomies")
+   
+   finally:
+       print(f"🧬 taxonomy saved at: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+       cursor.close()
+       connection.close()
 def extract_taxonomy_section(content, section_name):
-    """Extract a specific taxonomy section using regex."""
-    pattern = f"<{section_name}>(.*?)</{section_name}>"
-    match = re.search(pattern, content, re.DOTALL)
-    if match:
-        return match.group(1).strip()
-    return None
+   """Extract a specific taxonomy section using regex."""
+   pattern = f"<{section_name}>(.*?)</{section_name}>"
+   match = re.search(pattern, content, re.DOTALL)
+   if match:
+       return match.group(1).strip()
+   return None
 def parse_taxonomy_relationships(section_text):
-    """Parse taxonomy relationships from text into structured data."""
-    if not section_text:
-        return []
-    
-    relationships = []
-    
-    # Split by lines and process each relationship
-    lines = section_text.strip().split('\n')
-    for line in lines:
-        # Remove any brackets and extra whitespace
-        line = line.strip()
-        if not line:
-            continue
-            
-        # Parse relationship path like [A] -> [B] -> [C]
-        elements = re.findall(r'\[(.*?)\]', line)
-        
-        if len(elements) >= 2:
-            # Handle different formats (2 or 3 elements)
-            if len(elements) >= 3:
-                # 3 elements: broad -> subdomain -> specific
-                broad, subdomain, specific = elements[0], elements[1], elements[2]
-            else:
-                # 2 elements: null broad, subdomain -> specific
-                broad, subdomain, specific = None, elements[0], elements[1]
-                
-            relationships.append({
-                'broad': broad,
-                'subdomain': subdomain,
-                'specific': specific
-            })
-    
-    return relationships
+   """Parse taxonomy relationships from text into structured data."""
+   if not section_text:
+       return []
+   
+   relationships = []
+   
+   # Split by lines and process each relationship
+   lines = section_text.strip().split('\n')
+   for line in lines:
+       # Remove any brackets and extra whitespace
+       line = line.strip()
+       if not line:
+           continue
+           
+       # Parse relationship path like [A] -> [B] -> [C] -> [D]
+       elements = re.findall(r'\[(.*?)\]', line)
+       
+       if len(elements) >= 2:
+           # Handle different formats (2, 3, or 4 elements)
+           if len(elements) >= 4:
+               # 4 elements: broad -> subdomain -> specific -> sub_specific
+               broad, subdomain, specific, sub_specific = elements[0], elements[1], elements[2], elements[3]
+           elif len(elements) >= 3:
+               # 3 elements: broad -> subdomain -> specific
+               broad, subdomain, specific, sub_specific = elements[0], elements[1], elements[2], None
+           else:
+               # 2 elements: null broad, subdomain -> specific
+               broad, subdomain, specific, sub_specific = None, elements[0], elements[1], None
+               
+           relationships.append({
+               'broad': broad,
+               'subdomain': subdomain,
+               'specific': specific,
+               'sub_specific': sub_specific
+           })
+   
+   return relationships
 def load_taxonomy_data(file_path, case_id, cursor):
-    """Extract taxonomy data from a file and load it into PostgreSQL."""
-    if case_exists(case_id, "case_law_domains"):
-        logger.info(f"Case {case_id} already exists. Skipping creation.")
-        return    
-    try:
-        with open(file_path, 'r', encoding='utf-8') as file:
-            content = file.read()
-        
-        # Extract each taxonomy section
-        sections = {
-            'LawDomain': extract_taxonomy_section(content, 'LawDomain'),
-            'LegalIssues': extract_taxonomy_section(content, 'LegalIssues'),
-            'LegalSubcategories': extract_taxonomy_section(content, 'LegalSubcategories'),
-            'LegalConcepts': extract_taxonomy_section(content, 'LegalConcepts')
-        }
-        
-        # Process each section
-        all_relationships = []
-        
-        # LawDomain is required
-        if not sections['LawDomain']:
-            logger.warning(f"No LawDomain content found in {file_path}")
-            return
-            
-        all_relationships.extend(parse_taxonomy_relationships(sections['LawDomain']))
-        
-        # Process optional sections
-        for section_name in ['LegalIssues', 'LegalSubcategories', 'LegalConcepts']:
-            if sections[section_name]:
-                all_relationships.extend(parse_taxonomy_relationships(sections[section_name]))
-        
-        # Insert all relationships and link to case
-        for relationship in all_relationships:
-            domain_id = insert_law_domain(cursor, relationship['broad'], relationship['subdomain'], relationship['specific'])
-            link_case_to_domain(cursor, case_id, domain_id)
-            
-    except Exception as e:
-        logger.error(f"Error in load_taxonomy_data for {file_path}: {str(e)}")
-        raise
-def insert_law_domain(cursor, broad, subdomain, specific):
-    """Insert a law domain and return its ID."""
-    query = """
-        INSERT INTO law_domains (broad, subdomain, specific)
-        VALUES (%s, %s, %s)
-        ON CONFLICT (broad, subdomain, specific) DO UPDATE SET
-            broad = EXCLUDED.broad
-        RETURNING domain_id
-    """
-    
-    cursor.execute(query, (
-        broad,  # Could be None for 2-element relationships
-        subdomain,
-        specific
-    ))
-    
-    return cursor.fetchone()[0]
+   """Extract taxonomy data from a file and load it into PostgreSQL."""
+   if case_exists(case_id, "case_law_domains"):
+       logger.info(f"Case {case_id} already exists. Skipping creation.")
+       return    
+   try:
+       with open(file_path, 'r', encoding='utf-8') as file:
+           content = file.read()
+       
+       # Extract each taxonomy section
+       sections = {
+           'LawDomain': extract_taxonomy_section(content, 'LawDomain'),
+           'LegalIssues': extract_taxonomy_section(content, 'LegalIssues'),
+           'LegalSubcategories': extract_taxonomy_section(content, 'LegalSubcategories'),
+           'LegalConcepts': extract_taxonomy_section(content, 'LegalConcepts')
+       }
+       
+       # Process each section
+       all_relationships = []
+       
+       # LawDomain is required
+       if not sections['LawDomain']:
+           logger.warning(f"No LawDomain content found in {file_path}")
+           return
+           
+       all_relationships.extend(parse_taxonomy_relationships(sections['LawDomain']))
+       
+       # Process optional sections
+       for section_name in ['LegalIssues', 'LegalSubcategories', 'LegalConcepts']:
+           if sections[section_name]:
+               all_relationships.extend(parse_taxonomy_relationships(sections[section_name]))
+       
+       # Insert all relationships and link to case
+       for relationship in all_relationships:
+           domain_id = insert_law_domain(
+               cursor, 
+               relationship['broad'], 
+               relationship['subdomain'], 
+               relationship['specific'],
+               relationship['sub_specific']
+           )
+           link_case_to_domain(cursor, case_id, domain_id)
+           
+   except Exception as e:
+       logger.error(f"Error in load_taxonomy_data for {file_path}: {str(e)}")
+       raise
+def insert_law_domain(cursor, broad, subdomain, specific, sub_specific=None):
+   """Insert a law domain and return its ID."""
+   query = """
+       INSERT INTO law_domains (broad, subdomain, specific, sub_specific)
+       VALUES (%s, %s, %s, %s)
+       ON CONFLICT (broad, subdomain, specific, sub_specific) DO UPDATE SET
+           broad = EXCLUDED.broad
+       RETURNING domain_id
+   """
+   
+   cursor.execute(query, (
+       broad,        # Could be None for 2-element relationships
+       subdomain,
+       specific,
+       sub_specific  # Could be None for 3-element relationships
+   ))
+   
+   return cursor.fetchone()[0]
 def link_case_to_domain(cursor, case_id, domain_id):
-    """Create a relationship between a case and a law domain."""
-    query = """
-        INSERT INTO case_law_domains (case_id, domain_id)
-        VALUES (%s, %s)
-        ON CONFLICT (case_id, domain_id) DO NOTHING
-    """
-    
-    cursor.execute(query, (case_id, domain_id))
+   """Create a relationship between a case and a law domain."""
+   query = """
+       INSERT INTO case_law_domains (case_id, domain_id)
+       VALUES (%s, %s)
+       ON CONFLICT (case_id, domain_id) DO NOTHING
+   """
+   
+   cursor.execute(query, (case_id, domain_id))
 ########## /taxonomy
 ########## LegalPrinciples
 def process_LegalPrinciples(root_dir):
@@ -1330,17 +1341,16 @@ def main():
     """Main function to run the script."""
     try:
         # Replace with your actual directory path
-        root_directory = "C:\\__Repo\\_LegaWrite\\KGW-Extractor\\output"
-        # process_case_create_parties_files(root_directory)
-        # process_case_summary_files(root_directory)
-        # process_taxonomy_folder(root_directory)
+        root_directory = "C:\\_Repo\\KGW-Extractor\\output"
+        process_case_create_parties_files(root_directory)
+        process_case_summary_files(root_directory)
+        process_taxonomy_folder(root_directory)
         process_LegalPrinciples(root_directory)
-        # process_Facts(root_directory)
+        process_Facts(root_directory)
         # root_directory = "C:\\__Repo\\AdditionalInfo"
-        # process_additionalinfo_folder(root_directory) 
-        # root_directory = "C:\\__Repo\\_LegaWrite\\KGW-Extractor\\output"
-        # process_Ruling(root_directory)
-        # process_CausesOfAction(root_directory)
+        # process_additionalinfo_folder(root_directory)         
+        process_Ruling(root_directory)
+        process_CausesOfAction(root_directory)
         
         logger.info("🏁 Processing completed successfully🏁")
     except Exception as e:
